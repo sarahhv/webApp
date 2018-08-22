@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4em;
+    border: 3px solid black;
+    text-align: center;
+}
+
+header {
+    width: 50%;
+    margin: auto;
+}
+
+.shopping {
+    position: relative;
+    font-size: 2.7em;
+    margin: 5% 5%;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+    margin: 2% 0%;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    margin: 2% 0%;
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}
