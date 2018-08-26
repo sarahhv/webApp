@@ -4,15 +4,20 @@
     padding: 0;
 }
 
+body {
+    padding: 0% 20%; 
+}
+
 h1 {
     font-size: 4em;
-    border: 3px solid black;
+    background-color: #4CAF50;
     text-align: center;
+    color: white;
 }
 
 header {
     width: 50%;
-    margin: auto;
+    margin: 2% auto 0%;
 }
 
 .shopping {
@@ -34,9 +39,6 @@ button {
     float: right;
     background-color: transparent;
     border: none;
-}
-
-button img {
-    width: 30px;
-    height: 30px;
+    background-image: url(img/kryds1.png);
+    background-size: cover;
 }
