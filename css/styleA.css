@@ -1,0 +1,55 @@
+/* GLOBAL -START- */
+
+h1 {
+text-align: center;
+}
+
+#frontfridge {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+    
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 4px 50px;
+    cursor: pointer;
+}
+
+
+/* YOUR FRIDGE -START-*/
+
+
+.fridge {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 7%;
+    
+}
+
+.fridge p {
+    margin: 2% 50% 2% 2%;
+    font-size: 1.2em;
+    flex-grow: 3;
+}
+.fridge i {
+    margin: 2%;
+    flex-grow: 1;
+}
+
+.expired{
+    color: red;
+}
+.new {
+    color: green;
+}
+
