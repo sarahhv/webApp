@@ -1,4 +1,10 @@
-/* GLOBAL -START- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    margin: 0;
+}
+
+/* Fonts and font sizes */
 $h1-font: "Century Gothic",
 sans-serif;
 $h1-size: 2.1em;
@@ -6,11 +12,8 @@ $p-font: "Yu Gothic UI Light",
 sans-serif;
 $p-size: 1.8em;
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    margin: 0;
-}
+/* Colors */
+$baggrund: rgba(229, 251, 201, 0.2);
 
 h1 {
     font-size: $h1-size;

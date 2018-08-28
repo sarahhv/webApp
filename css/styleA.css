@@ -1,9 +1,10 @@
-/* GLOBAL -START- */
 * {
   box-sizing: border-box;
   margin: 0;
   margin: 0; }
 
+/* Fonts and font sizes */
+/* Colors */
 h1 {
   font-size: 2.1em;
   font-family: "Century Gothic", sans-serif;
