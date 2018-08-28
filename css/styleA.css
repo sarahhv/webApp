@@ -3,8 +3,12 @@
   margin: 0;
   margin: 0; }
 
-/* Fonts and font sizes */
-/* Colors */
+/* --Fonts and font sizes-- */
+/* --Colors-- */
+/* --Common use-- */
+body {
+  background-color: rgba(229, 251, 201, 0.2); }
+
 h1 {
   font-size: 2.1em;
   font-family: "Century Gothic", sans-serif;
@@ -14,13 +18,36 @@ h1 {
 header {
   background-color: #D0F79E;
   width: 100%;
-  padding: 2%; }
+  padding: 2% 0%;
+  display: flex;
+  justify-content: space-between; }
+  header button {
+    width: 20%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.7em; }
 
+footer {
+  grid-area: footer;
+  position: fixed;
+  bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  footer button {
+    background-color: #71A133;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer; }
+
+/* HOME --START-- */
 .wrapper-home {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "." "header" "nav" ".";
-  background-color: #d0f79e; }
+  grid-template-areas: "." "header" "nav" "."; }
   .wrapper-home h1 {
     margin-top: -4%; }
 
@@ -50,21 +77,43 @@ header {
     border: none;
     color: #E5FBCA;
     font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: 1.8em; }
+    font-size: 1.3em; }
 
 /* YOUR FRIDGE -START-*/
+.wrapper-fridge {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 10% 10%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header header" "main main main main main main" "footer footer footer footer footer footer"; }
+  .wrapper-fridge header {
+    grid-area: header; }
+  .wrapper-fridge main {
+    grid-area: main; }
+  .wrapper-fridge footer {
+    grid-area: footer; }
+
 .fridge {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 7%; }
+  display: grid;
+  margin-top: 8%;
+  align-content: center; }
   .fridge p {
-    margin: 2% 50% 2% 2%;
-    font-size: 1.2em;
-    flex-grow: 3; }
-  .fridge i {
-    margin: 2%;
-    flex-grow: 1; }
+    font-size: 1.3em;
+    font-family: "Yu Gothic UI Light", sans-serif;
+    margin: 2% 0 2% 8%; }
+  .fridge button {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    place-self: center;
+    font-size: 1.3em; }
+
+.no {
+  grid-column-start: 5;
+  color: red;
+  place-self: center; }
+
+.s-list {
+  grid-column-start: 6; }
 
 .expired {
   color: red; }
