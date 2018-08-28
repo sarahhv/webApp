@@ -1,87 +1,69 @@
 /* GLOBAL -START- */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    margin 0;
-}
+  box-sizing: border-box;
+  margin: 0;
+  margin: 0; }
 
-.wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-        "."
-        "header"
-        "nav"
-        ".";
-    background-color: #d0f79e;
-}
-
-.header {
-    grid-area: header;
-}
-
-.nav {
-    grid-area: nav;
-}
-
-h1 {
+.wrapper-home {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "." "header" "nav" ".";
+  background-color: #d0f79e; }
+  .wrapper-home h1 {
     text-align: center;
     font-family: "Yu Gothic UI", sans-serif;
     color: #71a133;
     margin-top: -4%;
-}
+    font-family: "Century Gothic", sans-serif;
+    font-size: 2.1em; }
+
+.header {
+  grid-area: header; }
+
+.nav {
+  grid-area: nav; }
 
 .frontfridge {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; }
 
 .button {
-    background-color: #71a133;
+  border: none;
+  display: block;
+  background-color: #71a133;
+  text-align: center;
+  width: 60%;
+  margin: 3% auto;
+  padding: 4%;
+  cursor: pointer;
+  }
+  .button a {
+    text-decoration: none;
     border: none;
     color: #E5FBCA;
-    padding: 4% 10%;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin: 3% 20%;
-    cursor: pointer;
     font-family: "Yu Gothic UI Light", sans-serif;
-}
-
+    font-size: 1.8em; }
 
 /* YOUR FRIDGE -START-*/
-
-
 .fridge {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 7%;
-
-}
-
-.fridge p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 7%; }
+  .fridge p {
     margin: 2% 50% 2% 2%;
     font-size: 1.2em;
-    flex-grow: 3;
-}
-
-.fridge i {
+    flex-grow: 3; }
+  .fridge i {
     margin: 2%;
-    flex-grow: 1;
-}
+    flex-grow: 1; }
 
 .expired {
-    color: red;
-}
+  color: red; }
 
 .new {
-    color: green;
-}
+  color: green; }
 
-
-
-body {}
+/*# sourceMappingURL=styleA.css.map */
