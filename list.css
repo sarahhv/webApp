@@ -3,20 +3,38 @@
   margin: 0;
   padding: 0; }
 
+/* Fonts and font sizes */
+/* Colors */
+body {
+  background-color: rgba(229, 251, 201, 0.2);
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+
 header {
+  grid-area: header;
   background-color: #D0F79E;
   width: 100%;
-  padding: 2%; }
+  padding: 2% 0%;
+  display: flex;
+  justify-content: space-between; }
+  header button {
+    width: 20%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.7em; }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.1em;
   font-family: "Century Gothic", sans-serif;
   text-align: center;
   color: #71A133; }
 
 .shopping {
+  grid-area: main;
   margin: 5%;
-  font-size: 2.0em;
+  font-size: 1.8em;
   font-family: "Yu Gothic UI Light", sans-serif; }
   .shopping .box {
     width: 25px;
@@ -24,7 +42,6 @@ h1 {
   .shopping button {
     width: 25px;
     height: 25px;
-    margin: 2% 0%;
     float: right;
     background-color: transparent;
     border: none;
@@ -33,6 +50,7 @@ h1 {
     font-weight: bold; }
 
 footer {
+  grid-area: footer;
   position: fixed;
   bottom: 0;
   width: 100%;
