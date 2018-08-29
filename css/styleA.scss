@@ -28,14 +28,7 @@ h1 {
     color: #71A133;
 }
 
-header {
-    button {
-        width: 20%;
-        border: none;
-        background-color: transparent;
-        font-size: 1.7em;
-    }
-}
+
 
 footer {
     grid-area: footer;
@@ -117,9 +110,7 @@ footer {
     grid-template-areas:
         "header header header header header header"
         "main main main main main main"
-        "footer footer footer footer footer footer"
-    ;
-
+        "footer footer footer footer footer footer";
     header {
         grid-area: header;
         background-color: #D0F79E;
@@ -127,6 +118,12 @@ footer {
         padding: 2% 0%;
         display: flex;
         justify-content: space-between;
+        button {
+            width: 10%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
     }
 
     main {
