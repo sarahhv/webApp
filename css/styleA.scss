@@ -29,12 +29,7 @@ h1 {
 }
 
 header {
-    background-color: #D0F79E;
-    width: 100%;
-    padding: 2% 0%;
-    display: flex;
-    justify-content: space-between;
-     button {
+    button {
         width: 20%;
         border: none;
         background-color: transparent;
@@ -49,6 +44,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+
     button {
         background-color: #71A133;
         border: none;
@@ -57,7 +53,7 @@ footer {
         padding: 16px 20px;
         font-size: 20px;
         cursor: pointer;
-        
+
     }
 }
 
@@ -71,16 +67,20 @@ footer {
         "header"
         "nav"
         ".";
+
     h1 {
         margin-top: -4%;
     }
 }
+
 .header {
     grid-area: header;
 }
+
 .nav {
     grid-area: nav;
 }
+
 .frontfridge {
     display: block;
     margin-left: auto;
@@ -97,7 +97,7 @@ footer {
     margin: 3% 20%;
     padding: 4% 10%;
     cursor: pointer;
-   
+
     a {
         text-decoration: none;
         border: none;
@@ -111,20 +111,28 @@ footer {
 /* YOUR FRIDGE -START-*/
 
 .wrapper-fridge {
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 10% 10%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header header header"
-    "main main main main main main"
-    "footer footer footer footer footer footer"
+    grid-template-areas:
+        "header header header header header header"
+        "main main main main main main"
+        "footer footer footer footer footer footer"
     ;
+
     header {
         grid-area: header;
+        background-color: #D0F79E;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
     }
+
     main {
         grid-area: main;
     }
+
     footer {
         grid-area: footer;
     }
@@ -134,24 +142,28 @@ footer {
     display: grid;
     margin-top: 8%;
     align-content: center;
+
     p {
         font-size: $p-size;
         font-family: $p-font;
         margin: 2% 0 2% 8%;
     }
+
     button {
         background-color: transparent;
         border: none;
         font-weight: bold;
         place-self: center;
         font-size: $p-size
-    } 
+    }
 }
+
 .no {
     grid-column-start: 5;
     color: red;
     place-self: center;
 }
+
 .s-list {
     grid-column-start: 6;
 }
