@@ -9,7 +9,7 @@ function seeFridge() {
 }
 
 function seeItems() {
-    document.getElementById("add-food").style.display = "block";
+    document.getElementById("add-food").style.display = "grid";
     document.getElementById("home").style.display = "none";
 }
 
