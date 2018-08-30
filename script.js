@@ -1,7 +1,7 @@
 /* Frontpage buttons */
-var a = document.getElementById("see-fridge");
-var b = document.getElementById("see-items");
-var c = document.getElementById("see-shopping");
+var btnSeeFridge = document.getElementById("see-fridge");
+var btnSeeItems = document.getElementById("see-items");
+var btnSeeShopping = document.getElementById("see-shopping");
 
 function seeFridge() {
     document.getElementById("your-fridge").style.display = "grid";
@@ -18,48 +18,45 @@ function seeShopping() {
     document.getElementById("home").style.display = "none";
 }
 
-a.addEventListener('click', seeFridge, true);
-b.addEventListener('click', seeItems, true);
-c.addEventListener('click', seeShopping, true);
+btnSeeFridge.addEventListener('click', seeFridge);
+btnSeeItems.addEventListener('click', seeItems);
+btnSeeShopping.addEventListener('click', seeShopping);
 
-/* Back buttons  */
-var tilbage = document.getElementById("back");
-var tilbageEt = document.getElementById("backEt");
-var tilbageTo = document.getElementById("backTo");
+/* Back buttons */
+var btnBack = document.getElementsByClassName("back");
 
 function goBack() {
+    document.getElementById("shopping-list").style.display = "none";
+    document.getElementById("add-food").style.display = "none";
     document.getElementById("your-fridge").style.display = "none";
     document.getElementById("home").style.display = "grid";
 }
 
-function goBackEt() {
-    document.getElementById("add-food").style.display = "none";
-    document.getElementById("home").style.display = "grid";
-}
-
-function goBackTo() {
-    document.getElementById("shopping-list").style.display = "none";
-    document.getElementById("home").style.display = "grid";
-}
-
-tilbage.addEventListener('click', goBack, true);
-tilbageEt.addEventListener('click', goBackEt, true);
-tilbageTo.addEventListener('click', goBackTo, true);
+btnBack[0].addEventListener('click', goBack);
+btnBack[1].addEventListener('click', goBack);
+btnBack[2].addEventListener('click', goBack);
 
 /* Shopping til Add og omvendt */
-var d = document.getElementById("go-shopping");
-var e = document.getElementById("go-fridge");
+var btnGoShopping = document.getElementById("go-shopping");
+var btnGoFridge = document.getElementById("go-fridge");
 
-function goShopping (){
+// Kortere version af funktionerne 
+
+/* function goShopping() {
     document.getElementById("your-fridge").style.display = "none";
     document.getElementById("shopping-list").style.display = "grid";
 }
 
-function goFridge (){
+function goFridge() {
     document.getElementById("shopping-list").style.display = "none";
     document.getElementById("your-fridge").style.display = "grid";
-    
-}
+} */
 
-d.addEventListener('click', goShopping, true);
-e.addEventListener('click', goFridge, true);
+btnGoShopping.addEventListener('click', () => {
+    document.getElementById("your-fridge").style.display = "none";
+    document.getElementById("shopping-list").style.display = "grid";
+});
+btnGoFridge.addEventListener('click', () => {
+    document.getElementById("shopping-list").style.display = "none";
+    document.getElementById("your-fridge").style.display = "grid";
+});
