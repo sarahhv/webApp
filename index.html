@@ -8,32 +8,31 @@
     <meta name="author" content="Sarah Hvalsøe">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>
 
 <body>
 
-    <section class="home">
-        <header class="header"><img class="frontfridge" src="img/frontfridge.png" alt="Picture of fridge">
-            <h1>Exparation</h1>
+    <section id="home">
+        <header class="header"><img class="frontfridge" src="img/logo.png" alt="Picture of fridge">
+            <!-- <h1>Exparation</h1> -->
         </header>
         <nav class="nav">
-            <button class="button"><a href="fridge.html">See Fridge</a></button>
-            <button class="button"><a href="#">Add Items</a></button>
-            <button class="button"><a href="#">Shopping list</a></button>
+            <button id="see-fridge">See Fridge</button>
+            <button id="see-items">Add Items</button>
+            <button id="see-shopping">Shopping</button>
         </nav>
     </section>
 
-    <section class="your-fridge">
+    <section id="your-fridge">
         <header>
-            <button>
+            <button id="back">
                 <i class="fa fa-arrow-left"></i>
             </button>
             <h1>Your Fridge</h1>
-            <button>
+            <button id="go-shopping">
                 <i class="fa fa-list-ul"></i>
             </button>
         </header>
@@ -85,14 +84,37 @@
 
     </section>
 
-    <section class="shopping-list">
+    <section id="add-food">
         <header>
-            <button class="back">
+            <button id="backEt">
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <h1>Categories</h1>
+            <button class="search">
+                <i class="fa fa-search"></i>
+            </button>
+        </header>
+        <main>
+
+            <button>Meat and fish</button>
+            <button>Fruits and vegetables</button>
+            <button>Dairy</button>
+
+        </main>
+
+        <aside>
+            <button>Scan food</button>
+        </aside>
+    </section>
+
+    <section id="shopping-list">
+        <header>
+            <button id="backTo">
                 <i class="fa fa-arrow-left"></i>
             </button>
             <h1>Shopping List</h1>
-            <button class="fridge-btn">
-                <i class="fa fa-columns"></i>
+            <button id="go-fridge">
+                <img src="img/icon.png" alt="">
             </button>
         </header>
 
@@ -146,34 +168,13 @@
 
     </section>
 
-    <section class="add-food">
-        <section class="categories">
-            <h1>Categories</h1>
-        </section>
-
-        <i class="material-icons">search</i>
-
-        <main class="buttongroup">
-
-            <button class="button">Meat and fish</button>
-            <button class="button">Fruits and vegetables</button>
-            <button class="button">Dairy</button>
-
-        </main>
-
-        <aside>
-
-            <button class="scan">Scan food</button>
-        </aside>
-    </section>
-
-    <section class="load">
+    <section id="load">
         <img src="img/fridge3.gif" alt="loading fridge, refrigerator">
         <!-- Fridge found on: http://www.mitsubishielectric.com.au/mr-wx500c-s-multi-drawer-refrigerator.html  -->
         <p>Waiting to fill your fridge...</p>
     </section>
 
-    <section class="error">
+    <section id="error">
 
         <body>
             <main>
@@ -188,7 +189,7 @@
             </main>
     </section>
 
-    <section class="modal-box">
+    <section id="modal-box">
         <header>
             <button>
                 <i class="fa fa-arrow-left"></i>

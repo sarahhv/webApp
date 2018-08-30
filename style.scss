@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+
+
 /* Fonts and font sizes */
 $h1-font: "Century Gothic",
 sans-serif;
@@ -11,17 +13,22 @@ $h1-size: 2.1em;
 $p-font: "Yu Gothic UI Light",
 sans-serif;
 $p-size:1.4em;
-
 /* Colors */
-$baggrund: rgba(229, 251, 201, 0.2);
+$baggrund: rgba(229, 251, 201, 0.5);
 $header-baggrund: #D0F79E;
-$h1-color: #71A133; 
+$h1-color: #71A133;
+
+html {
+    height: 100%;
+}
 
 body {
     background-color: $baggrund;
-}
+    height: 100%;  
+} 
 
-.home {
+#home {
+    height: 100%;
     display: grid;
     grid-gap: 20px;
     grid-template-areas:
@@ -29,14 +36,6 @@ body {
         "header"
         "nav"
         ".";
-
-    h1 {
-        margin-top: -4%;
-        font-size: $h1-size;
-        font-family: $h1-font;
-        text-align: center;
-        color: $h1-color;
-    }
 
     .header {
         grid-area: header;
@@ -53,28 +52,23 @@ body {
         width: 70%;
     }
 
-    .button {
+    button {
         border: none;
+        border-radius: 20px;
         display: block;
         background-color: #71a133;
         text-align: center;
         width: 60%;
-        margin: 3% 20%;
-        padding: 4% 10%;
-        cursor: pointer;
-
-        a {
-            text-decoration: none;
-            border: none;
-            color: #E5FBCA;
-            font-family: $p-font;
-            font-size: $p-size;
-        }
+        margin: 3% auto;
+        padding: 4% 5%;
+        color: white;
+        font-family: $p-font;
+        font-size: $p-size;
     }
 }
 
-.your-fridge {
-    display: grid;
+#your-fridge {
+    display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -153,7 +147,7 @@ body {
     footer {
         grid-area: footer;
         position: fixed;
-        bottom: 18px;
+        bottom: 3%;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -170,8 +164,68 @@ body {
     }
 }
 
-.shopping-list {
-    display: grid;
+#add-food {
+    display: none;
+    header {
+        background-color: $header-baggrund;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: $h1-color;
+        }
+    }
+
+    main {
+        margin: 20% 0% 0%;
+
+        button {
+            display: block;
+            background-color: #71a133;
+            width: 70%;
+            border-radius: 20px;
+            border: none;
+            padding: 4% 5%;
+            margin: 5% auto;
+            color: white;
+            text-align: center;
+            font-size: $p-size;
+            font-family: $p-font;
+        }
+
+    }
+
+    aside {
+        button {
+            display: block;
+            background-color: #71a133;
+            width: 30%;
+            border-radius: 20px;
+            border: none;
+            padding: 4% 5%;
+            margin: 5% auto;
+            color: white;
+            text-align: center;
+            font-size: $p-size;
+            font-family: $p-font;
+        }
+    }
+}
+
+#shopping-list {
+    display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -229,7 +283,7 @@ body {
     footer {
         grid-area: footer;
         position: fixed;
-        bottom: 18px;
+        bottom: 3%;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -246,84 +300,8 @@ body {
     }
 }
 
-.add-food {
-    visibility: hidden;
-    margin: 0;
-    border-radius: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: $baggrund;
-    font-family: $p-font;
-
-    .buttongroup {
-        .button {
-            background-color: #71a133;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 4em;
-            width: 60%;
-            display: block;
-            margin: auto;
-            margin-bottom: 5%;
-            padding-bottom: 80px;
-            padding-top: 80px;
-            border-radius: 50px;
-            font-family: "Yu Gothic UI Light", sans-serif;
-        }
-    }
-
-    .scan {
-        width: 20%;
-        font-size: 3em;
-        margin-left: 39%;
-        background-color: #71a133;
-        color: white;
-        margin-top: 15%;
-        border-radius: 50px;
-        padding-top: 25px;
-        padding-bottom: 29px;
-        font-family: "Yu Gothic UI Light", sans-serif;
-    }
-
-    h1 {
-        font-family: $h1-font;
-        text-align: center;
-        font-size: $h1-size;
-        color: $h1-color;
-        margin-bottom: 25%;
-        background-color: $header-baggrund;
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
-
-    .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 95px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: inline-block;
-        white-space: nowrap;
-        word-wrap: normal;
-        -webkit-font-feature-settings: 'liga';
-        -webkit-font-smoothing: antialiased;
-        position: absolute;
-        top: 52px;
-        left: 82%;
-        color: #d0f79e;
-    }
-}
-
-.load {
+#load {
+    display: none;
     margin-top: 25%;
 
     img {
@@ -342,7 +320,8 @@ body {
     }
 }
 
-.error {
+#error {
+    display: none;
     p {
         font-family: $p-font;
         font-size: 4em;
@@ -385,11 +364,11 @@ body {
     }
 }
 
-.modal-box {
+#modal-box {
     width: 100%;
     padding: 0;
     margin: 0;
-    display: grid;
+    display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
