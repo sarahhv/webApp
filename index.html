@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Expiration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sarah Hvalsøe">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+
+    <section class="home">
+        <header class="header"><img class="frontfridge" src="img/frontfridge.png" alt="Picture of fridge">
+            <h1>Exparation</h1>
+        </header>
+        <nav class="nav">
+            <button class="button"><a href="fridge.html">See Fridge</a></button>
+            <button class="button"><a href="#">Add Items</a></button>
+            <button class="button"><a href="#">Shopping list</a></button>
+        </nav>
+    </section>
+
+    <section class="your-fridge">
+        <header>
+            <button>
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <h1>Your Fridge</h1>
+            <button>
+                <i class="fa fa-list-ul"></i>
+            </button>
+        </header>
+
+        <main class="fridge">
+            <p>
+                <span class="first">1x Milk</span>
+                <time class="expired">23/08/18</time>
+                <span class="buttons">
+                    <button class="no"><i class="fa fa-close"></i></button>
+                    <button class="s-list"><i class="fa fa-list"></i></button></div>
+            </p>
+
+            <p>
+                <span class="first">3x Egg</span>
+                <time class="new">20/09/18</time>
+                <span class="buttons">
+                    <button class="no"><i class="fa fa-close"></i></button>
+                    <button class="s-list"><i class="fa fa-list"></i></button></span>
+            </p>
+
+            <p> <span class="first">1x Butter</span>
+                <time class="expired">23/08/18</time>
+                <span class="buttons">
+                    <button class="no"><i class="fa fa-close"></i></button>
+                    <button class="s-list"><i class="fa fa-list"></i></button></span>
+            </p>
+
+            <p><span class="first">5x Oniens</span>
+                <time class="new">20/09/18</time>
+                <span class="buttons">
+                    <button class="no"><i class="fa fa-close"></i></button>
+                    <button class="s-list"><i class="fa fa-list"></i></button></span>
+            </p>
+
+            <p>
+                <span class="first">7x Tomatoes</span>
+                <time class="new">20/09/18</time>
+                <span class="buttons"><button class="no"><i class="fa fa-close"></i></button>
+                    <button class="s-list"><i class="fa fa-list"></i></button></span>
+            </p>
+
+        </main>
+        <footer>
+            <button>
+                <i class="fa fa-plus"></i>
+            </button>
+        </footer>
+
+    </section>
+
+    <section class="shopping-list">
+        <header>
+            <button class="back">
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <h1>Shopping List</h1>
+            <button class="fridge-btn">
+                <i class="fa fa-columns"></i>
+            </button>
+        </header>
+
+        <main class="shopping">
+            <p>
+                <input type="checkbox" name="groceries" value="milk" class="box"> Milk
+                <button>
+                    <i class="fa fa-close"></i> <!-- Onclick remove it  -->
+                </button>
+            </p>
+            <p>
+                <input type="checkbox" name="groceries" value="egg" class="box"> Egg
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
+            </p>
+
+            <p>
+                <input type="checkbox" name="groceries" value="butter" class="box"> Butter
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
+            </p>
+
+            <p>
+                <input type="checkbox" name="groceries" value="onion" class="box"> Onion
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
+            </p>
+
+            <p>
+                <input type="checkbox" name="groceries" value="garlic" class="box"> Garlic
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
+            </p>
+
+            <p>
+                <input type="checkbox" name="groceries" value="tomato" class="box"> Tomato
+                <button>
+                    <i class="fa fa-close"></i>
+                </button>
+            </p>
+        </main>
+        <footer>
+            <button>
+                <i class="fa fa-plus"></i>
+            </button>
+        </footer>
+
+    </section>
+
+    <section class="load">
+        <img src="img/fridge3.gif" alt="loading fridge, refrigerator">
+        <!-- Fridge found on: http://www.mitsubishielectric.com.au/mr-wx500c-s-multi-drawer-refrigerator.html  -->
+        <p>Waiting to fill your fridge...</p>
+    </section>
+
+    <section class="modal-box">
+        <header>
+            <button>
+                <i class="fa fa-arrow-left"></i>
+            </button>
+            <h1>Fruit</h1>
+        </header>
+
+        <section>
+            <button>
+                <i class="fa fa-caret-square-o-up"></i>
+            </button>
+
+            <p>1</p>
+
+            <button>
+                <i class="fa fa-caret-square-o-down"></i>
+            </button>
+
+        </section>
+
+        <section class="btn">
+            <button>
+                <i class="fa fa-columns"></i>
+                <!-- Onclick remove it  -->
+            </button>
+            <button>
+                <i class="fa fa-file-text-o"></i>
+                <!-- Onclick remove it  -->
+            </button>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
