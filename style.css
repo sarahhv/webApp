@@ -32,7 +32,7 @@ body {
       padding: 4% 5%;
       color: white;
       font-family: "Yu Gothic UI Light", sans-serif;
-      font-size: 1.4em; }
+      font-size: 1.5em; }
 
 #your-fridge {
   display: none;
@@ -58,8 +58,8 @@ body {
       color: #71A133; }
   #your-fridge .fridge {
     grid-area: main;
-    margin: 2%;
-    font-size: 1.4em;
+    margin: 5%;
+    font-size: 1.5em;
     font-family: "Yu Gothic UI Light", sans-serif; }
     #your-fridge .fridge p {
       width: 100%;
@@ -73,11 +73,11 @@ body {
         display: flex;
         justify-content: end; }
     #your-fridge .fridge button {
-      width: 25px;
-      height: 25px;
+      width: 23px;
+      height: 23px;
       background-color: transparent;
       border: none;
-      font-size: 0.8em;
+      font-size: 1.1em;
       font-weight: bold; }
     #your-fridge .fridge .no {
       color: red; }
@@ -85,6 +85,8 @@ body {
       color: red; }
     #your-fridge .fridge .new {
       color: green; }
+    #your-fridge .fridge .s-list {
+      margin-left: 10%; }
   #your-fridge footer {
     grid-area: footer;
     position: fixed;
@@ -135,7 +137,7 @@ body {
       padding: 4% 5%;
       color: white;
       text-align: center;
-      font-size: 1.4em;
+      font-size: 1.5em;
       font-family: "Yu Gothic UI Light", sans-serif; }
   #add-food aside {
     grid-area: aside; }
@@ -149,7 +151,7 @@ body {
       margin: 6% auto 0%;
       color: white;
       text-align: center;
-      font-size: 1.4em;
+      font-size: 1.5em;
       font-family: "Yu Gothic UI Light", sans-serif; }
 
 #shopping-list {
@@ -177,19 +179,18 @@ body {
   #shopping-list .shopping {
     grid-area: main;
     margin: 5%;
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-family: "Yu Gothic UI Light", sans-serif; }
     #shopping-list .shopping .box {
-      width: 20px;
-      height: 20px;
-      font-size: 0.8em; }
+      width: 22px;
+      height: 22px; }
     #shopping-list .shopping button {
-      width: 25px;
-      height: 25px;
+      width: 22px;
+      height: 22px;
       float: right;
       background-color: transparent;
       border: none;
-      font-size: 0.8em;
+      font-size: 1.1em;
       color: red;
       font-weight: bold; }
   #shopping-list footer {
@@ -299,10 +300,10 @@ body {
       border: 3px solid black;
       text-align: center;
       font-family: "Yu Gothic UI Light", sans-serif;
-      font-size: 1.4em; }
+      font-size: 1.5em; }
     #modal-box section button {
       border: none;
       background-color: transparent;
-      font-size: 1.4em; }
+      font-size: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */

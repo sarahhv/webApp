@@ -10,7 +10,7 @@ sans-serif;
 $h1-size: 2.1em;
 $p-font: "Yu Gothic UI Light",
 sans-serif;
-$p-size:1.4em;
+$p-size:1.5em;
 /* Colors */
 $baggrund: rgba(229, 251, 201, 0.5);
 $header-baggrund: #D0F79E;
@@ -94,7 +94,7 @@ body {
 
     .fridge {
         grid-area: main;
-        margin: 2%;
+        margin: 5%;
         font-size: $p-size;
         font-family: $p-font;
 
@@ -116,11 +116,11 @@ body {
         }
 
         button {
-            width: 25px;
-            height: 25px;
+            width: 23px;
+            height: 23px;
             background-color: transparent;
             border: none;
-            font-size: 0.8em;
+            font-size: 1.1em;
             font-weight: bold;
         }
 
@@ -134,6 +134,10 @@ body {
 
         .new {
             color: green;
+        }
+
+        .s-list {
+            margin-left: 10%;
         }
     }
 
@@ -266,18 +270,17 @@ body {
         font-family: $p-font;
 
         .box {
-            width: 20px;
-            height: 20px;
-            font-size: 0.8em;
+            width: 22px;
+            height: 22px;
         }
 
         button {
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             float: right;
             background-color: transparent;
             border: none;
-            font-size: 0.8em;
+            font-size: 1.1em;
             color: red;
             font-weight: bold;
         }
