@@ -14,31 +14,35 @@ $p-size:1.8em;
 /* Colors */
 $baggrund: rgba(229, 251, 201, 0.2);
 
-.shoppping-list {
+.modal-box {
     background-color: $baggrund;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
     grid-template-areas:
         "header header header header"
-        "main main main main"
-        "footer footer footer footer";
+        "section section main main"
+    ;
 }
 
-.shopping-list {
+.modal-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
     header {
         grid-area: header;
         background-color: #D0F79E;
         width: 100%;
         padding: 2% 0%;
-        display: flex;
-        justify-content: space-between;
+        margin-bottom: 10%;
 
         button {
             width: 20%;
             border: none;
             background-color: transparent;
-            font-size: 1.7em;
+            font-size: $h1-size;
+            position: absolute;
         }
 
         h1 {
@@ -49,45 +53,37 @@ $baggrund: rgba(229, 251, 201, 0.2);
         }
     }
 
-    .shopping {
+    .btn {
         grid-area: main;
-        margin: 5%;
-        font-size: $p-size;
-        font-family: $p-font;
-
-        .box {
-            width: 25px;
-            height: 25px;
-        }
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
 
         button {
-            width: 25px;
-            height: 25px;
-            float: right;
+            font-size: $h1-size;
             background-color: transparent;
-            border: none;
-            font-size: 0.8em;
-            color: red;
-            font-weight: bold;
+            margin-bottom: 25%;
+            font-size: 6em;
         }
     }
 
-    footer {
-        grid-area: footer;
-        position: fixed;
-        bottom: 18px;
-        width: 100%;
+    section {
+        grid-area: section;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        p {
+            border: 3px solid black;
+            text-align: center;
+            font-family: $p-font;
+            font-size: $p-size;
+        }
 
         button {
-            background-color: #71A133;
             border: none;
-            border-radius: 50%;
-            color: white;
-            padding: 16px 20px;
-            font-size: 20px;
-            cursor: pointer;
+            background-color: transparent;
+            font-size: $p-size;
         }
     }
 }

@@ -8,13 +8,17 @@
 body {
   background-color: rgba(229, 251, 201, 0.2); }
 
-p {
-  font-family: "Yu Gothic UI Light", sans-serif;
-  font-size: 1.8em;
-  text-align: center; }
-
-img {
-  width: 80%;
-  margin: auto; }
+.load {
+  margin-top: 25%; }
+  .load img {
+    display: block;
+    width: 80%;
+    margin: auto; }
+  .load p {
+    margin-top: 10%;
+    font-family: "Yu Gothic UI Light", sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    padding: 0% 2%; }
 
 /*# sourceMappingURL=load.css.map */

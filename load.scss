@@ -19,13 +19,20 @@ body {
     background-color: $baggrund;
 }
 
-p {
-    font-family: $p-font;
-    font-size: $p-size;
-    text-align: center;
-}
+.load {
+    margin-top: 25%;
 
-img {
-    width: 80%;
-    margin: auto;
+    img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    
+    p { 
+        margin-top: 10%;
+        font-family: $p-font;
+        font-size: $p-size;
+        text-align: center;
+        padding: 0% 2%;
+    }
 }

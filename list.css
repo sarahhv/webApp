@@ -5,41 +5,39 @@
 
 /* Fonts and font sizes */
 /* Colors */
-body {
+.shoppping-list {
   background-color: rgba(229, 251, 201, 0.2);
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
 
-header {
+.shopping-list header {
   grid-area: header;
   background-color: #D0F79E;
   width: 100%;
   padding: 2% 0%;
   display: flex;
   justify-content: space-between; }
-  header button {
+  .shopping-list header button {
     width: 20%;
     border: none;
     background-color: transparent;
     font-size: 1.7em; }
-
-h1 {
-  font-size: 2.1em;
-  font-family: "Century Gothic", sans-serif;
-  text-align: center;
-  color: #71A133; }
-
-.shopping {
+  .shopping-list header h1 {
+    font-size: 2.1em;
+    font-family: "Century Gothic", sans-serif;
+    text-align: center;
+    color: #71A133; }
+.shopping-list .shopping {
   grid-area: main;
   margin: 5%;
   font-size: 1.8em;
   font-family: "Yu Gothic UI Light", sans-serif; }
-  .shopping .box {
+  .shopping-list .shopping .box {
     width: 25px;
     height: 25px; }
-  .shopping button {
+  .shopping-list .shopping button {
     width: 25px;
     height: 25px;
     float: right;
@@ -48,15 +46,14 @@ h1 {
     font-size: 0.8em;
     color: red;
     font-weight: bold; }
-
-footer {
+.shopping-list footer {
   grid-area: footer;
   position: fixed;
-  bottom: 0;
+  bottom: 18px;
   width: 100%;
   display: flex;
   justify-content: center; }
-  footer button {
+  .shopping-list footer button {
     background-color: #71A133;
     border: none;
     border-radius: 50%;
