@@ -46,6 +46,7 @@ tilbage.addEventListener('click', goBack, true);
 tilbageEt.addEventListener('click', goBackEt, true);
 tilbageTo.addEventListener('click', goBackTo, true);
 
+/* Shopping til Add og omvendt */
 var d = document.getElementById("go-shopping");
 var e = document.getElementById("go-fridge");
 
