@@ -10,9 +10,12 @@ sans-serif;
 $h1-size: 2.1em;
 $p-font: "Yu Gothic UI Light",
 sans-serif;
-$p-size:1.8em;
+$p-size:1.4em;
+
 /* Colors */
 $baggrund: rgba(229, 251, 201, 0.2);
+$header-baggrund: #D0F79E;
+$h1-color: #71A133; 
 
 body {
     background-color: $baggrund;
@@ -26,32 +29,30 @@ body {
         "header"
         "nav"
         ".";
-}
-.home {
 
     h1 {
         margin-top: -4%;
         font-size: $h1-size;
         font-family: $h1-font;
         text-align: center;
-        color: #71A133;
+        color: $h1-color;
     }
 
     .header {
         grid-area: header;
     }
-    
+
     .nav {
         grid-area: nav;
     }
-    
+
     .frontfridge {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 70%;
     }
-    
+
     .button {
         border: none;
         display: block;
@@ -61,7 +62,7 @@ body {
         margin: 3% 20%;
         padding: 4% 10%;
         cursor: pointer;
-    
+
         a {
             text-decoration: none;
             border: none;
@@ -70,7 +71,6 @@ body {
             font-size: $p-size;
         }
     }
-
 }
 
 .your-fridge {
@@ -81,12 +81,10 @@ body {
         "header header header header"
         "main main main main"
         "footer footer footer footer";
-}
 
-.your-fridge {
     header {
         grid-area: header;
-        background-color: #D0F79E;
+        background-color: $header-baggrund;
         width: 100%;
         padding: 2% 0%;
         display: flex;
@@ -103,7 +101,7 @@ body {
             font-size: $h1-size;
             font-family: $h1-font;
             text-align: center;
-            color: #71A133;
+            color: $h1-color;
         }
     }
 
@@ -121,7 +119,7 @@ body {
             .first {
                 width: 45%;
                 max-width: 45%;
-                // word-break: break-all;
+                word-break: break-all;
             }
 
             .buttons {
@@ -129,7 +127,7 @@ body {
                 justify-content: end;
             }
         }
-        
+
         button {
             width: 25px;
             height: 25px;
@@ -159,7 +157,7 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-    
+
         button {
             background-color: #71A133;
             border: none;
@@ -168,13 +166,11 @@ body {
             padding: 16px 20px;
             font-size: 20px;
             cursor: pointer;
-    
         }
     }
 }
 
-
-.shoppping-list {
+.shopping-list {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -182,12 +178,10 @@ body {
         "header header header header"
         "main main main main"
         "footer footer footer footer";
-}
 
-.shopping-list {
     header {
         grid-area: header;
-        background-color: #D0F79E;
+        background-color: $header-baggrund;
         width: 100%;
         padding: 2% 0%;
         display: flex;
@@ -204,7 +198,7 @@ body {
             font-size: $h1-size;
             font-family: $h1-font;
             text-align: center;
-            color: #71A133;
+            color: $h1-color;
         }
     }
 
@@ -215,8 +209,9 @@ body {
         font-family: $p-font;
 
         .box {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
+            font-size: 0.8em;
         }
 
         button {
@@ -251,20 +246,155 @@ body {
     }
 }
 
-.modal-box {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header header header"
-        "section section main main"
-    ;
+.add-food {
+    visibility: hidden;
+    margin: 0;
+    border-radius: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: $baggrund;
+    font-family: $p-font;
+
+    .buttongroup {
+        .button {
+            background-color: #71a133;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 4em;
+            width: 60%;
+            display: block;
+            margin: auto;
+            margin-bottom: 5%;
+            padding-bottom: 80px;
+            padding-top: 80px;
+            border-radius: 50px;
+            font-family: "Yu Gothic UI Light", sans-serif;
+        }
+    }
+
+    .scan {
+        width: 20%;
+        font-size: 3em;
+        margin-left: 39%;
+        background-color: #71a133;
+        color: white;
+        margin-top: 15%;
+        border-radius: 50px;
+        padding-top: 25px;
+        padding-bottom: 29px;
+        font-family: "Yu Gothic UI Light", sans-serif;
+    }
+
+    h1 {
+        font-family: $h1-font;
+        text-align: center;
+        font-size: $h1-size;
+        color: $h1-color;
+        margin-bottom: 25%;
+        background-color: $header-baggrund;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 95px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        top: 52px;
+        left: 82%;
+        color: #d0f79e;
+    }
+}
+
+.load {
+    margin-top: 25%;
+
+    img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    p {
+        margin-top: 10%;
+        font-family: $p-font;
+        font-size: 4em;
+        text-align: center;
+        padding: 0% 2%;
+        word-break: break-all;
+    }
+}
+
+.error {
+    p {
+        font-family: $p-font;
+        font-size: 4em;
+    }
+
+    h1 {
+        font-family: $h1-font;
+        width: 100%;
+        font-size: 5em;
+    }
+
+    .mainheader {
+        background-color: $header-baggrund;
+        color: $h1-color;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: relative;
+    }
+
+    body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 90px;
+        margin-top: 100px;
+    }
+
+    main {
+        height: 100%;
+    }
 }
 
 .modal-box {
     width: 100%;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "section section main main";
 
     header {
         grid-area: header;
@@ -321,23 +451,5 @@ body {
             background-color: transparent;
             font-size: $p-size;
         }
-    }
-}
-
-.load {
-    margin-top: 25%;
-
-    img {
-        display: block;
-        width: 80%;
-        margin: auto;
-    }
-    
-    p { 
-        margin-top: 10%;
-        font-family: $p-font;
-        font-size: $p-size;
-        text-align: center;
-        padding: 0% 2%;
     }
 }

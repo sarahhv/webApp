@@ -12,171 +12,278 @@ body {
   display: grid;
   grid-gap: 20px;
   grid-template-areas: "." "header" "nav" "."; }
-
-.home h1 {
-  margin-top: -4%;
-  font-size: 2.1em;
-  font-family: "Century Gothic", sans-serif;
-  text-align: center;
-  color: #71A133; }
-.home .header {
-  grid-area: header; }
-.home .nav {
-  grid-area: nav; }
-.home .frontfridge {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%; }
-.home .button {
-  border: none;
-  display: block;
-  background-color: #71a133;
-  text-align: center;
-  width: 60%;
-  margin: 3% 20%;
-  padding: 4% 10%;
-  cursor: pointer; }
-  .home .button a {
-    text-decoration: none;
+  .home h1 {
+    margin-top: -4%;
+    font-size: 2.1em;
+    font-family: "Century Gothic", sans-serif;
+    text-align: center;
+    color: #71A133; }
+  .home .header {
+    grid-area: header; }
+  .home .nav {
+    grid-area: nav; }
+  .home .frontfridge {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
+  .home .button {
     border: none;
-    color: #E5FBCA;
-    font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: 1.8em; }
+    display: block;
+    background-color: #71a133;
+    text-align: center;
+    width: 60%;
+    margin: 3% 20%;
+    padding: 4% 10%;
+    cursor: pointer; }
+    .home .button a {
+      text-decoration: none;
+      border: none;
+      color: #E5FBCA;
+      font-family: "Yu Gothic UI Light", sans-serif;
+      font-size: 1.4em; }
 
 .your-fridge {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
-
-.your-fridge header {
-  grid-area: header;
-  background-color: #D0F79E;
-  width: 100%;
-  padding: 2% 0%;
-  display: flex;
-  justify-content: space-between; }
-  .your-fridge header button {
-    width: 20%;
-    border: none;
-    background-color: transparent;
-    font-size: 1.7em; }
-  .your-fridge header h1 {
-    font-size: 2.1em;
-    font-family: "Century Gothic", sans-serif;
-    text-align: center;
-    color: #71A133; }
-.your-fridge .fridge {
-  grid-area: main;
-  margin: 2%;
-  font-size: 1.8em;
-  font-family: "Yu Gothic UI Light", sans-serif; }
-  .your-fridge .fridge p {
+  .your-fridge header {
+    grid-area: header;
+    background-color: #D0F79E;
     width: 100%;
+    padding: 2% 0%;
     display: flex;
     justify-content: space-between; }
-    .your-fridge .fridge p .first {
-      width: 45%;
-      max-width: 45%; }
-    .your-fridge .fridge p .buttons {
+    .your-fridge header button {
+      width: 20%;
+      border: none;
+      background-color: transparent;
+      font-size: 1.7em; }
+    .your-fridge header h1 {
+      font-size: 2.1em;
+      font-family: "Century Gothic", sans-serif;
+      text-align: center;
+      color: #71A133; }
+  .your-fridge .fridge {
+    grid-area: main;
+    margin: 2%;
+    font-size: 1.4em;
+    font-family: "Yu Gothic UI Light", sans-serif; }
+    .your-fridge .fridge p {
+      width: 100%;
       display: flex;
-      justify-content: end; }
-  .your-fridge .fridge button {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: none;
-    font-size: 0.8em;
-    font-weight: bold; }
-  .your-fridge .fridge .no {
-    color: red; }
-  .your-fridge .fridge .expired {
-    color: red; }
-  .your-fridge .fridge .new {
-    color: green; }
-.your-fridge footer {
-  grid-area: footer;
-  position: fixed;
-  bottom: 18px;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .your-fridge footer button {
-    background-color: #71A133;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    padding: 16px 20px;
-    font-size: 20px;
-    cursor: pointer; }
+      justify-content: space-between; }
+      .your-fridge .fridge p .first {
+        width: 45%;
+        max-width: 45%;
+        word-break: break-all; }
+      .your-fridge .fridge p .buttons {
+        display: flex;
+        justify-content: end; }
+    .your-fridge .fridge button {
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border: none;
+      font-size: 0.8em;
+      font-weight: bold; }
+    .your-fridge .fridge .no {
+      color: red; }
+    .your-fridge .fridge .expired {
+      color: red; }
+    .your-fridge .fridge .new {
+      color: green; }
+  .your-fridge footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .your-fridge footer button {
+      background-color: #71A133;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      padding: 16px 20px;
+      font-size: 20px;
+      cursor: pointer; }
 
-.shoppping-list {
+.shopping-list {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+  .shopping-list header {
+    grid-area: header;
+    background-color: #D0F79E;
+    width: 100%;
+    padding: 2% 0%;
+    display: flex;
+    justify-content: space-between; }
+    .shopping-list header button {
+      width: 20%;
+      border: none;
+      background-color: transparent;
+      font-size: 1.7em; }
+    .shopping-list header h1 {
+      font-size: 2.1em;
+      font-family: "Century Gothic", sans-serif;
+      text-align: center;
+      color: #71A133; }
+  .shopping-list .shopping {
+    grid-area: main;
+    margin: 5%;
+    font-size: 1.4em;
+    font-family: "Yu Gothic UI Light", sans-serif; }
+    .shopping-list .shopping .box {
+      width: 20px;
+      height: 20px;
+      font-size: 0.8em; }
+    .shopping-list .shopping button {
+      width: 25px;
+      height: 25px;
+      float: right;
+      background-color: transparent;
+      border: none;
+      font-size: 0.8em;
+      color: red;
+      font-weight: bold; }
+  .shopping-list footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .shopping-list footer button {
+      background-color: #71A133;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      padding: 16px 20px;
+      font-size: 20px;
+      cursor: pointer; }
 
-.shopping-list header {
-  grid-area: header;
-  background-color: #D0F79E;
+.add-food {
+  visibility: hidden;
+  margin: 0;
+  border-radius: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  padding: 2% 0%;
-  display: flex;
-  justify-content: space-between; }
-  .shopping-list header button {
+  height: 100%;
+  background-color: rgba(229, 251, 201, 0.2);
+  font-family: "Yu Gothic UI Light", sans-serif; }
+  .add-food .buttongroup .button {
+    background-color: #71a133;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4em;
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-bottom: 5%;
+    padding-bottom: 80px;
+    padding-top: 80px;
+    border-radius: 50px;
+    font-family: "Yu Gothic UI Light", sans-serif; }
+  .add-food .scan {
     width: 20%;
-    border: none;
-    background-color: transparent;
-    font-size: 1.7em; }
-  .shopping-list header h1 {
-    font-size: 2.1em;
+    font-size: 3em;
+    margin-left: 39%;
+    background-color: #71a133;
+    color: white;
+    margin-top: 15%;
+    border-radius: 50px;
+    padding-top: 25px;
+    padding-bottom: 29px;
+    font-family: "Yu Gothic UI Light", sans-serif; }
+  .add-food h1 {
     font-family: "Century Gothic", sans-serif;
     text-align: center;
-    color: #71A133; }
-.shopping-list .shopping {
-  grid-area: main;
-  margin: 5%;
-  font-size: 1.8em;
-  font-family: "Yu Gothic UI Light", sans-serif; }
-  .shopping-list .shopping .box {
-    width: 25px;
-    height: 25px; }
-  .shopping-list .shopping button {
-    width: 25px;
-    height: 25px;
-    float: right;
-    background-color: transparent;
-    border: none;
-    font-size: 0.8em;
-    color: red;
-    font-weight: bold; }
-.shopping-list footer {
-  grid-area: footer;
-  position: fixed;
-  bottom: 18px;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .shopping-list footer button {
-    background-color: #71A133;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    padding: 16px 20px;
-    font-size: 20px;
-    cursor: pointer; }
+    font-size: 2.1em;
+    color: #71A133;
+    margin-bottom: 25%;
+    background-color: #D0F79E;
+    padding-bottom: 30px;
+    padding-top: 30px; }
+  .add-food .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 95px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 52px;
+    left: 82%;
+    color: #d0f79e; }
 
-.modal-box {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
-  grid-template-areas: "header header header header" "section section main main"; }
+.load {
+  margin-top: 25%; }
+  .load img {
+    display: block;
+    width: 80%;
+    margin: auto; }
+  .load p {
+    margin-top: 10%;
+    font-family: "Yu Gothic UI Light", sans-serif;
+    font-size: 4em;
+    text-align: center;
+    padding: 0% 2%;
+    word-break: break-all; }
+
+.error p {
+  font-family: "Yu Gothic UI Light", sans-serif;
+  font-size: 4em; }
+.error h1 {
+  font-family: "Century Gothic", sans-serif;
+  width: 100%;
+  font-size: 5em; }
+.error .mainheader {
+  background-color: #D0F79E;
+  color: #71A133;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative; }
+.error body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%; }
+.error img {
+  width: 100%;
+  margin-bottom: 90px;
+  margin-top: 100px; }
+.error main {
+  height: 100%; }
 
 .modal-box {
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "section section main main"; }
   .modal-box header {
     grid-area: header;
     background-color: #D0F79E;
@@ -213,23 +320,10 @@ body {
       border: 3px solid black;
       text-align: center;
       font-family: "Yu Gothic UI Light", sans-serif;
-      font-size: 1.8em; }
+      font-size: 1.4em; }
     .modal-box section button {
       border: none;
       background-color: transparent;
-      font-size: 1.8em; }
-
-.load {
-  margin-top: 25%; }
-  .load img {
-    display: block;
-    width: 80%;
-    margin: auto; }
-  .load p {
-    margin-top: 10%;
-    font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: 1.8em;
-    text-align: center;
-    padding: 0% 2%; }
+      font-size: 1.4em; }
 
 /*# sourceMappingURL=style.css.map */
