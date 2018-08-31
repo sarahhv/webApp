@@ -41,17 +41,6 @@ var btnGoShopping = document.getElementById("go-shopping");
 var btnGoFridge = document.getElementById("go-fridge");
 
 // Kortere version af funktionerne 
-
-/* function goShopping() {
-    document.getElementById("your-fridge").style.display = "none";
-    document.getElementById("shopping-list").style.display = "grid";
-}
-
-function goFridge() {
-    document.getElementById("shopping-list").style.display = "none";
-    document.getElementById("your-fridge").style.display = "grid";
-} */
-
 btnGoShopping.addEventListener('click', () => {
     document.getElementById("your-fridge").style.display = "none";
     document.getElementById("shopping-list").style.display = "grid";
