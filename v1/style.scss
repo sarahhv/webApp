@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts and font sizes */
+$h1-font: "Century Gothic",
+sans-serif;
+$h1-size: 2.1em;
+$p-font: "Yu Gothic UI Light",
+sans-serif;
+$p-size:1.5em;
+/* Colors */
+$baggrund: rgba(229, 251, 201, 0.5);
+$header-baggrund: #D0F79E;
+$h1-color: #71A133;
+
+
+body {
+    background-color: $baggrund;
+    height: 100%;  
+} 
+
+#home {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas:
+        ". . ."
+        ". header ."
+        ". nav ."
+        ". . .";
+
+    header {
+        grid-area: header;
+        margin: 20% 0% 0%;
+
+        .frontfridge {
+            display: block;
+            width: 100%;
+            max-height: 450px;
+        }
+    }
+
+    nav {
+        grid-area: nav;
+
+        button {
+            border: none;
+            border-radius: 20px;
+            background-color: #71a133;
+            text-align: center;
+            width: 100%;
+            margin: 6% 0% 0%;
+            padding: 4% 5%;
+            color: white;
+            font-family: $p-font;
+            font-size: $p-size;
+        }
+    }
+}
+
+#your-fridge {
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+
+    header {
+        grid-area: header;
+        background-color: $header-baggrund;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: $h1-color;
+        }
+    }
+
+    .fridge {
+        grid-area: main;
+        margin: 5%;
+        font-size: $p-size;
+        font-family: $p-font;
+
+        p {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .first {
+                width: 45%;
+                max-width: 45%;
+                word-break: break-all;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: end;
+            }
+        }
+
+        button {
+            width: 23px;
+            height: 23px;
+            background-color: transparent;
+            border: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .no {
+            color: red;
+        }
+
+        .expired {
+            color: red;
+        }
+
+        .new {
+            color: green;
+        }
+
+        .s-list {
+            margin-left: 10%;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        position: fixed;
+        bottom: 3%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: #71A133;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            padding: 16px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+#add-food {
+    display: none;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        ". aside .";
+
+    header {
+        grid-area: header;
+        background-color: $header-baggrund;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: $h1-color;
+        }
+    }
+
+    main {
+        grid-area: main;
+        margin-top: 20%; 
+
+        button {
+            display: block;
+            background-color: #71a133;
+            width: 100%;
+            border-radius: 20px;
+            border: none;
+            margin: 6% 0% 0%;
+            padding: 4% 5%;
+            color: white;
+            text-align: center;
+            font-size: $p-size;
+            font-family: $p-font;
+        }
+
+    }
+
+    aside {
+        grid-area: aside;
+
+        button {
+            display: block;
+            background-color: #71a133;
+            width: 60%;
+            border-radius: 20px;
+            border: none;
+            padding: 4% 5%;
+            margin: 6% auto 0%;
+            color: white;
+            text-align: center;
+            font-size: $p-size;
+            font-family: $p-font;
+        }
+    }
+}
+
+#shopping-list {
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+
+    header {
+        grid-area: header;
+        background-color: $header-baggrund;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: $h1-color;
+        }
+    }
+
+    .shopping {
+        grid-area: main;
+        margin: 5%;
+        font-size: $p-size;
+        font-family: $p-font;
+
+        .box {
+            width: 22px;
+            height: 22px;
+        }
+
+        button {
+            width: 22px;
+            height: 22px;
+            float: right;
+            background-color: transparent;
+            border: none;
+            font-size: 1.1em;
+            color: red;
+            font-weight: bold;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        position: fixed;
+        bottom: 3%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: #71A133;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            padding: 16px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+#load {
+    display: none;
+    margin-top: 25%;
+
+    img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    p {
+        margin-top: 10%;
+        font-family: $p-font;
+        font-size: 4em;
+        text-align: center;
+        padding: 0% 2%;
+        word-break: break-all;
+    }
+}
+
+#error {
+    display: none;
+    p {
+        font-family: $p-font;
+        font-size: 4em;
+    }
+
+    h1 {
+        font-family: $h1-font;
+        width: 100%;
+        font-size: 5em;
+    }
+
+    .mainheader {
+        background-color: $header-baggrund;
+        color: $h1-color;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        position: relative;
+    }
+
+    body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 90px;
+        margin-top: 100px;
+    }
+
+    main {
+        height: 100%;
+    }
+}
+
+#modal-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "section section main main";
+
+    header {
+        grid-area: header;
+        background-color: #D0F79E;
+        width: 100%;
+        padding: 2% 0%;
+        margin-bottom: 10%;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: $h1-size;
+            position: absolute;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: #71A133;
+        }
+    }
+
+    .btn {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        button {
+            font-size: $h1-size;
+            background-color: transparent;
+            margin-bottom: 25%;
+            font-size: 6em;
+        }
+    }
+
+    section {
+        grid-area: section;
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        p {
+            border: 3px solid black;
+            text-align: center;
+            font-family: $p-font;
+            font-size: $p-size;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: $p-size;
+        }
+    }
+}
