@@ -9,6 +9,7 @@ body {
   background-color: rgba(229, 251, 201, 0.5);
   height: 100%; }
 
+/* Home section */
 #home {
   display: grid;
   grid-template-columns: 15% 70% 15%;
@@ -34,6 +35,7 @@ body {
       font-family: "Yu Gothic UI Light", sans-serif;
       font-size: 1.5em; }
 
+/* Your-fridge section */
 #your-fridge {
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
@@ -103,6 +105,7 @@ body {
       font-size: 20px;
       cursor: pointer; }
 
+/* Add-food section */
 #add-food {
   display: none;
   grid-template-columns: 15% 70% 15%;
@@ -154,6 +157,7 @@ body {
       font-size: 1.5em;
       font-family: "Yu Gothic UI Light", sans-serif; }
 
+/* Shopping-list section */
 #shopping-list {
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
@@ -209,6 +213,7 @@ body {
       font-size: 20px;
       cursor: pointer; }
 
+/* Load section */
 #load {
   display: none;
   margin-top: 25%; }
@@ -224,6 +229,7 @@ body {
     padding: 0% 2%;
     word-break: break-all; }
 
+/* Error section */
 #error {
   display: none; }
   #error p {
@@ -256,6 +262,7 @@ body {
   #error main {
     height: 100%; }
 
+/* Modal-box section */
 #modal-box {
   width: 100%;
   padding: 0;

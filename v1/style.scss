@@ -22,6 +22,8 @@ body {
     height: 100%;  
 } 
 
+
+/* Home section */
 #home {
     display: grid;
     grid-template-columns: 15% 70% 15%;
@@ -60,6 +62,7 @@ body {
     }
 }
 
+/* Your-fridge section */
 #your-fridge {
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
@@ -161,6 +164,7 @@ body {
     }
 }
 
+/* Add-food section */
 #add-food {
     display: none;
     grid-template-columns: 15% 70% 15%;
@@ -231,6 +235,7 @@ body {
     }
 }
 
+/* Shopping-list section */
 #shopping-list {
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
@@ -306,6 +311,7 @@ body {
     }
 }
 
+/* Load section */
 #load {
     display: none;
     margin-top: 25%;
@@ -326,6 +332,7 @@ body {
     }
 }
 
+/* Error section */
 #error {
     display: none;
     p {
@@ -370,6 +377,7 @@ body {
     }
 }
 
+/* Modal-box section */
 #modal-box {
     width: 100%;
     padding: 0;
