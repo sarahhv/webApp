@@ -127,10 +127,10 @@ body {
       font-family: "Century Gothic", sans-serif;
       text-align: center;
       color: #71A133; }
-  #add-food main {
+  #add-food section {
     grid-area: main;
     margin-top: 20%; }
-    #add-food main button {
+    #add-food section button {
       display: block;
       background-color: #71a133;
       width: 100%;
@@ -259,7 +259,7 @@ body {
     width: 100%;
     margin-bottom: 90px;
     margin-top: 100px; }
-  #error main {
+  #error section {
     height: 100%; }
 
 /* Modal-box section */
