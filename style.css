@@ -9,6 +9,7 @@ body {
   background-color: rgba(229, 251, 201, 0.5);
   height: 100%; }
 
+/* Home section */
 #home {
   display: grid;
   grid-template-columns: 15% 70% 15%;
@@ -34,11 +35,15 @@ body {
       font-family: "Yu Gothic UI Light", sans-serif;
       font-size: 1.5em; }
 
+/* Your-fridge section */
 #your-fridge {
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
-  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+  /* The Modal (background) */
+  /* Modal Content */
+  /* The Close Button */ }
   #your-fridge header {
     grid-area: header;
     background-color: #D0F79E;
@@ -102,7 +107,75 @@ body {
       padding: 16px 20px;
       font-size: 20px;
       cursor: pointer; }
+  #your-fridge #modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */ }
+  #your-fridge .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    flex-direction: column; }
+    #your-fridge .modal-content header {
+      padding-left: 5%; }
+    #your-fridge .modal-content .indhold {
+      display: flex;
+      margin: 5%; }
+    #your-fridge .modal-content .stepper {
+      width: 45%;
+      margin: auto 0; }
+      #your-fridge .modal-content .stepper input {
+        width: 100%;
+        background-color: rgba(229, 251, 201, 0.5);
+        border: 1px solid #D0F79E;
+        text-align: center;
+        font-family: "Yu Gothic UI Light", sans-serif;
+        font-size: 1.5em; }
+    #your-fridge .modal-content .btn {
+      width: 45%;
+      height: 150px;
+      margin: auto; }
+      #your-fridge .modal-content .btn .fridge {
+        border: none;
+        background-color: transparent;
+        background-image: url(img/iconTo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 70px;
+        margin: 0; }
+      #your-fridge .modal-content .btn .list {
+        border: none;
+        background-color: transparent;
+        font-size: 3.5em;
+        width: 100%;
+        height: 70px;
+        margin-top: 5%; }
+  #your-fridge .close {
+    color: red;
+    float: right;
+    font-size: 1.7em;
+    font-weight: bold; }
 
+/* Add-food section */
 #add-food {
   display: none;
   grid-template-columns: 15% 70% 15%;
@@ -124,10 +197,10 @@ body {
       font-family: "Century Gothic", sans-serif;
       text-align: center;
       color: #71A133; }
-  #add-food main {
+  #add-food section {
     grid-area: main;
     margin-top: 20%; }
-    #add-food main button {
+    #add-food section button {
       display: block;
       background-color: #71a133;
       width: 100%;
@@ -154,6 +227,7 @@ body {
       font-size: 1.5em;
       font-family: "Yu Gothic UI Light", sans-serif; }
 
+/* Shopping-list section */
 #shopping-list {
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
@@ -176,6 +250,13 @@ body {
       font-family: "Century Gothic", sans-serif;
       text-align: center;
       color: #71A133; }
+    #shopping-list header #go-fridge {
+      background-image: url(img/logo.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20%;
+      height: 42px; }
   #shopping-list .shopping {
     grid-area: main;
     margin: 5%;
@@ -209,6 +290,7 @@ body {
       font-size: 20px;
       cursor: pointer; }
 
+/* Load section */
 #load {
   display: none;
   margin-top: 25%; }
@@ -224,6 +306,7 @@ body {
     padding: 0% 2%;
     word-break: break-all; }
 
+/* Error section */
 #error {
   display: none; }
   #error p {
@@ -253,57 +336,75 @@ body {
     width: 100%;
     margin-bottom: 90px;
     margin-top: 100px; }
-  #error main {
+  #error section {
     height: 100%; }
 
-#modal-box {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: none;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: auto;
-  grid-template-areas: "header header header header" "section section main main"; }
-  #modal-box header {
-    grid-area: header;
-    background-color: #D0F79E;
+/* Modal-box section */
+/* #modal-box {
     width: 100%;
-    padding: 2% 0%;
-    margin-bottom: 10%; }
-    #modal-box header button {
-      width: 20%;
-      border: none;
-      background-color: transparent;
-      font-size: 2.1em;
-      position: absolute; }
-    #modal-box header h1 {
-      font-size: 2.1em;
-      font-family: "Century Gothic", sans-serif;
-      text-align: center;
-      color: #71A133; }
-  #modal-box .btn {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    margin: 0% 10%; }
-    #modal-box .btn button {
-      font-size: 2.1em;
-      background-color: transparent;
-      margin-bottom: 25%;
-      font-size: 6em; }
-  #modal-box section {
-    grid-area: section;
-    display: flex;
-    flex-direction: column;
-    margin: 0% 10%; }
-    #modal-box section p {
-      border: 3px solid black;
-      text-align: center;
-      font-family: "Yu Gothic UI Light", sans-serif;
-      font-size: 1.5em; }
-    #modal-box section button {
-      border: none;
-      background-color: transparent;
-      font-size: 1.5em; }
+    padding: 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "section section main main";
 
-/*# sourceMappingURL=style.css.map */
+    header {
+        grid-area: header;
+        background-color: #D0F79E;
+        width: 100%;
+        padding: 2% 0%;
+        margin-bottom: 10%;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: $h1-size;
+            position: absolute;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: #71A133;
+        }
+    }
+
+    .btn {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        button {
+            font-size: $h1-size;
+            background-color: transparent;
+            margin-bottom: 25%;
+            font-size: 6em;
+        }
+    }
+
+    section {
+        grid-area: section;
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        p {
+            border: 3px solid black;
+            text-align: center;
+            font-family: $p-font;
+            font-size: $p-size;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: $p-size;
+        }
+    }
+} */
