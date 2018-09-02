@@ -9,6 +9,9 @@ body {
   background-color: rgba(229, 251, 201, 0.5);
   height: 100%; }
 
+header i {
+  -webkit-text-stroke: 3px #D0F79E; }
+
 /* Home section */
 #home {
   display: grid;
@@ -251,12 +254,13 @@ body {
       text-align: center;
       color: #71A133; }
     #shopping-list header #go-fridge {
+      margin: auto;
       background-image: url(img/logo.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       width: 20%;
-      height: 42px; }
+      height: 50px; }
   #shopping-list .shopping {
     grid-area: main;
     margin: 5%;

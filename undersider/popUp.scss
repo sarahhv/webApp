@@ -15,6 +15,9 @@ $p-size:1.8em;
 $baggrund: rgba(229, 251, 201, 0.2);
 
 .modal-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
     background-color: $baggrund;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -23,12 +26,6 @@ $baggrund: rgba(229, 251, 201, 0.2);
         "header header header header"
         "section section main main"
     ;
-}
-
-.modal-box {
-    width: 100%;
-    padding: 0;
-    margin: 0;
 
     header {
         grid-area: header;
@@ -53,21 +50,7 @@ $baggrund: rgba(229, 251, 201, 0.2);
         }
     }
 
-    .btn {
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        margin: 0% 10%;
-
-        button {
-            font-size: $h1-size;
-            background-color: transparent;
-            margin-bottom: 25%;
-            font-size: 6em;
-        }
-    }
-
-    section {
+    .stepper {
         grid-area: section;
         display: flex;
         flex-direction: column;
@@ -84,6 +67,29 @@ $baggrund: rgba(229, 251, 201, 0.2);
             border: none;
             background-color: transparent;
             font-size: $p-size;
+        }
+    }
+
+    .btn {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        margin: 0% 10%;
+
+        button {
+            font-size: $h1-size;
+            background-color: transparent;
+            margin-bottom: 25%;
+            font-size: 6em;
+        }
+
+        .fridge {
+            background-image: url(img/icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 50px;
         }
     }
 }
