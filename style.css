@@ -22,10 +22,10 @@ header i {
 #home {
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-areas: ". . ." ". header ." ". nav ." ". . ."; }
+  grid-template-areas: ". header ." ". nav ."; }
   #home header {
     grid-area: header;
-    margin: 20% 0% 0%; }
+    margin: 10% 0% 0%; }
     #home header .frontfridge {
       display: block;
       width: 100%;
@@ -34,7 +34,8 @@ header i {
       padding: 10%;
       border-radius: 50%;
       border: none;
-      filter: invert(100%); }
+      filter: invert(100%);
+      margin-bottom: 10%; }
   #home nav {
     grid-area: nav; }
     #home nav button {
