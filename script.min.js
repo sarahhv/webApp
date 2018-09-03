@@ -68,3 +68,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+/* Source for the modal box: 
+https://www.w3schools.com/howto/howto_css_modals.asp */

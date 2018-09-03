@@ -135,7 +135,9 @@ header i {
     border: 1px solid #888;
     width: 80%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    /* Source for the modal box:
+    https://www.w3schools.com/howto/howto_css_modals.asp */ }
     #your-fridge .modal-content header {
       padding-left: 5%; }
     #your-fridge .modal-content .indhold {
