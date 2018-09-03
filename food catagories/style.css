@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+  
+  /* Fonts and font sizes */
+  /* Colors */
+  body {
+    background-color: rgba(229, 251, 201, 0.5);
+    height: 100%; }
+
+button{
+
+    border: none;
+    background: none;
+    font-size: 1em;
+    margin-top: 10%;
+    font-family: "Century Gothic", sans-serif;    
+
+}
