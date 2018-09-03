@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 /* Fonts and font sizes */
 $h1-font: "Century Gothic",
 sans-serif;
@@ -12,17 +16,24 @@ $p-font: "Yu Gothic UI Light",
 sans-serif;
 $p-size:1.5em;
 /* Colors */
-$baggrund: rgba(229, 251, 201, 0.5);
+$baggrund: rgba(229, 251, 201, 0.8);
 $header-baggrund: #D0F79E;
 $h1-color: #71A133;
 
-
 body {
-    background-color: $baggrund;
-    height: 100%;  
-} 
+    // background-color: $baggrund;
+    background-image: url(img/fridge.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
 
-
+header {
+    i {
+        -webkit-text-stroke: 3px $header-baggrund;
+    }
+}
 /* Home section */
 #home {
     display: grid;
@@ -41,6 +52,11 @@ body {
             display: block;
             width: 100%;
             max-height: 450px;
+            background-color: #8E5ECC;
+            padding: 10%;
+            border-radius: 50%;
+            border: none;
+            filter: invert(100%);
         }
     }
 
@@ -64,6 +80,7 @@ body {
 
 /* Your-fridge section */
 #your-fridge {
+    background-color: $baggrund;
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -97,11 +114,13 @@ body {
 
     .fridge {
         grid-area: main;
-        margin: 5%;
+        // margin: 5%;
         font-size: $p-size;
         font-family: $p-font;
+        height: 100vh;  
 
         p {
+            padding: 3% 5% 0%;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -123,7 +142,7 @@ body {
             height: 23px;
             background-color: transparent;
             border: none;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
         }
 
@@ -137,10 +156,6 @@ body {
 
         .new {
             color: green;
-        }
-
-        .s-list {
-            margin-left: 10%;
         }
     }
 
@@ -162,6 +177,99 @@ body {
             cursor: pointer;
         }
     }
+
+    /* The Modal (background) */
+    #modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        border: 1px solid #888;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        header {
+            padding-left: 5%;
+        }
+
+        .indhold {
+            display: flex;
+            margin: 5%;
+        }
+        .stepper {
+            width: 45%;
+            margin: auto 0;
+
+            input {
+                width: 100%;
+                background-color: $baggrund;
+                border: 1px solid $header-baggrund;
+                text-align: center;
+                font-family: $p-font;
+                font-size: $p-size;
+            }
+        }
+
+        .btn {
+            width: 45%;
+            height: 150px;
+            margin: auto;
+
+            .fridge {
+                border: none;
+                background-color: transparent;
+                background-image: url(img/iconTo.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 70px;
+                margin: 0;
+            }
+
+            .list {
+                border: none;
+                background-color: transparent;
+                font-size: 3.5em;
+                width: 100%;
+                height: 70px;
+                margin-top: 5%;
+            }
+        }
+        /* Source for the modal box:
+        https://www.w3schools.com/howto/howto_css_modals.asp */
+    }
+
+    /* The Close Button */
+    .close {
+        color: red;
+        float: right;
+        font-size: 1.7em;
+        font-weight: bold;
+    }
+
+
 }
 
 /* Add-food section */
@@ -198,7 +306,7 @@ body {
 
     section {
         grid-area: main;
-        margin-top: 20%; 
+        margin-top: 20%;
 
         button {
             display: block;
@@ -213,7 +321,6 @@ body {
             font-size: $p-size;
             font-family: $p-font;
         }
-
     }
 
     aside {
@@ -237,6 +344,7 @@ body {
 
 /* Shopping-list section */
 #shopping-list {
+    background-color: $baggrund;
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -266,6 +374,16 @@ body {
             text-align: center;
             color: $h1-color;
         }
+
+        #go-fridge {
+            margin: auto;
+            background-image: url(img/logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 20%;
+            height: 50px;
+        }
     }
 
     .shopping {
@@ -273,6 +391,7 @@ body {
         margin: 5%;
         font-size: $p-size;
         font-family: $p-font;
+        height: 100vh;
 
         .box {
             width: 22px;
@@ -335,6 +454,7 @@ body {
 /* Error section */
 #error {
     display: none;
+
     p {
         font-family: $p-font;
         font-size: 4em;
@@ -378,7 +498,7 @@ body {
 }
 
 /* Modal-box section */
-#modal-box {
+/* #modal-box {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -445,4 +565,4 @@ body {
             font-size: $p-size;
         }
     }
-}
+} */
