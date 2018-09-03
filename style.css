@@ -13,7 +13,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%; }
+  background-attachment: fixed;
+  height: 100vh; }
 
 header i {
   -webkit-text-stroke: 3px #D0F79E; }
@@ -22,7 +23,8 @@ header i {
 #home {
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-areas: ". header ." ". nav ."; }
+  grid-template-areas: ". header ." ". nav .";
+  margin: auto; }
   #home header {
     grid-area: header;
     margin: 10% 0% 0%; }
@@ -61,6 +63,7 @@ header i {
   /* Modal Content */
   /* The Close Button */ }
   #your-fridge header {
+    position: fixed;
     grid-area: header;
     background-color: #D0F79E;
     width: 100%;
@@ -79,6 +82,7 @@ header i {
       color: #71A133; }
   #your-fridge .fridge {
     grid-area: main;
+    margin-top: 35px;
     font-size: 1.5em;
     font-family: "Yu Gothic UI Light", sans-serif;
     height: 100vh; }
@@ -91,9 +95,6 @@ header i {
         width: 45%;
         max-width: 45%;
         word-break: break-all; }
-      #your-fridge .fridge p .buttons {
-        display: flex;
-        justify-content: end; }
     #your-fridge .fridge button {
       width: 23px;
       height: 23px;
@@ -122,6 +123,8 @@ header i {
       padding: 16px 20px;
       font-size: 20px;
       cursor: pointer; }
+  #your-fridge #btnModal {
+    position: relative; }
   #your-fridge #modal {
     display: none;
     /* Hidden by default */
@@ -151,7 +154,8 @@ header i {
     /* Source for the modal box:
     https://www.w3schools.com/howto/howto_css_modals.asp */ }
     #your-fridge .modal-content header {
-      padding-left: 5%; }
+      padding-left: 5%;
+      position: relative; }
     #your-fridge .modal-content .indhold {
       display: flex;
       margin: 5%; }
