@@ -30,11 +30,6 @@ body {
     height: 100vh;
 }
 
-header {
-    i {
-        -webkit-text-stroke: 3px $header-baggrund;
-    }
-}
 /* Home section */
 #home {
     display: grid;
@@ -42,7 +37,6 @@ header {
     grid-template-areas:
         ". header ."
         ". nav .";
-
     margin: auto;
 
     header {
@@ -117,10 +111,10 @@ header {
 
     .fridge {
         grid-area: main;
-        margin-top: 35px;
+        margin-top: 80px;
         font-size: $p-size;
         font-family: $p-font;
-        height: 100vh;  
+        height: 100vh;
 
         p {
             padding: 3% 5% 0%;
@@ -179,6 +173,7 @@ header {
     #btnModal {
         position: relative;
     }
+
     /* The Modal (background) */
     #modal {
         display: none;
@@ -219,6 +214,7 @@ header {
             display: flex;
             margin: 5%;
         }
+
         .stepper {
             width: 45%;
             margin: auto 0;
@@ -259,6 +255,7 @@ header {
                 margin-top: 5%;
             }
         }
+
         /* Source for the modal box:
         https://www.w3schools.com/howto/howto_css_modals.asp */
     }
@@ -270,8 +267,6 @@ header {
         font-size: 1.7em;
         font-weight: bold;
     }
-
-
 }
 
 /* Add-food section */
@@ -356,6 +351,7 @@ header {
         "footer footer footer footer";
 
     header {
+        position: fixed;
         grid-area: header;
         background-color: $header-baggrund;
         width: 100%;
@@ -378,22 +374,26 @@ header {
         }
 
         #go-fridge {
-            margin: auto;
-            background-image: url(img/logo.png);
+            background-image: url(img/icon.png);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            width: 20%;
-            height: 50px;
+            height: 40px;
+            margin: 2% 0%;
         }
     }
 
     .shopping {
         grid-area: main;
-        margin: 5%;
+        margin-top: 80px;
         font-size: $p-size;
         font-family: $p-font;
         height: 100vh;
+
+        p {
+            padding: 3% 5% 0%;
+            width: 100%;
+        }
 
         .box {
             width: 22px;
@@ -498,73 +498,3 @@ header {
         height: 100%;
     }
 }
-
-/* Modal-box section */
-/* #modal-box {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: none;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header header header"
-        "section section main main";
-
-    header {
-        grid-area: header;
-        background-color: #D0F79E;
-        width: 100%;
-        padding: 2% 0%;
-        margin-bottom: 10%;
-
-        button {
-            width: 20%;
-            border: none;
-            background-color: transparent;
-            font-size: $h1-size;
-            position: absolute;
-        }
-
-        h1 {
-            font-size: $h1-size;
-            font-family: $h1-font;
-            text-align: center;
-            color: #71A133;
-        }
-    }
-
-    .btn {
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        margin: 0% 10%;
-
-        button {
-            font-size: $h1-size;
-            background-color: transparent;
-            margin-bottom: 25%;
-            font-size: 6em;
-        }
-    }
-
-    section {
-        grid-area: section;
-        display: flex;
-        flex-direction: column;
-        margin: 0% 10%;
-
-        p {
-            border: 3px solid black;
-            text-align: center;
-            font-family: $p-font;
-            font-size: $p-size;
-        }
-
-        button {
-            border: none;
-            background-color: transparent;
-            font-size: $p-size;
-        }
-    }
-} */

@@ -26,15 +26,14 @@
         document.getElementById("home").style.display = "grid";
     }
 
-    btnBack[0].addEventListener('click', goBack);
-    btnBack[1].addEventListener('click', goBack);
-    btnBack[2].addEventListener('click', goBack);
+    for (var btn of btnBack) {
+        btn.addEventListener('click', goBack);
+    }
 
     /* Shopping til Add og omvendt */
     var btnGoShopping = document.getElementById("go-shopping");
     var btnGoFridge = document.getElementById("go-fridge");
-
-    // Kortere version af funktionerne 
+ 
     btnGoShopping.addEventListener('click', () => {
         document.getElementById("your-fridge").style.display = "none";
         document.getElementById("shopping-list").style.display = "grid";
@@ -43,35 +42,54 @@
         document.getElementById("shopping-list").style.display = "none";
         document.getElementById("your-fridge").style.display = "grid";
     });
-
-
     /* All event listener source - baseline for our code:
     https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener */
 
+    //An array of elements
+    var btnModal = document.getElementsByClassName("s-list");
 
-    /* Modal box */
-    var modal = document.getElementById('modal');
-    var btnModal = document.getElementById("btnModal");
+    function goModal() {
+        document.getElementById("modal").style.display = "block";
+    }
+
+    // var btn only exists in this loop as a pointer, 
+    for (var btn of btnModal) {
+        btn.addEventListener('click', goModal);
+    } 
+
+    // Same line just in its original form  
+      /*   for (var i = 0; i < btnModal.length; i++) {
+        btnModal[i].addEventListener(ajdaiowdja);
+    } */
 
     // Get the <span> element that closes the modal
     var btnClose = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
-    btnModal.onclick = function () {
-        modal.style.display = "block";
-    }
-
     // When the user clicks on <span> (x), close the modal
-    btnClose.onclick = function () {
-        modal.style.display = "none";
-    }
+    btnClose.addEventListener('click', () => {
+        document.getElementById("modal").style.display = "none";
+    });
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
+    window.addEventListener('click', ()=> {
         if (event.target == modal) {
             modal.style.display = "none";
         }
+    })
+
+    /* Source for the modal box inspiration: 
+    https://www.w3schools.com/howto/howto_css_modals.asp */
+
+    /* All close buttons on both lists  */
+
+/*      function deleteP (element){
+        element.remove();
     }
 
-    /* Source for the modal box: 
-    https://www.w3schools.com/howto/howto_css_modals.asp */
+    var btnDeleteP = document.getElementsByClassName("no");
+
+    for (var btn of btnDeleteP) {
+        btn.addEventListener('click', deleteP (this));
+    }
+  */
+    //This fordi det skal være selve knappen og elementet der skal removes 
