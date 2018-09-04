@@ -152,7 +152,7 @@ body {
           font-size: 1.5em; }
       #your-fridge #modal .modal-content .btn {
         width: 100%;
-        height: 150px;
+        height: auto;
         margin: auto; }
         #your-fridge #modal .modal-content .btn .list {
           border: none;
@@ -234,7 +234,7 @@ body {
           background-position: left; }
       #your-fridge #modalFridge .modal-content .btn {
         width: 100%;
-        height: 150px;
+        height: auto;
         margin: auto; }
         #your-fridge #modalFridge .modal-content .btn .fridgeModal {
           border: none;
@@ -440,7 +440,7 @@ body {
           font-size: 1.5em; }
       #shopping-list #modalShopping .modal-content .btn {
         width: 100%;
-        height: 150px;
+        height: auto;
         margin: auto; }
         #shopping-list #modalShopping .modal-content .btn .list {
           border: none;
