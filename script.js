@@ -79,17 +79,3 @@
 
     /* Source for the modal box inspiration: 
     https://www.w3schools.com/howto/howto_css_modals.asp */
-
-    /* All close buttons on both lists  */
-
-/*      function deleteP (element){
-        element.remove();
-    }
-
-    var btnDeleteP = document.getElementsByClassName("no");
-
-    for (var btn of btnDeleteP) {
-        btn.addEventListener('click', deleteP (this));
-    }
-  */
-    //This fordi det skal være selve knappen og elementet der skal removes 
