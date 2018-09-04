@@ -106,8 +106,14 @@
         // When the user clicks on class="close", close the modal
         btnLuk.addEventListener('click', () => {
             document.getElementById("modalFridge").style.display = "none";
-            document.getElementById("modalShopping").style.display = "none";
         });
+
+    var btnLukEt = document.getElementsByClassName("lukEt")[0];
+
+    // When the user clicks on class="close", close the modal
+    btnLukEt.addEventListener('click', () => {
+        document.getElementById("modalShopping").style.display = "none";
+    });
     
         // When the user clicks anywhere outside of the modal, close it
         window.addEventListener('click', ()=> {

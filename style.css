@@ -211,14 +211,27 @@ body {
         margin: 5%; }
       #your-fridge #modalFridge .modal-content .searchbar {
         width: 100%;
-        margin: auto 0; }
-        #your-fridge #modalFridge .modal-content .searchbar input {
-          width: 100%;
+        margin: 0 auto; }
+        #your-fridge #modalFridge .modal-content .searchbar input[type=text] {
+          display: block;
+          width: 70%;
+          margin: 0 auto;
+          box-sizing: border-box;
           background-color: rgba(229, 251, 201, 0.8);
           border: 1px solid #D0F79E;
-          text-align: center;
           font-family: "Yu Gothic UI Light", sans-serif;
-          font-size: 1.5em; }
+          font-size: 1.5em;
+          padding-left: 20%;
+          background-image: url(img/search.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-color: #D0F79E;
+          transition: width 1.0s ease-in-out; }
+        #your-fridge #modalFridge .modal-content .searchbar input[type=text]:focus {
+          margin: 0 auto;
+          width: 100%;
+          background-position: left; }
       #your-fridge #modalFridge .modal-content .btn {
         width: 100%;
         height: 150px;
@@ -243,7 +256,8 @@ body {
 #add-food {
   display: none;
   grid-template-columns: 15% 70% 15%;
-  grid-template-areas: "header header header" ". main ." ". aside ."; }
+  grid-template-areas: "header header header" ". main ." ". aside .";
+  /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */ }
   #add-food header {
     grid-area: header;
     background-color: #D0F79E;
@@ -277,12 +291,12 @@ body {
       transition: width 2.0s ease-in-out;
       height: 40px;
       padding-left: 15%; }
-  #add-food input[type=text]:focus {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 40px;
-    background-position: left; }
+    #add-food .search input[type=text]:focus {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 40px;
+      background-position: left; }
   #add-food section {
     grid-area: main;
     margin-top: 20%; }
@@ -435,6 +449,30 @@ body {
           width: 100%;
           height: 70px;
           margin-top: 5%; }
+    #shopping-list #modalShopping .searchbar {
+      width: 100%;
+      margin: 0 auto; }
+      #shopping-list #modalShopping .searchbar input[type=text] {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: rgba(229, 251, 201, 0.8);
+        border: 1px solid #D0F79E;
+        font-family: "Yu Gothic UI Light", sans-serif;
+        font-size: 1.5em;
+        text-align: left;
+        padding-left: 20%;
+        background-image: url(img/search.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #D0F79E;
+        transition: width 1.0s ease-in-out; }
+      #shopping-list #modalShopping .searchbar input[type=text]:focus {
+        margin: 0 auto;
+        width: 100%;
+        background-position: left; }
 
 /* Load section */
 #load {

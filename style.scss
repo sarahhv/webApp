@@ -283,17 +283,33 @@ body {
 
             .searchbar {
                 width: 100%;
-                margin: auto 0;
+                margin: 0 auto;
 
-                input {
-                    width: 100%;
+                input[type=text] {
+                    display: block;
+                    width: 70%;
+                    margin: 0 auto;
+                    box-sizing: border-box;
                     background-color: $baggrund;
                     border: 1px solid $header-baggrund;
-                    text-align: center;
                     font-family: $p-font;
                     font-size: $p-size;
+                    padding-left: 20%;
+                    background-image: url(img/search.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-color: $header-baggrund;
+                    transition: width 1.0s ease-in-out;
+
                 }
-            }
+
+                input[type=text]:focus {
+                    margin: 0 auto;
+                    width: 100%;
+                    background-position: left;
+                }
+            } 
 
             .btn {
                 width: 100%;
@@ -376,15 +392,16 @@ body {
             height: 40px;
             padding-left: 15%;
         }
-    }
 
-    input[type=text]:focus {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        height: 40px;
-        background-position: left;
-    }
+        input[type=text]:focus {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 40px;
+            background-position: left;
+        }
+    } /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */
+
 
     section {
         grid-area: main;
@@ -584,6 +601,36 @@ body {
                 }
             }
         }
+
+        .searchbar {
+            width: 100%;
+            margin: 0 auto;
+
+            input[type=text] {
+                display: block;
+                width: 70%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                background-color: $baggrund;
+                border: 1px solid $header-baggrund;
+                font-family: $p-font;
+                font-size: $p-size;
+                text-align: left;
+                padding-left: 20%;
+                background-image: url(img/search.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: $header-baggrund;
+                transition: width 1.0s ease-in-out;
+            }
+
+            input[type=text]:focus {
+                margin: 0 auto;
+                width: 100%;
+                background-position: left;
+            }
+        } 
     }
 }
 
