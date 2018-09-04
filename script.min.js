@@ -33,8 +33,7 @@
     /* Shopping til Add og omvendt */
     var btnGoShopping = document.getElementById("go-shopping");
     var btnGoFridge = document.getElementById("go-fridge");
-
-    // Kortere version af funktionerne 
+ 
     btnGoShopping.addEventListener('click', () => {
         document.getElementById("your-fridge").style.display = "none";
         document.getElementById("shopping-list").style.display = "grid";
@@ -43,7 +42,6 @@
         document.getElementById("shopping-list").style.display = "none";
         document.getElementById("your-fridge").style.display = "grid";
     });
-
     /* All event listener source - baseline for our code:
     https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener */
 
@@ -84,7 +82,7 @@
 
     /* All close buttons on both lists  */
 
-/*     function deleteP (element){
+/*      function deleteP (element){
         element.remove();
     }
 
@@ -93,5 +91,5 @@
     for (var btn of btnDeleteP) {
         btn.addEventListener('click', deleteP (this));
     }
- */
+  */
     //This fordi det skal være selve knappen og elementet der skal removes 
