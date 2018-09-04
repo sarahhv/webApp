@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 /* Fonts and font sizes */
 $h1-font: "Century Gothic",
 sans-serif;
@@ -12,13 +16,18 @@ $p-font: "Yu Gothic UI Light",
 sans-serif;
 $p-size:1.5em;
 /* Colors */
-$baggrund: rgba(229, 251, 201, 0.5);
+$baggrund: rgba(229, 251, 201, 0.8);
 $header-baggrund: #D0F79E;
 $h1-color: #71A133;
 
 body {
-    background-color: $baggrund;
-    height: 100%;
+    // background-color: $baggrund;
+    background-image: url(img/fridge.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 header {
@@ -31,19 +40,25 @@ header {
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-areas:
-        ". . ."
         ". header ."
-        ". nav ."
-        ". . .";
+        ". nav .";
+
+    margin: auto;
 
     header {
         grid-area: header;
-        margin: 20% 0% 0%;
+        margin: 10% 0% 0%;
 
         .frontfridge {
             display: block;
             width: 100%;
             max-height: 450px;
+            background-color: #8E5ECC;
+            padding: 10%;
+            border-radius: 50%;
+            border: none;
+            filter: invert(100%);
+            margin-bottom: 10%;
         }
     }
 
@@ -67,6 +82,7 @@ header {
 
 /* Your-fridge section */
 #your-fridge {
+    background-color: $baggrund;
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -76,6 +92,7 @@ header {
         "footer footer footer footer";
 
     header {
+        position: fixed;
         grid-area: header;
         background-color: $header-baggrund;
         width: 100%;
@@ -100,11 +117,13 @@ header {
 
     .fridge {
         grid-area: main;
-        margin: 5%;
+        margin-top: 80px;
         font-size: $p-size;
         font-family: $p-font;
+        height: 100vh;  
 
         p {
+            padding: 3% 5% 0%;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -114,11 +133,6 @@ header {
                 max-width: 45%;
                 word-break: break-all;
             }
-
-            .buttons {
-                display: flex;
-                justify-content: end;
-            }
         }
 
         button {
@@ -126,7 +140,7 @@ header {
             height: 23px;
             background-color: transparent;
             border: none;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: bold;
         }
 
@@ -140,10 +154,6 @@ header {
 
         .new {
             color: green;
-        }
-
-        .s-list {
-            margin-left: 10%;
         }
     }
 
@@ -166,6 +176,9 @@ header {
         }
     }
 
+    #btnModal {
+        position: relative;
+    }
     /* The Modal (background) */
     #modal {
         display: none;
@@ -199,6 +212,7 @@ header {
 
         header {
             padding-left: 5%;
+            position: relative;
         }
 
         .indhold {
@@ -332,6 +346,7 @@ header {
 
 /* Shopping-list section */
 #shopping-list {
+    background-color: $baggrund;
     display: none;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -341,6 +356,7 @@ header {
         "footer footer footer footer";
 
     header {
+        position: fixed;
         grid-area: header;
         background-color: $header-baggrund;
         width: 100%;
@@ -375,9 +391,10 @@ header {
 
     .shopping {
         grid-area: main;
-        margin: 5%;
+        margin-top: 80px;
         font-size: $p-size;
         font-family: $p-font;
+        height: 100vh;
 
         .box {
             width: 22px;

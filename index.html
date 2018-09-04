@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Expiration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Sarah Hvalsøe, Amalie, Maria">
@@ -22,7 +23,7 @@
             </header>
             <nav>
                 <button id="see-fridge">See Fridge</button>
-                <button id="see-items">Add Items</button>
+                <button id="see-items">Add Food</button>
                 <button id="see-shopping">Shopping List</button>
             </nav>
         </article>
@@ -44,79 +45,96 @@
                     <span class="first">1x Milk</span>
                     <time datetime="2018-08-23" class="expired">23/08/18</time>
                     <span class="buttons">
-                        <button class="no"><i class="fa fa-close"></i></button>
-                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                        <button class="no">
+                            <i class="fa fa-close"></i></button>
+                        <button class="s-list">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                    </span>
                 </p>
 
                 <p>
                     <span class="first">3x Egg</span>
                     <time datetime="2018-09-20" class="new">20/09/18</time>
                     <span class="buttons">
-                        <button class="no"><i class="fa fa-close"></i></button>
-                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                        <button class="no">
+                            <i class="fa fa-close"></i></button>
+                        <button class="s-list">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                    </span>
                 </p>
 
                 <p> <span class="first">1x Butter</span>
                     <time datetime="2018-08-23" class="expired">23/08/18</time>
                     <span class="buttons">
-                        <button class="no"><i class="fa fa-close"></i></button>
-                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                        <button class="no">
+                            <i class="fa fa-close"></i></button>
+                        <button class="s-list">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                    </span>
                 </p>
 
                 <p><span class="first">5x Oniens</span>
                     <time datetime="2018-09-20" class="new">20/09/18</time>
                     <span class="buttons">
-                        <button class="no"><i class="fa fa-close"></i></button>
-                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                        <button class="no">
+                            <i class="fa fa-close"></i></button>
+                        <button class="s-list">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                    </span>
                 </p>
 
                 <p>
                     <span class="first">7x Tomatoes</span>
                     <time datetime="2018-09-20" class="new">20/09/18</time>
-                    <span class="buttons"><button class="no"><i class="fa fa-close"></i></button>
-                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                    <span class="buttons">
+                        <button class="no">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <button class="s-list">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                    </span>
                 </p>
-            
             </section>
-            <!-- Trigger/Open The Modal -->
-            <button id="btnModal">Open Modal</button>
 
             <!-- The Modal -->
             <div id="modal">
 
-            <!-- Modal content -->
-            <div class="modal-content">
-               
-                <section class="modal-box">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box">
                         <header>
                             <h1>Fruit</h1>
                             <button class="close">
                                 <i class="fa fa-close"></i>
                             </button>
                         </header>
-                <div class="indhold">
-                        <section class="stepper">              
-                            <form action="/action_page.php">
-                                <input type="number" name="amount" step="1" placeholder="Amount">
-                            </form>
-                            <!-- Source for the form: 
+                        <div class="indhold">
+                            <section class="stepper">
+                                <form action="/action_page.php">
+                                    <input type="number" name="amount" step="1" placeholder="Amount">
+                                </form>
+                                <!-- Source for the form: 
                                 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
-                        </section>
-                
-                        <section class="btn">
-                            <button class="fridge">
-                            </button>
-                            <button class="list">
-                                <i class="fa fa-list-ul"></i>
-                                <!-- Onclick remove it  -->
-                            </button>
-                        </section>
-                    </div>
-                </section>
-                <!-- Source for the modal box: 
-                    https://www.w3schools.com/howto/howto_css_modals.asp -->
-            </div>
+                            </section>
 
+                            <section class="btn">
+                                <button class="fridge">
+                                </button>
+                                <button class="list">
+                                    <i class="fa fa-list-ul"></i>
+                                    <!-- Onclick remove it  -->
+                                </button>
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
+                    https://www.w3schools.com/howto/howto_css_modals.asp -->
+                </div>
             </div>
 
             <footer>

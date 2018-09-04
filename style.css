@@ -3,11 +3,18 @@
   margin: 0;
   padding: 0; }
 
+html {
+  height: 100%; }
+
 /* Fonts and font sizes */
 /* Colors */
 body {
-  background-color: rgba(229, 251, 201, 0.5);
-  height: 100%; }
+  background-image: url(img/fridge.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh; }
 
 header i {
   -webkit-text-stroke: 3px #D0F79E; }
@@ -16,14 +23,21 @@ header i {
 #home {
   display: grid;
   grid-template-columns: 15% 70% 15%;
-  grid-template-areas: ". . ." ". header ." ". nav ." ". . ."; }
+  grid-template-areas: ". header ." ". nav .";
+  margin: auto; }
   #home header {
     grid-area: header;
-    margin: 20% 0% 0%; }
+    margin: 10% 0% 0%; }
     #home header .frontfridge {
       display: block;
       width: 100%;
-      max-height: 450px; }
+      max-height: 450px;
+      background-color: #8E5ECC;
+      padding: 10%;
+      border-radius: 50%;
+      border: none;
+      filter: invert(100%);
+      margin-bottom: 10%; }
   #home nav {
     grid-area: nav; }
     #home nav button {
@@ -40,6 +54,7 @@ header i {
 
 /* Your-fridge section */
 #your-fridge {
+  background-color: rgba(229, 251, 201, 0.8);
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
@@ -48,6 +63,7 @@ header i {
   /* Modal Content */
   /* The Close Button */ }
   #your-fridge header {
+    position: fixed;
     grid-area: header;
     background-color: #D0F79E;
     width: 100%;
@@ -66,10 +82,12 @@ header i {
       color: #71A133; }
   #your-fridge .fridge {
     grid-area: main;
-    margin: 5%;
+    margin-top: 80px;
     font-size: 1.5em;
-    font-family: "Yu Gothic UI Light", sans-serif; }
+    font-family: "Yu Gothic UI Light", sans-serif;
+    height: 100vh; }
     #your-fridge .fridge p {
+      padding: 3% 5% 0%;
       width: 100%;
       display: flex;
       justify-content: space-between; }
@@ -77,15 +95,12 @@ header i {
         width: 45%;
         max-width: 45%;
         word-break: break-all; }
-      #your-fridge .fridge p .buttons {
-        display: flex;
-        justify-content: end; }
     #your-fridge .fridge button {
       width: 23px;
       height: 23px;
       background-color: transparent;
       border: none;
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: bold; }
     #your-fridge .fridge .no {
       color: red; }
@@ -93,8 +108,6 @@ header i {
       color: red; }
     #your-fridge .fridge .new {
       color: green; }
-    #your-fridge .fridge .s-list {
-      margin-left: 10%; }
   #your-fridge footer {
     grid-area: footer;
     position: fixed;
@@ -110,6 +123,8 @@ header i {
       padding: 16px 20px;
       font-size: 20px;
       cursor: pointer; }
+  #your-fridge #btnModal {
+    position: relative; }
   #your-fridge #modal {
     display: none;
     /* Hidden by default */
@@ -139,7 +154,8 @@ header i {
     /* Source for the modal box:
     https://www.w3schools.com/howto/howto_css_modals.asp */ }
     #your-fridge .modal-content header {
-      padding-left: 5%; }
+      padding-left: 5%;
+      position: relative; }
     #your-fridge .modal-content .indhold {
       display: flex;
       margin: 5%; }
@@ -148,7 +164,7 @@ header i {
       margin: auto 0; }
       #your-fridge .modal-content .stepper input {
         width: 100%;
-        background-color: rgba(229, 251, 201, 0.5);
+        background-color: rgba(229, 251, 201, 0.8);
         border: 1px solid #D0F79E;
         text-align: center;
         font-family: "Yu Gothic UI Light", sans-serif;
@@ -234,11 +250,13 @@ header i {
 
 /* Shopping-list section */
 #shopping-list {
+  background-color: rgba(229, 251, 201, 0.8);
   display: none;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
   #shopping-list header {
+    position: fixed;
     grid-area: header;
     background-color: #D0F79E;
     width: 100%;
@@ -265,9 +283,10 @@ header i {
       height: 50px; }
   #shopping-list .shopping {
     grid-area: main;
-    margin: 5%;
+    margin-top: 80px;
     font-size: 1.5em;
-    font-family: "Yu Gothic UI Light", sans-serif; }
+    font-family: "Yu Gothic UI Light", sans-serif;
+    height: 100vh; }
     #shopping-list .shopping .box {
       width: 22px;
       height: 22px; }
