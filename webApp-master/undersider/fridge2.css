@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* Fonts and font sizes */
+/* Colors */
+.your-fridge {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+
+.your-fridge header {
+  grid-area: header;
+  background-color: #D0F79E;
+  width: 100%;
+  padding: 2% 0%;
+  display: flex;
+  justify-content: space-between; }
+  .your-fridge header button {
+    width: 20%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.7em; }
+  .your-fridge header h1 {
+    font-size: 2.1em;
+    font-family: "Century Gothic", sans-serif;
+    text-align: center;
+    color: #71A133; }
+.your-fridge .fridge {
+  grid-area: main;
+  margin: 2%;
+  font-size: 1.3em;
+  font-family: "Yu Gothic UI Light", sans-serif; }
+  .your-fridge .fridge p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .your-fridge .fridge p .first {
+      width: 45%;
+      max-width: 45%; }
+    .your-fridge .fridge p .buttons {
+      display: flex;
+      justify-content: end; }
+  .your-fridge .fridge button {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    font-weight: bold; }
+  .your-fridge .fridge .no {
+    color: red; }
+  .your-fridge .fridge .expired {
+    color: red; }
+  .your-fridge .fridge .new {
+    color: green; }
+.your-fridge footer {
+  grid-area: footer;
+  position: fixed;
+  bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .your-fridge footer button {
+    background-color: #71A133;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 16px 20px;
+    font-size: 20px;
+    cursor: pointer; }
+
+/*# sourceMappingURL=fridge2.css.map */

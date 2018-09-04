@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts and font sizes */
+$h1-font: "Century Gothic",
+sans-serif;
+$h1-size: 2.1em;
+$p-font: "Yu Gothic UI Light",
+sans-serif;
+$p-size:1.8em;
+/* Colors */
+$baggrund: rgba(229, 251, 201, 0.2);
+
+.shoppping-list {
+    background-color: $baggrund;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+.shopping-list {
+    header {
+        grid-area: header;
+        background-color: #D0F79E;
+        width: 100%;
+        padding: 2% 0%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 20%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.7em;
+        }
+
+        h1 {
+            font-size: $h1-size;
+            font-family: $h1-font;
+            text-align: center;
+            color: #71A133;
+        }
+    }
+
+    .shopping {
+        grid-area: main;
+        margin: 5%;
+        font-size: $p-size;
+        font-family: $p-font;
+
+        .box {
+            width: 25px;
+            height: 25px;
+        }
+
+        button {
+            width: 25px;
+            height: 25px;
+            float: right;
+            background-color: transparent;
+            border: none;
+            font-size: 0.8em;
+            color: red;
+            font-weight: bold;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        position: fixed;
+        bottom: 18px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: #71A133;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            padding: 16px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
