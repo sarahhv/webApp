@@ -85,28 +85,39 @@
     var btnFPlus = document.getElementsByClassName("Fplus");
     var btnSPlus = document.getElementsByClassName("Splus");
 
-    function goPlus() {
-        document.getElementById("modalSearch").style.display = "block";
+    function goFPlus() {
+        document.getElementById("modalFridge").style.display = "block";
+    }
+
+    function goSPlus () {
+        document.getElementById('modalShopping').style.display = "block";
     }
 
     for (var btn of btnFPlus) {
-        btn.addEventListener('click', goPlus);
+        btn.addEventListener('click', goFPlus);
     } 
 
     for (var btn of btnSPlus) {
-        btn.addEventListener('click', goPlus);
+        btn.addEventListener('click', goSPlus);
     } 
 
     var btnLuk = document.getElementsByClassName("luk")[0];
 
         // When the user clicks on class="close", close the modal
         btnLuk.addEventListener('click', () => {
-            document.getElementById("modalSearch").style.display = "none";
+            document.getElementById("modalFridge").style.display = "none";
+            document.getElementById("modalShopping").style.display = "none";
         });
     
         // When the user clicks anywhere outside of the modal, close it
         window.addEventListener('click', ()=> {
-            if (event.target == modalSearch) {
-                modalSearch.style.display = "none";
+            if (event.target == modalFridge) {
+                modalFridge.style.display = "none";
+            }
+        });
+
+        window.addEventListener('click', ()=> {
+            if (event.target == modalShopping) {
+                modalShopping.style.display = "none";
             }
         });
