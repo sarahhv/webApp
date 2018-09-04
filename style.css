@@ -59,7 +59,7 @@ body {
   /* The Modal for add shopping */
   /* Modal box from the add more plus in footer */
   /* Source for the modal box:
-  https://www.w3schools.com/howto/howto_css_modals.asp */
+      https://www.w3schools.com/howto/howto_css_modals.asp */
   /* The Close Button */ }
   #your-fridge header {
     position: fixed;
@@ -261,6 +261,28 @@ body {
       font-family: "Century Gothic", sans-serif;
       text-align: center;
       color: #71A133; }
+  #add-food .search {
+    width: 20%; }
+    #add-food .search input[type=text] {
+      float: right;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.5em;
+      border: none;
+      background-image: url(img/search.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #D0F79E;
+      transition: width 2.0s ease-in-out;
+      height: 40px;
+      padding-left: 15%; }
+  #add-food input[type=text]:focus {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 40px;
+    background-position: left; }
   #add-food section {
     grid-area: main;
     margin-top: 20%; }
@@ -464,5 +486,5 @@ body {
     height: 100%; }
 
 /* The Modal (background) */
-       /* Source for the modal box:
+/* Source for the modal box:
 https://www.w3schools.com/howto/howto_css_modals.asp */

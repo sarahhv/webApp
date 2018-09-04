@@ -170,9 +170,9 @@ body {
         overflow: auto;
         /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
 
-            /* Modal Content */
+        /* Black w/ opacity */
+        /* Modal Content */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -180,7 +180,7 @@ body {
             width: 80%;
             display: flex;
             flex-direction: column;
-            background-color:#F4FCE9;
+            background-color: #F4FCE9;
 
             header {
                 padding-left: 5%;
@@ -260,8 +260,8 @@ body {
         overflow: auto;
         /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
 
+        /* Black w/ opacity */
         /* Modal Content */
         .modal-content {
             background-color: #fefefe;
@@ -270,7 +270,7 @@ body {
             width: 80%;
             display: flex;
             flex-direction: column;
-            background-color:#F4FCE9;
+            background-color: #F4FCE9;
 
             header {
                 padding-left: 5%;
@@ -310,14 +310,13 @@ body {
                     width: 100%;
                     height: 70px;
                     margin: 5% 0%;
-                } 
+                }
             }
         }
     }
 
-        /* Source for the modal box:
+    /* Source for the modal box:
         https://www.w3schools.com/howto/howto_css_modals.asp */
-
     /* The Close Button */
     .close {
         color: red;
@@ -357,6 +356,34 @@ body {
             text-align: center;
             color: $h1-color;
         }
+    }
+
+    .search {
+        width: 20%;
+
+        input[type=text] {
+            float: right;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: $p-size;
+            border: none;
+            background-image: url(img/search.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: $header-baggrund;
+            transition: width 2.0s ease-in-out;
+            height: 40px;
+            padding-left: 15%;
+        }
+    }
+
+    input[type=text]:focus {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 40px;
+        background-position: left;
     }
 
     section {
@@ -507,8 +534,8 @@ body {
         overflow: auto;
         /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
 
+        /* Black w/ opacity */
         /* Modal Content */
         .modal-content {
             background-color: #fefefe;
@@ -517,7 +544,7 @@ body {
             width: 80%;
             display: flex;
             flex-direction: column;
-            background-color:#F4FCE9;
+            background-color: #F4FCE9;
 
             header {
                 padding-left: 5%;
@@ -554,7 +581,7 @@ body {
                     width: 100%;
                     height: 70px;
                     margin-top: 5%;
-                } 
+                }
             }
         }
     }
@@ -628,5 +655,5 @@ body {
 }
 
 /* The Modal (background) */
-       /* Source for the modal box:
+/* Source for the modal box:
 https://www.w3schools.com/howto/howto_css_modals.asp */
