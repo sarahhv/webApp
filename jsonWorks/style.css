@@ -225,7 +225,6 @@ body {
           font-family: "Yu Gothic UI Light", sans-serif;
           font-size: 1.5em;
           padding-left: 20%;
-          background-image: url(img/search.png);
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
@@ -529,3 +528,5 @@ body {
 /* The Modal (background) */
 /* Source for the modal box:
 https://www.w3schools.com/howto/howto_css_modals.asp */
+
+/*# sourceMappingURL=style.css.map */
