@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Expiration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sarah Hvalsøe, Amalie, Maria">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Home section -->
+        <article id="home">
+            <header><img class="frontfridge" src="img/logo.png" alt="Picture of fridge">
+                <!-- <h1>Exparation</h1> -->
+            </header>
+            <nav>
+                <button id="see-fridge">See Fridge</button>
+                <button id="see-items">Add Food</button>
+                <button id="see-shopping">Shopping List</button>
+            </nav>
+        </article>
+
+        <!-- your-fridge section -->
+        <article id="your-fridge">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Your Fridge</h1>
+                <button id="go-shopping">
+                    <i class="fa fa-list-ul"></i>
+                </button>
+            </header>
+
+            <section class="fridge">
+                <p>
+                    <span class="first">1x Milk</span>
+                    <time datetime="2018-08-23" class="expired">23/08/18</time>
+                    <span class="buttons">
+                        <button class="no"><i class="fa fa-close"></i></button>
+                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                </p>
+
+                <p>
+                    <span class="first">3x Egg</span>
+                    <time datetime="2018-09-20" class="new">20/09/18</time>
+                    <span class="buttons">
+                        <button class="no"><i class="fa fa-close"></i></button>
+                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                </p>
+
+                <p> <span class="first">1x Butter</span>
+                    <time datetime="2018-08-23" class="expired">23/08/18</time>
+                    <span class="buttons">
+                        <button class="no"><i class="fa fa-close"></i></button>
+                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                </p>
+
+                <p><span class="first">5x Oniens</span>
+                    <time datetime="2018-09-20" class="new">20/09/18</time>
+                    <span class="buttons">
+                        <button class="no"><i class="fa fa-close"></i></button>
+                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                </p>
+
+                <p>
+                    <span class="first">7x Tomatoes</span>
+                    <time datetime="2018-09-20" class="new">20/09/18</time>
+                    <span class="buttons"><button class="no"><i class="fa fa-close"></i></button>
+                        <button class="s-list"><i class="fa fa-list-ul"></i></button></span>
+                </p>
+            
+            </section>
+            <!-- Trigger/Open The Modal -->
+            <button id="btnModal">Open Modal</button>
+
+            <!-- The Modal -->
+            <div id="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+               
+                <section class="modal-box">
+                        <header>
+                            <h1>Fruit</h1>
+                            <button class="close">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                <div class="indhold">
+                        <section class="stepper">              
+                            <form action="/action_page.php">
+                                <input type="number" name="amount" step="1" placeholder="Amount">
+                            </form>
+                            <!-- Source for the form: 
+                                https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
+                        </section>
+                
+                        <section class="btn">
+                            <button class="fridge">
+                            </button>
+                            <button class="list">
+                                <i class="fa fa-list-ul"></i>
+                                <!-- Onclick remove it  -->
+                            </button>
+                        </section>
+                    </div>
+                </section>
+                <!-- Source for the modal box: 
+                    https://www.w3schools.com/howto/howto_css_modals.asp -->
+            </div>
+
+            </div>
+
+            <footer>
+                <button>
+                    <i class="fa fa-plus"></i>
+                </button>
+            </footer>
+
+        </article>
+
+        <!-- Add items/Add food section -->
+        <article id="add-food">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Categories</h1>
+                <form class="search">
+                        <input type="text" name="search">
+                      </form>
+            </header>
+            <section>
+                <button>Meat and fish</button>
+                <button>Fruits and vegetables</button>
+                <button>Dairy</button>
+
+            </section>
+
+            <aside>
+                <button>Scan food</button>
+            </aside>
+        </article>
+
+        <!-- Shopping list section -->
+        <article id="shopping-list">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Dairy</h1>
+                <button id="go-fridge">
+                </button>
+            </header>
+
+            <section class="shopping">
+                <p>
+                    Milk
+                    <button>
+                        <i class="fa fa-plus"></i> <!-- Onclick remove it  -->
+                    </button>
+                </p>
+                <p>
+                    Eggs
+                    <button>
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </p>
+
+                <p>
+                    Butter
+                    <button>
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </p>
+
+                <p>
+                Yoghurt
+                    <button>
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </p>
+
+                <p>
+                    Cheese
+                        <button>
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </p>
+
+                    
+                <p>
+                    Bread
+                        <button>
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </p>
+            </section>
+            <footer>
+                <button>
+                    <i class="fa fa-plus"></i>
+                </button>
+            </footer>
+
+        </article>
+
+        <!-- Loading section -->
+        <article id="load">
+            <img src="img/fridge3.gif" alt="loading fridge, refrigerator">
+            <!-- Fridge found on: http://www.mitsubishielectric.com.au/mr-wx500c-s-multi-drawer-refrigerator.html  -->
+            <p>Waiting to fill your fridge...</p>
+        </article>
+
+        <!-- Error section -->
+        <article id="error">
+            <section>
+                <section class="mainheader">
+                    <h1>Error!</h1>
+                </section>
+
+                <img src="img/brokenfridge.jpg" alt="Error">
+
+                <h1>Oh no!</h1>
+                <p>Your page has expired!</p>
+            </section>
+        </article>
+
+    </main>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
