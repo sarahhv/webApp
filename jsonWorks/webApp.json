@@ -1,0 +1,27 @@
+{ "fridge":[
+	{
+		"amount": "1",
+		"title": "Milk",
+		"date": "05-09-2018"
+	},
+	{
+		"amount": "4",
+		"title": "5",
+		"date": "6"
+	},
+	{
+		"amount": "1",
+		"title": "egg",
+		"date": "2019"
+	},
+	{
+		"amount": "",
+		"title": "",
+		"date": ""
+	},
+	{
+		"amount": "",
+		"title": "",
+		"date": ""
+	}
+]}
