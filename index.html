@@ -23,8 +23,8 @@
             </header>
             <nav>
                 <button id="see-fridge">See Fridge</button>
-                <button id="see-items">Add Food</button>
                 <button id="see-shopping">Shopping List</button>
+                <button id="see-items">Add Food</button>
             </nav>
         </article>
 
@@ -107,7 +107,7 @@
                 </p>
             </section>
 
-            <!-- The Modal -->
+            <!-- The Modal-box for add to by shopping list icon -->
             <div id="modal">
 
                 <!-- Modal content -->
@@ -127,10 +127,7 @@
                                 <!-- Source for the form: 
                                 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
                             </section>
-
                             <section class="btn">
-                                <button class="fridge">
-                                </button>
                                 <button class="list">
                                     <i class="fa fa-list-ul"></i>
                                     <!-- Onclick remove it  -->
@@ -144,11 +141,42 @@
             </div>
 
             <footer>
-                <button>
+                <button class="Fplus">
                     <i class="fa fa-plus"></i>
                 </button>
             </footer>
 
+            <!-- Modal box in footer plus sign -->
+            <div id="modalFridge">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box">
+                        <header>
+                            <h1>Search</h1>
+                            <button class="luk">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                        <div class="indhold">
+                            <section class="searchbar">
+                                <form class="search">
+                                        <input type="text" name="search">
+                                </form>
+                                <!-- Source for the form: 
+                                    https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
+                            </section>
+
+                            <section class="btn">
+                                <button class="fridgeModal">
+                                </button>
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
+                        https://www.w3schools.com/howto/howto_css_modals.asp -->
+                </div>
+            </div>
         </article>
 
         <!-- Add items/Add food section -->
@@ -158,9 +186,9 @@
                     <i class="fa fa-arrow-left"></i>
                 </button>
                 <h1>Categories</h1>
-                <button class="search">
-                    <i class="fa fa-search"></i>
-                </button>
+                <form class="search">
+                        <input type="text" name="search">
+                </form>
             </header>
             <section>
                 <button>Meat and fish</button>
@@ -228,10 +256,40 @@
                 </p>
             </section>
             <footer>
-                <button>
+                <button class="Splus">
                     <i class="fa fa-plus"></i>
                 </button>
             </footer>
+
+            <div id="modalShopping">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <section class="modal-box-search">
+                            <header>
+                                <h1>Search</h1>
+                                <button class="lukEt">
+                                    <i class="fa fa-close"></i>
+                                </button>
+                            </header>
+                            <div class="indhold">
+                                <section class="searchbar">
+                                    <form class="search">
+                                            <input type="text" name="search">
+                                    </form>
+                                </section>
+    
+                                <section class="btn">
+                                    <button class="list">
+                                        <i class="fa fa-list-ul"></i>
+                                    </button>
+                                </section>
+                            </div>
+                        </section>
+                        <!-- Source for the modal box: 
+                            https://www.w3schools.com/howto/howto_css_modals.asp -->
+                    </div>
+                </div>
 
         </article>
 
@@ -255,7 +313,6 @@
                 <p>Your page has expired!</p>
             </section>
         </article>
-
     </main>
 
     <script src="script.js"></script>

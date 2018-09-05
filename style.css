@@ -56,8 +56,10 @@ body {
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
   grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
-  /* The Modal (background) */
-  /* Modal Content */
+  /* The Modal for add shopping */
+  /* Modal box from the add more plus in footer */
+  /* Source for the modal box:
+      https://www.w3schools.com/howto/howto_css_modals.asp */
   /* The Close Button */ }
   #your-fridge header {
     position: fixed;
@@ -79,7 +81,7 @@ body {
       color: #71A133; }
   #your-fridge .fridge {
     grid-area: main;
-    margin-top: 80px;
+    padding-top: 60px;
     font-size: 1.5em;
     font-family: "Yu Gothic UI Light", sans-serif;
     height: 100vh; }
@@ -105,23 +107,6 @@ body {
       color: red; }
     #your-fridge .fridge .new {
       color: green; }
-  #your-fridge footer {
-    grid-area: footer;
-    position: fixed;
-    bottom: 3%;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #your-fridge footer button {
-      background-color: #71A133;
-      border: none;
-      border-radius: 50%;
-      color: white;
-      padding: 16px 20px;
-      font-size: 20px;
-      cursor: pointer; }
-  #your-fridge #btnModal {
-    position: relative; }
   #your-fridge #modal {
     display: none;
     /* Hidden by default */
@@ -140,53 +125,127 @@ body {
     overflow: auto;
     /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */ }
-  #your-fridge .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    border: 1px solid #888;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    /* Source for the modal box:
-    https://www.w3schools.com/howto/howto_css_modals.asp */ }
-    #your-fridge .modal-content header {
-      padding-left: 5%;
-      position: relative; }
-    #your-fridge .modal-content .indhold {
+    /* Black w/ opacity */
+    /* Modal Content */ }
+    #your-fridge #modal .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      border: 1px solid #888;
+      width: 80%;
       display: flex;
-      margin: 5%; }
-    #your-fridge .modal-content .stepper {
-      width: 45%;
-      margin: auto 0; }
-      #your-fridge .modal-content .stepper input {
+      flex-direction: column;
+      background-color: #F4FCE9; }
+      #your-fridge #modal .modal-content header {
+        padding-left: 5%;
+        position: relative; }
+      #your-fridge #modal .modal-content .indhold {
+        margin: 5%; }
+      #your-fridge #modal .modal-content .stepper {
         width: 100%;
-        background-color: rgba(229, 251, 201, 0.8);
-        border: 1px solid #D0F79E;
-        text-align: center;
-        font-family: "Yu Gothic UI Light", sans-serif;
-        font-size: 1.5em; }
-    #your-fridge .modal-content .btn {
-      width: 45%;
-      height: 150px;
-      margin: auto; }
-      #your-fridge .modal-content .btn .fridge {
-        border: none;
-        background-color: transparent;
-        background-image: url(img/iconTo.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        margin: auto 0; }
+        #your-fridge #modal .modal-content .stepper input {
+          width: 100%;
+          background-color: rgba(229, 251, 201, 0.8);
+          border: 1px solid #D0F79E;
+          text-align: center;
+          font-family: "Yu Gothic UI Light", sans-serif;
+          font-size: 1.5em; }
+      #your-fridge #modal .modal-content .btn {
         width: 100%;
-        height: 70px;
-        margin: 0; }
-      #your-fridge .modal-content .btn .list {
-        border: none;
-        background-color: transparent;
-        font-size: 3.5em;
+        height: auto;
+        margin: auto; }
+        #your-fridge #modal .modal-content .btn .list {
+          border: none;
+          background-color: transparent;
+          font-size: 3.5em;
+          width: 100%;
+          height: 70px;
+          margin-top: 5%; }
+  #your-fridge footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #your-fridge footer button {
+      background-color: #71A133;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      padding: 16px 20px;
+      font-size: 20px;
+      cursor: pointer; }
+  #your-fridge #modalFridge {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    /* Modal Content */ }
+    #your-fridge #modalFridge .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      border: 1px solid #888;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      background-color: #F4FCE9; }
+      #your-fridge #modalFridge .modal-content header {
+        padding-left: 5%;
+        position: relative; }
+      #your-fridge #modalFridge .modal-content .indhold {
+        margin: 5%; }
+      #your-fridge #modalFridge .modal-content .searchbar {
         width: 100%;
-        height: 70px;
-        margin-top: 5%; }
+        margin: 0 auto; }
+        #your-fridge #modalFridge .modal-content .searchbar input[type=text] {
+          display: block;
+          width: 70%;
+          margin: 0 auto;
+          box-sizing: border-box;
+          background-color: rgba(229, 251, 201, 0.8);
+          border: 1px solid #D0F79E;
+          font-family: "Yu Gothic UI Light", sans-serif;
+          font-size: 1.5em;
+          padding-left: 20%;
+          background-image: url(img/search.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-color: #D0F79E;
+          transition: width 1.0s ease-in-out; }
+        #your-fridge #modalFridge .modal-content .searchbar input[type=text]:focus {
+          margin: 0 auto;
+          width: 100%;
+          background-position: left; }
+      #your-fridge #modalFridge .modal-content .btn {
+        width: 100%;
+        height: auto;
+        margin: auto; }
+        #your-fridge #modalFridge .modal-content .btn .fridgeModal {
+          border: none;
+          background-color: transparent;
+          background-image: url(img/iconTo.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          height: 70px;
+          margin: 5% 0%; }
   #your-fridge .close {
     color: red;
     float: right;
@@ -197,7 +256,8 @@ body {
 #add-food {
   display: none;
   grid-template-columns: 15% 70% 15%;
-  grid-template-areas: "header header header" ". main ." ". aside ."; }
+  grid-template-areas: "header header header" ". main ." ". aside .";
+  /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */ }
   #add-food header {
     grid-area: header;
     background-color: #D0F79E;
@@ -215,6 +275,28 @@ body {
       font-family: "Century Gothic", sans-serif;
       text-align: center;
       color: #71A133; }
+  #add-food .search {
+    width: 20%; }
+    #add-food .search input[type=text] {
+      float: right;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 1.5em;
+      border: none;
+      background-image: url(img/search.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #D0F79E;
+      transition: width 2.0s ease-in-out;
+      height: 40px;
+      padding-left: 15%; }
+    #add-food .search input[type=text]:focus {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 40px;
+      background-position: left; }
   #add-food section {
     grid-area: main;
     margin-top: 20%; }
@@ -279,7 +361,7 @@ body {
       margin: 2% 0%; }
   #shopping-list .shopping {
     grid-area: main;
-    margin-top: 80px;
+    padding-top: 80px;
     font-size: 1.5em;
     font-family: "Yu Gothic UI Light", sans-serif;
     height: 100vh; }
@@ -313,6 +395,84 @@ body {
       padding: 16px 20px;
       font-size: 20px;
       cursor: pointer; }
+  #shopping-list #modalShopping {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    /* Modal Content */ }
+    #shopping-list #modalShopping .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      border: 1px solid #888;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      background-color: #F4FCE9; }
+      #shopping-list #modalShopping .modal-content header {
+        padding-left: 5%;
+        position: relative; }
+      #shopping-list #modalShopping .modal-content .indhold {
+        margin: 5%; }
+      #shopping-list #modalShopping .modal-content .searchbar {
+        width: 100%;
+        margin: auto 0; }
+        #shopping-list #modalShopping .modal-content .searchbar input {
+          width: 100%;
+          background-color: rgba(229, 251, 201, 0.8);
+          border: 1px solid #D0F79E;
+          text-align: center;
+          font-family: "Yu Gothic UI Light", sans-serif;
+          font-size: 1.5em; }
+      #shopping-list #modalShopping .modal-content .btn {
+        width: 100%;
+        height: auto;
+        margin: auto; }
+        #shopping-list #modalShopping .modal-content .btn .list {
+          border: none;
+          background-color: transparent;
+          font-size: 3.5em;
+          width: 100%;
+          height: 70px;
+          margin-top: 5%; }
+    #shopping-list #modalShopping .searchbar {
+      width: 100%;
+      margin: 0 auto; }
+      #shopping-list #modalShopping .searchbar input[type=text] {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        background-color: rgba(229, 251, 201, 0.8);
+        border: 1px solid #D0F79E;
+        font-family: "Yu Gothic UI Light", sans-serif;
+        font-size: 1.5em;
+        text-align: left;
+        padding-left: 20%;
+        background-image: url(img/search.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #D0F79E;
+        transition: width 1.0s ease-in-out; }
+      #shopping-list #modalShopping .searchbar input[type=text]:focus {
+        margin: 0 auto;
+        width: 100%;
+        background-position: left; }
 
 /* Load section */
 #load {
@@ -362,3 +522,7 @@ body {
     margin-top: 100px; }
   #error section {
     height: 100%; }
+
+/* The Modal (background) */
+/* Source for the modal box:
+https://www.w3schools.com/howto/howto_css_modals.asp */

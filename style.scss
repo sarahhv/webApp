@@ -111,7 +111,7 @@ body {
 
     .fridge {
         grid-area: main;
-        margin-top: 80px;
+        padding-top: 60px;
         font-size: $p-size;
         font-family: $p-font;
         height: 100vh;
@@ -151,6 +151,77 @@ body {
         }
     }
 
+    /* The Modal for add shopping */
+    #modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+
+        /* Black w/ opacity */
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            border: 1px solid #888;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            background-color: #F4FCE9;
+
+            header {
+                padding-left: 5%;
+                position: relative;
+            }
+
+            .indhold {
+                margin: 5%;
+            }
+
+            .stepper {
+                width: 100%;
+                margin: auto 0;
+
+                input {
+                    width: 100%;
+                    background-color: $baggrund;
+                    border: 1px solid $header-baggrund;
+                    text-align: center;
+                    font-family: $p-font;
+                    font-size: $p-size;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                height: auto;
+                margin: auto;
+
+                .list {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 3.5em;
+                    width: 100%;
+                    height: 70px;
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+
     footer {
         grid-area: footer;
         position: fixed;
@@ -170,12 +241,8 @@ body {
         }
     }
 
-    #btnModal {
-        position: relative;
-    }
-
-    /* The Modal (background) */
-    #modal {
+    /* Modal box from the add more plus in footer */
+    #modalFridge {
         display: none;
         /* Hidden by default */
         position: fixed;
@@ -193,73 +260,79 @@ body {
         overflow: auto;
         /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.4);
+
         /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        border: 1px solid #888;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-
-        header {
-            padding-left: 5%;
-            position: relative;
-        }
-
-        .indhold {
-            display: flex;
-            margin: 5%;
-        }
-
-        .stepper {
-            width: 45%;
-            margin: auto 0;
-
-            input {
-                width: 100%;
-                background-color: $baggrund;
-                border: 1px solid $header-baggrund;
-                text-align: center;
-                font-family: $p-font;
-                font-size: $p-size;
-            }
-        }
-
-        .btn {
-            width: 45%;
-            height: 150px;
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
             margin: auto;
+            border: 1px solid #888;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            background-color: #F4FCE9;
 
-            .fridge {
-                border: none;
-                background-color: transparent;
-                background-image: url(img/iconTo.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 100%;
-                height: 70px;
-                margin: 0;
+            header {
+                padding-left: 5%;
+                position: relative;
             }
 
-            .list {
-                border: none;
-                background-color: transparent;
-                font-size: 3.5em;
+            .indhold {
+                margin: 5%;
+            }
+
+            .searchbar {
                 width: 100%;
-                height: 70px;
-                margin-top: 5%;
+                margin: 0 auto;
+
+                input[type=text] {
+                    display: block;
+                    width: 70%;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                    background-color: $baggrund;
+                    border: 1px solid $header-baggrund;
+                    font-family: $p-font;
+                    font-size: $p-size;
+                    padding-left: 20%;
+                    background-image: url(img/search.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-color: $header-baggrund;
+                    transition: width 1.0s ease-in-out;
+
+                }
+
+                input[type=text]:focus {
+                    margin: 0 auto;
+                    width: 100%;
+                    background-position: left;
+                }
+            } 
+
+            .btn {
+                width: 100%;
+                height: auto;
+                margin: auto;
+
+                .fridgeModal {
+                    border: none;
+                    background-color: transparent;
+                    background-image: url(img/iconTo.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 100%;
+                    height: 70px;
+                    margin: 5% 0%;
+                }
             }
         }
-
-        /* Source for the modal box:
-        https://www.w3schools.com/howto/howto_css_modals.asp */
     }
 
+    /* Source for the modal box:
+        https://www.w3schools.com/howto/howto_css_modals.asp */
     /* The Close Button */
     .close {
         color: red;
@@ -300,6 +373,35 @@ body {
             color: $h1-color;
         }
     }
+
+    .search {
+        width: 20%;
+
+        input[type=text] {
+            float: right;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: $p-size;
+            border: none;
+            background-image: url(img/search.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: $header-baggrund;
+            transition: width 2.0s ease-in-out;
+            height: 40px;
+            padding-left: 15%;
+        }
+
+        input[type=text]:focus {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 40px;
+            background-position: left;
+        }
+    } /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */
+
 
     section {
         grid-area: main;
@@ -385,7 +487,7 @@ body {
 
     .shopping {
         grid-area: main;
-        margin-top: 80px;
+        padding-top: 80px;
         font-size: $p-size;
         font-family: $p-font;
         height: 100vh;
@@ -429,6 +531,106 @@ body {
             font-size: 20px;
             cursor: pointer;
         }
+    }
+
+    #modalShopping {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4);
+
+        /* Black w/ opacity */
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            border: 1px solid #888;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            background-color: #F4FCE9;
+
+            header {
+                padding-left: 5%;
+                position: relative;
+            }
+
+            .indhold {
+                margin: 5%;
+            }
+
+            .searchbar {
+                width: 100%;
+                margin: auto 0;
+
+                input {
+                    width: 100%;
+                    background-color: $baggrund;
+                    border: 1px solid $header-baggrund;
+                    text-align: center;
+                    font-family: $p-font;
+                    font-size: $p-size;
+                }
+            }
+
+            .btn {
+                width: 100%;
+                height: auto;
+                margin: auto;
+
+                .list {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 3.5em;
+                    width: 100%;
+                    height: 70px;
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        .searchbar {
+            width: 100%;
+            margin: 0 auto;
+
+            input[type=text] {
+                display: block;
+                width: 70%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                background-color: $baggrund;
+                border: 1px solid $header-baggrund;
+                font-family: $p-font;
+                font-size: $p-size;
+                text-align: left;
+                padding-left: 20%;
+                background-image: url(img/search.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: $header-baggrund;
+                transition: width 1.0s ease-in-out;
+            }
+
+            input[type=text]:focus {
+                margin: 0 auto;
+                width: 100%;
+                background-position: left;
+            }
+        } 
     }
 }
 
@@ -498,3 +700,7 @@ body {
         height: 100%;
     }
 }
+
+/* The Modal (background) */
+/* Source for the modal box:
+https://www.w3schools.com/howto/howto_css_modals.asp */

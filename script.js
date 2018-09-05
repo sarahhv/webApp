@@ -16,7 +16,7 @@
         document.getElementById("home").style.display = "none";
     });
 
-    /* Back buttons */
+    /* Back buttons - top left */
     var btnBack = document.getElementsByClassName("back");
 
     function goBack() {
@@ -30,7 +30,7 @@
         btn.addEventListener('click', goBack);
     }
 
-    /* Shopping til Add og omvendt */
+    /* Shopping to Add and Add to shopping function */
     var btnGoShopping = document.getElementById("go-shopping");
     var btnGoFridge = document.getElementById("go-fridge");
  
@@ -45,6 +45,7 @@
     /* All event listener source - baseline for our code:
     https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener */
 
+    /* Modal-box coding for the list button on your-fridge */
     //An array of elements
     var btnModal = document.getElementsByClassName("s-list");
 
@@ -59,13 +60,13 @@
 
     // Same line just in its original form  
       /*   for (var i = 0; i < btnModal.length; i++) {
-        btnModal[i].addEventListener(ajdaiowdja);
+        btnModal[i].addEventListener('click', goModal);
     } */
 
-    // Get the <span> element that closes the modal
+    // Get the class="close" element that closes the modal
     var btnClose = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on <span> (x), close the modal
+    // When the user clicks on class="close", close the modal
     btnClose.addEventListener('click', () => {
         document.getElementById("modal").style.display = "none";
     });
@@ -76,20 +77,53 @@
             modal.style.display = "none";
         }
     })
-
-    /* Source for the modal box inspiration: 
+    /* Source for the modal-box inspiration: 
     https://www.w3schools.com/howto/howto_css_modals.asp */
 
-    /* All close buttons on both lists  */
 
-/*      function deleteP (element){
-        element.remove();
+    /* Modal-box for plus sign in footer */
+    var btnFPlus = document.getElementsByClassName("Fplus");
+    var btnSPlus = document.getElementsByClassName("Splus");
+
+    function goFPlus() {
+        document.getElementById("modalFridge").style.display = "block";
     }
 
-    var btnDeleteP = document.getElementsByClassName("no");
-
-    for (var btn of btnDeleteP) {
-        btn.addEventListener('click', deleteP (this));
+    function goSPlus () {
+        document.getElementById('modalShopping').style.display = "block";
     }
-  */
-    //This fordi det skal være selve knappen og elementet der skal removes 
+
+    for (var btn of btnFPlus) {
+        btn.addEventListener('click', goFPlus);
+    } 
+
+    for (var btn of btnSPlus) {
+        btn.addEventListener('click', goSPlus);
+    } 
+
+    var btnLuk = document.getElementsByClassName("luk")[0];
+
+        // When the user clicks on class="close", close the modal
+        btnLuk.addEventListener('click', () => {
+            document.getElementById("modalFridge").style.display = "none";
+        });
+
+    var btnLukEt = document.getElementsByClassName("lukEt")[0];
+
+    // When the user clicks on class="close", close the modal
+    btnLukEt.addEventListener('click', () => {
+        document.getElementById("modalShopping").style.display = "none";
+    });
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.addEventListener('click', ()=> {
+            if (event.target == modalFridge) {
+                modalFridge.style.display = "none";
+            }
+        });
+
+        window.addEventListener('click', ()=> {
+            if (event.target == modalShopping) {
+                modalShopping.style.display = "none";
+            }
+        });
