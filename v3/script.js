@@ -45,6 +45,23 @@ btnGoFridge.addEventListener('click', () => {
 /* All event listener source - baseline for our code:
 https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener */
 
+/* Modal-box coding for the list button on your-fridge */
+//An array of elements
+var btnModal = document.getElementsByClassName("s-list");
+
+function goModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+// var btn only exists in this loop as a pointer, 
+for (var btn of btnModal) {
+    btn.addEventListener('click', goModal);
+} 
+
+// Same line just in its original form  
+    /*   for (var i = 0; i < btnModal.length; i++) {
+    btnModal[i].addEventListener('click', goModal);
+} */
 
 // Get the class="close" element that closes the modal
 var btnClose = document.getElementsByClassName("close")[0];
@@ -55,7 +72,7 @@ btnClose.addEventListener('click', () => {
 });
 
 // When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', () => {
+window.addEventListener('click', ()=> {
     if (event.target == modal) {
         modal.style.display = "none";
     }
@@ -72,62 +89,43 @@ function goFPlus() {
     document.getElementById("modalFridge").style.display = "block";
 }
 
-function goSPlus() {
+function goSPlus () {
     document.getElementById('modalShopping').style.display = "block";
 }
 
 for (var btn of btnFPlus) {
     btn.addEventListener('click', goFPlus);
-}
+} 
 
 for (var btn of btnSPlus) {
     btn.addEventListener('click', goSPlus);
-}
+} 
 
 var btnLuk = document.getElementsByClassName("luk")[0];
-var btnLukEt = document.getElementsByClassName("lukEt")[0];
-var btncloseShopping = document.getElementsByClassName("closeModalShopping")[0];
 
+    // When the user clicks on class="close", close the modal
+    btnLuk.addEventListener('click', () => {
+        document.getElementById("modalFridge").style.display = "none";
+    });
+
+var btnLukEt = document.getElementsByClassName("lukEt")[0];
 
 // When the user clicks on class="close", close the modal
-btnLuk.addEventListener('click', () => {
-    document.getElementById("modalFridge").style.display = "none";
-});
-
 btnLukEt.addEventListener('click', () => {
     document.getElementById("modalShopping").style.display = "none";
 });
 
-btncloseShopping.addEventListener('click', () =>{
-    document.getElementById("modalSendToFridge").style.display = "none";
-});
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', ()=> {
+        if (event.target == modalFridge) {
+            modalFridge.style.display = "none";
+        }
+    });
 
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', () => {
-    if (event.target == modalFridge) {
-        modalFridge.style.display = "none";
-    }
-});
+    window.addEventListener('click', ()=> {
+        if (event.target == modalShopping) {
+            modalShopping.style.display = "none";
+        }
+    });
 
-window.addEventListener('click', () => {
-    if (event.target == modalShopping) {
-        modalShopping.style.display = "none";
-    }
-});
 
-window.addEventListener('click', () => {
-    if (event.target == modalSendToFridge) {
-        modalSendToFridge.style.display = "none";
-    }
-});
-
-/* MODAL BOX FOR INTRODUKTION*/
-//An array of elements
-var btnModal = document.getElementsByClassName("introLuk");
-
-function closeIntro() {
-    document.getElementById("modalIntro").style.display = "none";
-}
-for (var btn of btnModal) {
-    btn.addEventListener('click', closeIntro);
-}

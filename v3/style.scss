@@ -150,12 +150,12 @@ body {
             color: red;
         }
 
-        button {
+            button {
                 background-color: transparent;
                 border: none;
                 font-size: 1em;
                 font-weight: bold;
-        }
+            }
     }
 
     /* The Modal for add shopping */
@@ -467,8 +467,8 @@ body {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            height: 30px;
-            margin: auto 0%;
+            height: 40px;
+            margin: 2% 0%;
         }
     }
 
@@ -481,24 +481,16 @@ body {
 
         p {
             display: grid;
-            grid-template-columns: 0.7fr 0.5fr 5fr 0.7fr;
+            grid-template-columns: 1fr 6fr 0.9fr;
             grid-template-rows: auto;
             grid-template-areas: 
-            "checkBox amountS titleS end";
+            "checkBox titleS end";
             padding: 3% 5% 0%;
-            width: 100vw;
-            word-break: break-all;
+            width: 100%;
         }
 
         .checkBox {
             grid-area: checkBox;
-            width: 60%;
-            height: 60%;
-            margin: auto;
-        }
-
-        .amountS {
-            grid-area: amountS;
         }
 
         .titleS {
@@ -507,105 +499,7 @@ body {
 
         .end {
             grid-area: end;
-            color: red;
-            background-color: transparent;
-            border: none;
-            font-size: 1em;
-            font-weight: bold;
         }
-    }
-
-    #modalSendToFridge {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgba(0, 0, 0, 0.4);
-
-        /* Black w/ opacity */
-        /* Modal Content */
-        .modal-content {
-            margin: auto;
-            border: 1px solid #888;
-            width: 80%;
-            display: flex;
-            flex-direction: column;
-            background-color: #F4FCE9;
-
-            header {
-                padding-left: 5%;
-                position: relative;
-            }
-
-            .indhold {
-                margin: 5%;
-            }
-
-            .searchShopping {
-                width: 100%;
-                margin: auto 0;
-
-                input {
-                    width: 100%;
-                    background-color: $baggrund;
-                    border: 1px solid $header-baggrund;
-                    text-align: center;
-                    font-family: $p-font;
-                    font-size: $p-size;
-                }
-            }
-
-            .btn {
-                width: 100%;
-                height: auto;
-                margin: auto;
-
-                .list {
-                    border: none;
-                    background-color: transparent;
-                    font-size: 3.5em;
-                    width: 100%;
-                    height: 70px;
-                    margin-top: 5%;
-                }
-            }
-        }
-
-        .searchShopping {
-            width: 100%;
-            margin: 0 auto;
-
-            input {
-                display: block;
-                width: 70%;
-                margin: 2% auto;
-                box-sizing: border-box;
-                background-color: $baggrund;
-                border: 1px solid $header-baggrund;
-                font-family: $p-font;
-                font-size: $p-size;
-                text-align: center;
-                transition: width 1.0s ease-in-out;
-            }
-
-            input:focus {
-                margin: 0 auto;
-                width: 100%;
-                background-position: left;
-            }
-        } 
     }
 
     footer {
@@ -785,105 +679,6 @@ body {
 
     section {
         height: 100%;
-    }
-}
-
-.intro-modal {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    padding-top: 20px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        border: 1px solid #888;
-        width: 90%;
-        background-color: #F4FCE9;
-
-        .introLuk {
-            color: red;
-            font-weight: bold;
-
-        }
-
-        header {
-            padding: 1% 5%;
-            position: relative;
-            background-color: $header-baggrund;
-            text-align: center;
-            color: $h1-color;
-            font-family: $h1-font;
-            font-size: 1.8em;
-
-            .introLuk {
-                margin: -12px -25px auto auto;
-                background-color: #defbb7;
-                border-color: #a4b987;
-                border-radius: 50%;
-                padding: 7px 10px;
-                float: right;
-                font-size: 30px;
-            }
-        }
-
-        .indhold {
-            margin: 5%;
-        }
-
-        .indhold p {
-            margin: 4%;
-            font-family: $p-font;
-            font-size: 1.4em;
-
-        }
-
-        .btnPlus {
-            background-color: #71A133;
-            border: none;
-            border-radius: 50%;
-            color: white;
-            padding: 8px 10px;
-            font-size: 16px;
-            margin-bottom: -10px;
-            cursor: pointer;
-        }
-
-        #fridgeLogo {
-            width: 10%;
-            border: none;
-            background-color: transparent;
-            font-size: 1.7em;
-            background-image: url(img/icon.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 40px;
-        }
-
-        .check {
-            width: 20px;
-            height: 20px;
-        }
-    }
-}
-
-#enjoy section {
-    display: flex;
-    justify-content: space-between;
-
-    .introLuk {
-        border: none;
-        background-color: transparent;
-        font-size: 40px;
-        align-self: flex-end;
-        margin: 5px 8px;
     }
 }
 
