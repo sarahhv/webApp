@@ -86,27 +86,30 @@ body {
     font-family: "Yu Gothic UI Light", sans-serif;
     height: 100vh; }
     #your-fridge .fridge p {
-      padding: 3% 5% 0%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between; }
-      #your-fridge .fridge p .first {
-        width: 45%;
-        max-width: 45%;
-        word-break: break-all; }
+      display: grid;
+      grid-template-columns: 0.5fr 3fr 3fr 0.7fr 0.7fr;
+      grid-template-rows: auto;
+      grid-template-areas: "first second time add no";
+      padding: 3% 10% 0%;
+      width: 100vw;
+      word-break: break-all; }
+    #your-fridge .fridge .first {
+      grid-area: first; }
+    #your-fridge .fridge .second {
+      grid-area: second; }
+    #your-fridge .fridge time {
+      grid-area: time;
+      text-align: center; }
+    #your-fridge .fridge .s-list {
+      grid-area: add; }
+    #your-fridge .fridge .no {
+      grid-area: no;
+      color: red; }
     #your-fridge .fridge button {
-      width: 23px;
-      height: 23px;
       background-color: transparent;
       border: none;
       font-size: 1em;
       font-weight: bold; }
-    #your-fridge .fridge .no {
-      color: red; }
-    #your-fridge .fridge .expired {
-      color: red; }
-    #your-fridge .fridge .new {
-      color: green; }
   #your-fridge #modal {
     display: none;
     /* Hidden by default */

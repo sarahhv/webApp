@@ -117,38 +117,45 @@ body {
         height: 100vh;
 
         p {
-            padding: 3% 5% 0%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-
-            .first {
-                width: 45%;
-                max-width: 45%;
-                word-break: break-all;
-            }
+            display: grid;
+            grid-template-columns: 0.5fr 3fr 3fr 0.7fr 0.7fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "first second time add no"
+            ;
+            padding: 3% 10% 0%;
+            width: 100vw;
+            word-break: break-all;
         }
 
-        button {
-            width: 23px;
-            height: 23px;
-            background-color: transparent;
-            border: none;
-            font-size: 1em;
-            font-weight: bold;
+        .first {
+            grid-area: first;
+        }
+        
+        .second {
+            grid-area: second;
+        }
+
+        time {
+            grid-area: time;
+            text-align: center;
+        }
+
+        .s-list {
+            grid-area: add;
         }
 
         .no {
+            grid-area: no;
             color: red;
         }
 
-        .expired {
-            color: red;
-        }
-
-        .new {
-            color: green;
-        }
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 1em;
+                font-weight: bold;
+            }
     }
 
     /* The Modal for add shopping */
@@ -174,7 +181,6 @@ body {
         /* Black w/ opacity */
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
             margin: auto;
             border: 1px solid #888;
             width: 80%;
@@ -264,7 +270,6 @@ body {
         /* Black w/ opacity */
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
             margin: auto;
             border: 1px solid #888;
             width: 80%;
@@ -299,7 +304,6 @@ body {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
-                    background-color: $header-baggrund;
                     transition: width 1.0s ease-in-out;
 
                 }
@@ -555,7 +559,6 @@ body {
         /* Black w/ opacity */
         /* Modal Content */
         .modal-content {
-            background-color: #fefefe;
             margin: auto;
             border: 1px solid #888;
             width: 80%;
@@ -621,7 +624,6 @@ body {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                background-color: $header-baggrund;
                 transition: width 1.0s ease-in-out;
             }
 

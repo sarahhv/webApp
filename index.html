@@ -40,8 +40,8 @@
                 </button>
             </header>
 
-            <section class="fridge">
-                <p>
+            <section id="dataArea">
+<!--                 <p>
                     <span class="first">1x Milk</span>
                     <time datetime="2018-08-23" class="expired">23/08/18</time>
                     <span class="buttons">
@@ -104,10 +104,10 @@
                             <i class="fa fa-close"></i>
                         </button>
                     </span>
-                </p>
+                </p> -->
             </section>
 
-            <!-- The Modal-box for add to by shopping list icon -->
+            <!-- The Modal-box for add to shopping list icon -->
             <div id="modal">
 
                 <!-- Modal content -->
@@ -128,7 +128,7 @@
                                 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
                             </section>
                             <section class="btn">
-                                <button class="list">
+                                <button class="list" id="addEt">
                                     <i class="fa fa-list-ul"></i>
                                     <!-- Onclick remove it  -->
                                 </button>
@@ -160,15 +160,21 @@
                         </header>
                         <div class="indhold">
                             <section class="searchbar">
-                                <form class="search">
-                                        <input type="text" name="search">
+                                <form class="search" id="form">
+                                    <input type="text" name="search" id="amount" class="amount">
+                                </form>
+                                <form class="search" id="formEt">
+                                    <input type="text" name="search" id="title" class="title">
+                                </form>
+                                <form class="search" id="formTo">
+                                    <input type="text" name="search" id="date" class="date">
                                 </form>
                                 <!-- Source for the form: 
                                     https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
                             </section>
 
                             <section class="btn">
-                                <button class="fridgeModal">
+                                <button type="button" id="add" class="fridgeModal">
                                 </button>
                             </section>
                         </div>
@@ -316,6 +322,7 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="scriptJs.js"></script>
 
 </body>
 
