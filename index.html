@@ -40,74 +40,10 @@
                 </button>
             </header>
 
-            <section class="fridge">
-                <p>
-                    <span class="first">1x Milk</span>
-                    <time datetime="2018-08-23" class="expired">23/08/18</time>
-                    <span class="buttons">
-                        <button class="s-list">
-                            <i class="fa fa-list-ul"></i>
-                        </button>
-                        <button class="no">
-                            <i class="fa fa-close"></i>
-                        </button>
-
-                    </span>
-                </p>
-
-                <p>
-                    <span class="first">3x Egg</span>
-                    <time datetime="2018-09-20" class="new">20/09/18</time>
-                    <span class="buttons">
-                        <button class="s-list">
-                            <i class="fa fa-list-ul"></i>
-                        </button>
-                        <button class="no">
-                            <i class="fa fa-close"></i>
-                        </button>
-                    </span>
-                </p>
-
-                <p> <span class="first">1x Butter</span>
-                    <time datetime="2018-08-23" class="expired">23/08/18</time>
-                    <span class="buttons">
-                        <button class="s-list">
-                            <i class="fa fa-list-ul"></i>
-                        </button>
-                        <button class="no">
-                            <i class="fa fa-close"></i>
-                        </button>
-                    </span>
-                </p>
-
-                <p><span class="first">5x Oniens</span>
-                    <time datetime="2018-09-20" class="new">20/09/18</time>
-                    <span class="buttons">
-                        <button class="s-list">
-                            <i class="fa fa-list-ul"></i>
-                        </button>
-                        <button class="no">
-                            <i class="fa fa-close"></i>
-                        </button>
-
-                    </span>
-                </p>
-
-                <p>
-                    <span class="first">7x Tomatoes</span>
-                    <time datetime="2018-09-20" class="new">20/09/18</time>
-                    <span class="buttons">
-                        <button class="s-list">
-                            <i class="fa fa-list-ul"></i>
-                        </button>
-                        <button class="no">
-                            <i class="fa fa-close"></i>
-                        </button>
-                    </span>
-                </p>
+            <section id="dataArea">
             </section>
 
-            <!-- The Modal-box for add to by shopping list icon -->
+            <!-- The Modal-box for add to shopping list icon -->
             <div id="modal">
 
                 <!-- Modal content -->
@@ -124,11 +60,14 @@
                                 <form action="/action_page.php">
                                     <input type="number" name="amount" step="1" placeholder="Amount">
                                 </form>
+                                <form action="/action_page.php">
+                                    <input type="text" name="amount" placeholder="Food">
+                                </form>
                                 <!-- Source for the form: 
                                 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
                             </section>
                             <section class="btn">
-                                <button class="list">
+                                <button class="list" id="addEt">
                                     <i class="fa fa-list-ul"></i>
                                     <!-- Onclick remove it  -->
                                 </button>
@@ -159,16 +98,22 @@
                             </button>
                         </header>
                         <div class="indhold">
-                            <section class="searchbar">
-                                <form class="search">
-                                        <input type="text" name="search">
+                            <section class="search">
+                                <form class="search" id="form">
+                                    <input type="number" name="search" id="amount" class="amount" placeholder="Amount">
+                                </form>
+                                <form class="search" id="formEt">
+                                    <input type="text" name="search" id="title" class="title" placeholder="Food">
+                                </form>
+                                <form class="search" id="formTo">
+                                    <input type="number" name="search" id="date" class="date" placeholder="Date">
                                 </form>
                                 <!-- Source for the form: 
                                     https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
                             </section>
 
                             <section class="btn">
-                                <button class="fridgeModal">
+                                <button type="button" id="add" class="fridgeModal">
                                 </button>
                             </section>
                         </div>
@@ -186,20 +131,28 @@
                     <i class="fa fa-arrow-left"></i>
                 </button>
                 <h1>Categories</h1>
-                <form class="search">
-                        <input type="text" name="search">
+                <form class="searchbar">
+                    <input type="text" name="searchbar">
                 </form>
             </header>
-            <section>
-                <button>Meat and fish</button>
-                <button>Fruits and vegetables</button>
-                <button>Dairy</button>
 
+            <section class="video">
+                <video autoplay id="videoPlay"></video>
+                <script>
+                    const constraints = {
+                      video: true
+                    };
+                    
+                    const video = document.querySelector('video');
+                    
+                    navigator.mediaDevices.getUserMedia(constraints).
+                      then((stream) => {video.srcObject = stream});
+                    </script>
+
+                <!-- https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
+
+                <input class="video" type="file" accept="image/*" capture="camera" />
             </section>
-
-            <aside>
-                <button>Scan food</button>
-            </aside>
         </article>
 
         <!-- Shopping list section -->
@@ -214,46 +167,6 @@
             </header>
 
             <section class="shopping">
-                <p>
-                    <input type="checkbox" name="groceries" value="milk" class="box"> Milk
-                    <button>
-                        <i class="fa fa-close"></i> <!-- Onclick remove it  -->
-                    </button>
-                </p>
-                <p>
-                    <input type="checkbox" name="groceries" value="egg" class="box"> Egg
-                    <button>
-                        <i class="fa fa-close"></i>
-                    </button>
-                </p>
-
-                <p>
-                    <input type="checkbox" name="groceries" value="butter" class="box"> Butter
-                    <button>
-                        <i class="fa fa-close"></i>
-                    </button>
-                </p>
-
-                <p>
-                    <input type="checkbox" name="groceries" value="onion" class="box"> Onion
-                    <button>
-                        <i class="fa fa-close"></i>
-                    </button>
-                </p>
-
-                <p>
-                    <input type="checkbox" name="groceries" value="garlic" class="box"> Garlic
-                    <button>
-                        <i class="fa fa-close"></i>
-                    </button>
-                </p>
-
-                <p>
-                    <input type="checkbox" name="groceries" value="tomato" class="box"> Tomato
-                    <button>
-                        <i class="fa fa-close"></i>
-                    </button>
-                </p>
             </section>
             <footer>
                 <button class="Splus">
@@ -263,33 +176,36 @@
 
             <div id="modalShopping">
 
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <section class="modal-box-search">
-                            <header>
-                                <h1>Search</h1>
-                                <button class="lukEt">
-                                    <i class="fa fa-close"></i>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box-search">
+                        <header>
+                            <h1>Search</h1>
+                            <button class="lukEt">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                        <div class="indhold">
+                            <section class="searchShopping">
+                                <form class="search" id="sForm">
+                                    <input type="number" name="search" id="sAmount" class="amount" placeholder="Amount">
+                                </form>
+                                <form class="search" id="sFormEt">
+                                    <input type="text" name="search" id="sTitle" class="title" placeholder="Food">
+                                </form>
+                            </section>
+
+                            <section class="btn">
+                                <button class="list">
+                                    <i class="fa fa-list-ul"></i>
                                 </button>
-                            </header>
-                            <div class="indhold">
-                                <section class="searchbar">
-                                    <form class="search">
-                                            <input type="text" name="search">
-                                    </form>
-                                </section>
-    
-                                <section class="btn">
-                                    <button class="list">
-                                        <i class="fa fa-list-ul"></i>
-                                    </button>
-                                </section>
-                            </div>
-                        </section>
-                        <!-- Source for the modal box: 
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
                             https://www.w3schools.com/howto/howto_css_modals.asp -->
-                    </div>
                 </div>
+            </div>
 
         </article>
 
@@ -316,6 +232,7 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="scriptJs.js"></script>
 
 </body>
 
