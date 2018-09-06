@@ -16,8 +16,6 @@
 
 <body>
     <main>
-
-
         <!-- Home section -->
         <article id="home">
             <header><img class="frontfridge" src="img/logo.png" alt="Picture of fridge">
@@ -321,11 +319,11 @@
     <div class="intro-modal" id="modalIntro">
         <div class="modal-content">
             <article id="welcome">
-                <header>
-                    <h1>Welcome to Experation</h1>
-                    <button class="introLuk">
+                <header id="welcomeHead">
+                     <button class="introLuk">
                     <i class="fa fa-close"></i>
                     </button>
+                    <h1>Welcome to Experation</h1>
                 </header>
                 <section class="indhold">
                     <p>This is a guide for you to get the optimal use of this app.</p>
@@ -342,7 +340,7 @@
                     <p>At each food item you will see two symbols:</p>
                     <p><i class="fa fa-list-ul"></i> With this one you can move the selected item to your shopping list.</p>
                     <p><i class="fa fa-close"></i> This symbol will just remove it from the fridge.</p>
-                    <p>This symbol: <button>
+                    <p>This symbol: <button class="btnPlus">
                     <i class="fa fa-plus"></i>
                 </button> gives you the opportunity to add by search directly to your fridge</p>
                     
@@ -355,12 +353,13 @@
                 </header>
                 <section class="indhold">
                     <p>On this site see the food items you placed here.</p>
-                    <p><input type="checkbox" name="groceries" value="egg" class="box"> Check of when you have bought an item and it will get placed in the fridge</p>
+                    <p><input type="checkbox" class="check"> Check of when you have bought an item and it will get placed in the fridge</p>
                     <p><i class="fa fa-close"></i> Click on this symbol if you regret the item and don't actually want it</p>
-                    <p>Again this symbol <button>
+                    <p>Again this symbol <button class="btnPlus">
                     <i class="fa fa-plus"></i>
                 </button> will add items directly by search this time to your shopping list instead</p>
-                    <p><i class="fa fa-columns"></i>
+                    <p><button id="fridgeLogo">
+                </button>
                         With this symbol you'll get into the fridge, you can find it in the right corner.</p>
                     
                 </section>
@@ -380,9 +379,8 @@
                 <header>
                     <h1>Good luck</h1>
                 </header>
-
                 <section class="indhold">
-                    <p>You are now are now ready to explore Experation</p>
+                    <p>You are now are now ready to explore Experation </p>
                     <button class="introLuk"> <i class="fa fa-close"></i>
                     </button>
                 </section>

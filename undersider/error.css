@@ -1,47 +1,36 @@
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-}
+.error p {
+  font-family: "Yu Gothic UI Light", sans-serif;
+  font-size: 4em; }
+.error h1 {
+  font-family: "Century Gothic", sans-serif;
+  width: 100%;
+  font-size: 5em; }
+.error .mainheader {
+  background-color: #d0f79e;
+  color: #71a133;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative; }
+.error body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%; }
+.error img {
+  width: 100%;
+  margin-bottom: 90px;
+  margin-top: 100px; }
+.error main {
+  height: 100%; }
 
-p{
-font-family: "Yu Gothic UI Light", sans-serif;
-font-size: 4em;
-}
-
-h1{
-    font-family: "Century Gothic", sans-serif;
-    width: 100%;
-    font-size: 5em;
-}
-
-.mainheader {
-    background-color: #d0f79e;
-    color: #71a133;
-    width: 100%;
-    text-align:  center;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    position:  relative;
-}
-
-body {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-}
-
-img{width: 100%;
-    margin-bottom: 90px;
-    margin-top: 100px;}
-
-main{
-
-height: 100%;    
-
-}
+/*# sourceMappingURL=error.css.map */

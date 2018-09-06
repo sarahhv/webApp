@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Expiration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sarah Hvalsøe, Amalie, Maria">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <article id="scanner">
+        <div class="intro-modal" id="modalScan">
+            <div class="modal-content">
+                <header>
+                    <h1>Welcome to Experation</h1>
+                    <button class="introLuk">
+                        <i class="fa fa-close"></i>
+                    </button>
+                </header>
+                <section class="indhold">
+                    <p>Scan your stuff.</p>
+                    <video id="video" width="240" height="320" autoplay> </video>
+                    <p id="error">Click on the video to send a snapshot to the receiving screen</p>
+                    <input type="file" accept="image/*" capture="camera">                    
+                </section>
+            </div>
+        </div>
+    </article>
+</body>

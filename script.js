@@ -138,4 +138,3 @@
 for (var btn of btnModal) {
         btn.addEventListener('click', closeIntro);
     } 
-
