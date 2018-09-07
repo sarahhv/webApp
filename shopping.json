@@ -1,14 +1,14 @@
 { "shopping":[
 	{
 		"amount": "1",
-		"title": "Salad"
-	},
-	{
-		"amount": "12",
-		"title": "Burger Buns"
-	},
-	{
-		"amount": "1",
 		"title": "Egg"
+	},
+	{
+		"amount": "10",
+		"title": "Bananer"
+	},
+	{
+		"amount": "5",
+		"title": ""
 	}
 ]}

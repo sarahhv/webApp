@@ -50,7 +50,7 @@
                 <div class="modal-content">
                     <section class="modal-box">
                         <header>
-                            <h1>Fruit</h1>
+                            <h1 id="titleFood"></h1>
                             <button class="close">
                                 <i class="fa fa-close"></i>
                             </button>
@@ -58,10 +58,7 @@
                         <div class="indhold">
                             <section class="stepper">
                                 <form action="/action_page.php">
-                                    <input type="number" name="amount" step="1" placeholder="Amount">
-                                </form>
-                                <form action="/action_page.php">
-                                    <input type="text" name="amount" placeholder="Food">
+                                    <input type="number" name="amount" step="1" placeholder="Amount" id="amountAdd">
                                 </form>
                                 <!-- Source for the form: 
                                 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
@@ -106,7 +103,7 @@
                                     <input type="text" name="search" id="title" class="title" placeholder="Food">
                                 </form>
                                 <form class="search" id="formTo">
-                                    <input type="date" name="search" id="date" class="date" placeholder="Date">
+                                    <input type="date" name="search" id="date" class="date">
                                 </form>
                                 <!-- Source for the form: 
                                     https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
@@ -165,14 +162,8 @@
                             </header>
                             <div class="indhold">
                                 <section class="search">
-                                    <form class="search" id="form">
-                                        <input type="number" name="search" id="amount" class="amount" placeholder="Amount">
-                                    </form>
-                                    <form class="search" id="formEt">
-                                        <input type="text" name="search" id="title" class="title" placeholder="Food">
-                                    </form>
-                                    <form class="search" id="formTo">
-                                        <input type="date" name="search" id="date" class="date" placeholder="Date">
+                                    <form class="search" id="formTre">
+                                        <input type="date" name="search" id="dateSend" class="date">
                                     </form>
                                     <!-- Source for the form: 
                                         https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->

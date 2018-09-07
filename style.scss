@@ -118,7 +118,7 @@ body {
 
         p {
             display: grid;
-            grid-template-columns: 0.5fr 3fr 3fr 0.7fr 0.7fr;
+            grid-template-columns: 1fr 3fr 3fr 0.7fr 0.7fr;
             grid-template-rows: auto;
             grid-template-areas: 
             "first second time add no"
@@ -403,17 +403,7 @@ body {
             background-repeat: no-repeat;
             background-size: contain;
             background-color: $header-baggrund;
-            transition: width 7.0s ease-in-out;
             height: 40px;
-            padding-left: 15%;
-        }
-
-        input[type=text]:focus {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            height: 40px;
-            background-position: left;
         }
     } /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */
 }
@@ -471,7 +461,7 @@ body {
 
         p {
             display: grid;
-            grid-template-columns: 0.7fr 0.5fr 5fr 0.7fr;
+            grid-template-columns: 0.7fr 1fr 5fr 0.7fr;
             grid-template-rows: auto;
             grid-template-areas: 
             "checkBox amountS titleS end";
