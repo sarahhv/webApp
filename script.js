@@ -244,18 +244,18 @@ window.addEventListener('load', initialize);
 "use strict";
 
 function sendDataToServerS(objArrayShopping) {
-    var xhttpS = new XMLHttpRequest();
-    xhttpS.open("POST", "saveJsonShopping.php", true);
-    xhttpS.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttpS.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "saveJsonShopping.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
     alert("Your shopping list is updated!");
 }
 
 function removeDataFromServerS(objArrayShopping) {
-    var xhttpS = new XMLHttpRequest();
-    xhttpS.open("POST", "saveJsonShopping.php", true);
-    xhttpS.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttpS.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "saveJsonShopping.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
 }
 
 function removeShoppingFromList(itemToRemove) {
