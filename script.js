@@ -148,7 +148,7 @@ function sendDataToServer(objArray) {
     xhttp.open("POST", "saveJsonFridge.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("jsonData=" + JSON.stringify(objArray, null, '\t'));
-    alert("Food List was saved!");
+    alert("Food List was updated!");
 }
 
 function removeDataFromServer(objArray) {
@@ -251,9 +251,17 @@ function sendDataToServerS(objArrayShopping) {
     alert("Your shopping list is updated!");
 }
 
+function removeDataFromServerS(objArrayShopping) {
+    var xhttpS = new XMLHttpRequest();
+    xhttpS.open("POST", "saveJsonShopping.php", true);
+    xhttpS.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttpS.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
+}
+
 function removeShoppingFromList(itemToRemove) {
     objArrayShopping.splice(itemToRemove, 1);
     displayJSONSData(objArrayShopping);
+    removeDataFromServerS(objArrayShopping);
 }
 
 function displayJSONSData(shoppingList) {
