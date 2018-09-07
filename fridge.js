@@ -1,148 +1,5 @@
-           /* THE MAIN AND NORMAL .JS - THE FIRST .JS WE DID */
-/* FRONTPAGE-BUTTONS */
-var btnSeeFridge = document.getElementById("see-fridge");
-var btnSeeItems = document.getElementById("see-items");
-var btnSeeShopping = document.getElementById("see-shopping");
-
-btnSeeFridge.addEventListener('click', () => {
-    document.getElementById("your-fridge").style.display = "grid";
-    document.getElementById("home").style.display = "none";
-});
-btnSeeItems.addEventListener('click', () => {
-    document.getElementById("add-food").style.display = "grid";
-    document.getElementById("home").style.display = "none";
-});
-btnSeeShopping.addEventListener('click', () => {
-    document.getElementById("shopping-list").style.display = "grid";
-    document.getElementById("home").style.display = "none";
-});
-
-/* BACK BUTTONS - TOP LEFT */
-var btnBack = document.getElementsByClassName("back");
-
-function goBack() {
-    document.getElementById("shopping-list").style.display = "none";
-    document.getElementById("add-food").style.display = "none";
-    document.getElementById("your-fridge").style.display = "none";
-    document.getElementById("home").style.display = "grid";
-}
-
-for (var btn of btnBack) {
-    btn.addEventListener('click', goBack);
-}
-
-/* SHOPPING TO ADD AND ADD TO SHOPPING FUNCTION TOP RIGHT */
-var btnGoShopping = document.getElementById("go-shopping");
-var btnGoFridge = document.getElementById("go-fridge");
-
-btnGoShopping.addEventListener('click', () => {
-    document.getElementById("your-fridge").style.display = "none";
-    document.getElementById("shopping-list").style.display = "grid";
-});
-btnGoFridge.addEventListener('click', () => {
-    document.getElementById("shopping-list").style.display = "none";
-    document.getElementById("your-fridge").style.display = "grid";
-});
-/* All event listener source - baseline for our code:
-https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener */
-
-
-// Get the class="close" element that closes the modal
-var btnClose = document.getElementsByClassName("close")[0];
-
-// When the user clicks on class="close", close the modal
-btnClose.addEventListener('click', () => {
-    document.getElementById("modal").style.display = "none";
-});
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', () => {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-})
-/* Source for the modal-box inspiration: 
-https://www.w3schools.com/howto/howto_css_modals.asp */
-
-
-/* MODAL-BOX FOR PLUS SIGN IN FOOTER */
-
-// The plus on the "your fridge" site
-var btnFPlus = document.getElementsByClassName("Fplus");
-// The plus on the "shopping list" site
-var btnSPlus = document.getElementsByClassName("Splus");
-
-function goFPlus() {
-    document.getElementById("modalFridge").style.display = "block";
-}
-
-function goSPlus() {
-    document.getElementById('modalShopping').style.display = "block";
-}
-
-for (var btn of btnFPlus) {
-    btn.addEventListener('click', goFPlus);
-}
-
-for (var btn of btnSPlus) {
-    btn.addEventListener('click', goSPlus);
-}
-
-// Close botton on the your fridge plus modal-box
-var btnLuk = document.getElementsByClassName("luk")[0];
-// Close botton on the your shopping list plus modal-box
-var btnLukEt = document.getElementsByClassName("lukEt")[0];
-// Close botton on the s-list modal-box
-var btncloseShopping = document.getElementsByClassName("closeModalShopping")[0];
-
-
-// When the user clicks on class="close", close the modal
-btnLuk.addEventListener('click', () => {
-    document.getElementById("modalFridge").style.display = "none";
-});
-
-btnLukEt.addEventListener('click', () => {
-    document.getElementById("modalShopping").style.display = "none";
-});
-
-btncloseShopping.addEventListener('click', () =>{
-    document.getElementById("modalSendToFridge").style.display = "none";
-});
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', () => {
-    if (event.target == modalFridge) {
-        modalFridge.style.display = "none";
-    }
-});
-
-window.addEventListener('click', () => {
-    if (event.target == modalShopping) {
-        modalShopping.style.display = "none";
-    }
-});
-
-window.addEventListener('click', () => {
-    if (event.target == modalSendToFridge) {
-        modalSendToFridge.style.display = "none";
-    }
-});
-
-/* MODAL BOX FOR INTRODUKTION*/
-//An array of elements
-var btnModal = document.getElementsByClassName("introLuk");
-
-function closeIntro() {
-    document.getElementById("modalIntro").style.display = "none";
-}
-for (var btn of btnModal) {
-    btn.addEventListener('click', closeIntro);
-}
-
-// --------- FRIDGE.JS HERE IS THE FRIDGE REGARDING FRIDGE.JS AND SAVEJSONFRIDGE.PHP ----------------//
 "use strict";
 
-// Sending the newly comitted data to the json file 
 function sendDataToServer(objArray) {
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "saveJsonFridge.php", true);
@@ -151,17 +8,9 @@ function sendDataToServer(objArray) {
     alert("Food List was saved!");
 }
 
-function removeDataFromServer(objArray) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "saveJsonFridge.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("jsonData=" + JSON.stringify(objArray, null, '\t'));
-}
-
 function removeFridgeFromList(itemToRemove) {
     objArray.splice(itemToRemove, 1);
     displayJSONData(objArray);
-    removeDataFromServer(objArray);
 }
 
 function displayJSONData(fridgeList) {
@@ -239,8 +88,6 @@ window.addEventListener('load', initialize);
 
 // --------- Hovedprogram Slut ----------------//
 
-
-// --------- SHOPPING.JS HERE IS THE SHOPPING REGARDING SHOPPING.JS AND SAVEJSONSHOPPING.JS ----------------//
 "use strict";
 
 function sendDataToServerS(objArrayShopping) {

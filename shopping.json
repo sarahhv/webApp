@@ -1,27 +1,18 @@
 { "shopping":[
 	{
 		"amount": "1",
-		"title": "Milk",
-		"date": "05-09-2018"
+		"title": "Salad"
 	},
 	{
-		"amount": "4",
-		"title": "5",
-		"date": "6"
+		"amount": "12",
+		"title": "Burger Buns"
 	},
 	{
 		"amount": "1",
-		"title": "egg",
-		"date": "2019"
+		"title": "Egg"
 	},
 	{
 		"amount": "",
-		"title": "",
-		"date": ""
-	},
-	{
-		"amount": "",
-		"title": "",
-		"date": ""
+		"title": ""
 	}
 ]}
