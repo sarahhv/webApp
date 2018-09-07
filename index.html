@@ -106,7 +106,7 @@
                                     <input type="text" name="search" id="title" class="title" placeholder="Food">
                                 </form>
                                 <form class="search" id="formTo">
-                                    <input type="number" name="search" id="date" class="date" placeholder="Date">
+                                    <input type="date" name="search" id="date" class="date" placeholder="Date">
                                 </form>
                                 <!-- Source for the form: 
                                     https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
@@ -135,24 +135,7 @@
                     <input type="text" name="searchbar">
                 </form>
             </header>
-
-            <section class="video">
-                <video autoplay id="videoPlay"></video>
-                <script>
-                    const constraints = {
-                      video: true
-                    };
-                    
-                    const video = document.querySelector('video');
-                    
-                    navigator.mediaDevices.getUserMedia(constraints).
-                      then((stream) => {video.srcObject = stream});
-                    </script>
-
-                <!-- https://www.html5rocks.com/en/tutorials/getusermedia/intro/ -->
-
                 <input class="video" type="file" accept="image/*" capture="camera" />
-            </section>
         </article>
 
         <!-- Shopping list section -->
@@ -189,7 +172,7 @@
                                         <input type="text" name="search" id="title" class="title" placeholder="Food">
                                     </form>
                                     <form class="search" id="formTo">
-                                        <input type="number" name="search" id="date" class="date" placeholder="Date">
+                                        <input type="date" name="search" id="date" class="date" placeholder="Date">
                                     </form>
                                     <!-- Source for the form: 
                                         https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
@@ -343,7 +326,7 @@
     </main>
 
     <script src="script.js"></script>
-    <script src="scriptJs.js"></script>
+    <script src="fridge.js"></script>
     <script src="shopping.js"></script>
 
 </body>

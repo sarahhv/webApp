@@ -312,7 +312,11 @@ body {
                     font-size: $p-size;
                     text-align: center;
                     transition: width 1.0s ease-in-out;
+                }
 
+                input[type=date]{
+                    transition: width 0;
+                    text-align: center;
                 }
 
                 input:focus {
@@ -412,20 +416,6 @@ body {
             background-position: left;
         }
     } /* Inspiration from: https://www.w3schools.com/howto/howto_css_animated_search.asp  */
-
-    .video {
-        background-color: $baggrund;
-        margin: 0;
-        grid-area: main; 
-        width: 100%; 
-        height: 100vh;
-
-        video {
-            padding: 2%;
-            width: 100vw;
-            height: auto;
-        }
-    }
 }
 
 /* Shopping-list section */

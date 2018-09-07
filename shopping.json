@@ -1,14 +1,17 @@
 { "shopping":[
 	{
 		"amount": "1",
-		"title": "Milk"
+		"title": "Milk",
+		"date": "05-09-2018"
 	},
 	{
 		"amount": "1",
-		"title": "Butter"
+		"title": "Butter",
+		"date": "07-10-2018"
 	},
 	{
-		"amount": "",
-		"title": "Egg"
+		"amount": "1",
+		"title": "Egg",
+		"date": "13-11-2018"
 	}
 ]}

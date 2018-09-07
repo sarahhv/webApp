@@ -2,7 +2,7 @@
 
 function sendDataToServer(objArray) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "saveJson.php", true);
+    xhttp.open("POST", "saveJsonFridge.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("jsonData=" + JSON.stringify(objArray, null, '\t'));
     alert("Food List was saved!");
@@ -57,7 +57,7 @@ function initialize() {
         }
     };
 
-    xhr.open('GET', 'webApp.json', true);
+    xhr.open('GET', 'fridge.json', true);
     xhr.send(null);
 }
 

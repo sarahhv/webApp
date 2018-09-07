@@ -233,6 +233,9 @@ body {
           font-size: 1.5em;
           text-align: center;
           transition: width 1.0s ease-in-out; }
+        #your-fridge #modalFridge .modal-content .search input[type=date] {
+          transition: width 0;
+          text-align: center; }
         #your-fridge #modalFridge .modal-content .search input:focus {
           margin: 0 auto;
           width: 100%;
@@ -303,16 +306,6 @@ body {
       left: 0;
       height: 40px;
       background-position: left; }
-  #add-food .video {
-    background-color: rgba(229, 251, 201, 0.7);
-    margin: 0;
-    grid-area: main;
-    width: 100%;
-    height: 100vh; }
-    #add-food .video video {
-      padding: 2%;
-      width: 100vw;
-      height: auto; }
 
 /* Shopping-list section */
 #shopping-list {
