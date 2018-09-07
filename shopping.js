@@ -1,10 +1,10 @@
 "use strict";
 
-function sendDataToServer(objArrayShopping) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "saveJsonShopping.php", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
+function sendDataToServerS(objArrayShopping) {
+    var xhttpS = new XMLHttpRequest();
+    xhttpS.open("POST", "saveJsonShopping.php", true);
+    xhttpS.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttpS.send("jsonSData=" + JSON.stringify(objArrayShopping, null, '\t'));
     alert("Your shopping list is updated!");
 }
 
@@ -35,12 +35,12 @@ function sendToFridge() {
 }
 
 
-function initialize() {
+function initializeS() {
 
     document.getElementById("addS").addEventListener("click", function () {
         objArrayShopping[objArrayShopping.length] = new shoppingObj(document.getElementById("sAmount").value, document.getElementById("sTitle").value);
         displayJSONSData(objArrayShopping);
-        sendSDataToServer(objArrayShopping);
+        sendDataToServerS(objArrayShopping);
     });
 
     var xhr = new XMLHttpRequest();
@@ -74,6 +74,6 @@ function shoppingObj(amount, title) {
 // --------- Main Start ----------------//
 
 var objArrayShopping = new Array;
-window.addEventListener('load', initialize);
+window.addEventListener('load', initializeS);
 
 // --------- Hovedprogram Slut ----------------//

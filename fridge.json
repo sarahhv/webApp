@@ -2,16 +2,16 @@
 	{
 		"amount": "1",
 		"title": "Milk",
-		"date": "05-09-2018"
+		"date": "2018-10-05"
 	},
 	{
 		"amount": "1",
 		"title": "Butter",
-		"date": "07-10-2018"
+		"date": "2018-09-20"
 	},
 	{
-		"amount": "1",
-		"title": "Egg",
-		"date": "13-11-2018"
+		"amount": "2",
+		"title": "Burger bun",
+		"date": "2018-09-07"
 	}
 ]}
