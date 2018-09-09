@@ -167,12 +167,13 @@ function removeFridgeFromList(itemToRemove) {
 function displayJSONData(fridgeList) {
     var content = '<section class="fridge">';
     for (var i = 0; i < fridgeList.length; i++) {
+        let ftitle = fridgeList[i].getTitle();
         content += '<p>';
         content += '<span class="amountFridge">' + fridgeList[i].getAmount() + '</span>';
         content += '<span class="titleFridge">' + fridgeList[i].getTitle() + '</span>';
         content += '<time datetime"2018-08-23">' + fridgeList[i].getDate() + '</time>';
 
-        content += '<button type="button" class="s-list" onclick="goModal()"><i class="fa fa-list-ul"></i></button>';
+        content += `<button type="button" class="s-list" onclick="goModal('${ftitle}')"><i class="fa fa-list-ul"></i></button>`;
 
         content += '<button type="button" class="no" onclick="removeFridgeFromList(' + i + ')"><i class="fa fa-close"></i></button>';
         content += '</p>'
@@ -185,8 +186,9 @@ function displayJSONData(fridgeList) {
     document.getElementById("formTo").reset();
 }
 
-function goModal() {
+function goModal(title) {
     document.getElementById("modal").style.display = "block";
+    document.getElementById("titleFood").innerHTML = title;
 }
 
 function initialize() {
