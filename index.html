@@ -57,7 +57,7 @@
                         </header>
                         <div class="indhold">
                             <section class="stepper">
-                                <form action="/action_page.php">
+                                <form action="/action_page.php" id="amountAddForm">
                                     <input type="number" name="amount" step="1" placeholder="Amount" id="amountAdd">
                                 </form>
                                 <!-- Source for the form: 
@@ -155,15 +155,18 @@
                     <div class="modal-content">
                         <section class="modal-box">
                             <header>
-                                <h1>Add to fridge</h1>
+                                <h1 id="titleSList"></h1>
                                 <button class="closeModalShopping">
                                     <i class="fa fa-close"></i>
                                 </button>
                             </header>
                             <div class="indhold">
-                                <section class="search">
-                                    <form class="search" id="formTre">
-                                        <input type="date" name="search" id="dateSend" class="date">
+                                <section class="searchShopping">
+                                    <form class="sendToFridge" id="formTre">
+                                        <input type="number" name="amount" id="amountSList" class="amountSend">
+                                    </form>
+                                    <form class="search" id="formFire">
+                                        <input type="date" name="search" id="dateSend" class="dateSend">
                                     </form>
                                     <!-- Source for the form: 
                                         https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->

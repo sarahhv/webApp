@@ -393,27 +393,20 @@ body {
         position: relative; }
       #shopping-list #modalSendToFridge .modal-content .indhold {
         margin: 5%; }
-      #shopping-list #modalSendToFridge .modal-content .searchShopping {
-        width: 100%;
-        margin: auto 0; }
-        #shopping-list #modalSendToFridge .modal-content .searchShopping input {
-          width: 100%;
-          background-color: rgba(229, 251, 201, 0.7);
-          border: 1px solid #D0F79E;
-          text-align: center;
-          font-family: "Yu Gothic UI Light", sans-serif;
-          font-size: 1.5em; }
       #shopping-list #modalSendToFridge .modal-content .btn {
         width: 100%;
         height: auto;
         margin: auto; }
-        #shopping-list #modalSendToFridge .modal-content .btn .list {
+        #shopping-list #modalSendToFridge .modal-content .btn .fridgeModal {
           border: none;
           background-color: transparent;
-          font-size: 3.5em;
+          background-image: url(img/iconTo.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
           width: 100%;
           height: 70px;
-          margin-top: 5%; }
+          margin: 5% 0%; }
     #shopping-list #modalSendToFridge .searchShopping {
       width: 100%;
       margin: 0 auto; }
@@ -432,6 +425,8 @@ body {
         margin: 0 auto;
         width: 100%;
         background-position: left; }
+    #shopping-list #modalSendToFridge .closeModalShopping {
+      color: red; }
   #shopping-list footer {
     grid-area: footer;
     position: fixed;
@@ -518,6 +513,8 @@ body {
         margin: 0 auto;
         width: 100%;
         background-position: left; }
+    #shopping-list #modalShopping .lukEt {
+      color: red; }
 
 /* Load section */
 #load {

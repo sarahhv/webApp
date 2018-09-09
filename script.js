@@ -160,8 +160,8 @@ function removeDataFromServer(objArray) {
 
 function removeFridgeFromList(itemToRemove) {
     objArray.splice(itemToRemove, 1);
-    displayJSONData(objArray);
     removeDataFromServer(objArray);
+    displayJSONData(objArray);
 }
 
 function displayJSONData(fridgeList) {
@@ -189,14 +189,29 @@ function displayJSONData(fridgeList) {
 function goModal(title) {
     document.getElementById("modal").style.display = "block";
     document.getElementById("titleFood").innerHTML = title;
+
+    document.getElementById("addEt").addEventListener('click', () => {
+        let amount = document.getElementById("amountAdd").value;
+
+        // This line is needed - doesn't need alert, but an if there is nothing. Because we need a defined - or else there will be an undefined in or data list 
+        if (!amount) {
+            alert("Please enter an amount")
+        } else {
+            let myShoppingObject = new shoppingObj(amount, title); 
+            objArrayShopping.push(myShoppingObject);
+            sendDataToServerS(objArrayShopping);
+            displayJSONSData(objArrayShopping);
+            document.getElementById("amountAddForm").reset();
+        }
+    });
 }
 
 function initialize() {
 
     document.getElementById("add").addEventListener("click", function () {
         objArray[objArray.length] = new fridgeObj(document.getElementById("amount").value, document.getElementById("title").value, document.getElementById("date").value);
-        displayJSONData(objArray);
         sendDataToServer(objArray);
+        displayJSONData(objArray);
     });
 
     var xhr = new XMLHttpRequest();
@@ -262,15 +277,18 @@ function removeDataFromServerS(objArrayShopping) {
 
 function removeShoppingFromList(itemToRemove) {
     objArrayShopping.splice(itemToRemove, 1);
-    displayJSONSData(objArrayShopping);
     removeDataFromServerS(objArrayShopping);
+    displayJSONSData(objArrayShopping);
+    
 }
 
 function displayJSONSData(shoppingList) {
     var content = '<section class="shopping">';
     for (var i = 0; i < shoppingList.length; i++) {
+        let slTitle = shoppingList[i].getTitle();
+        let slAmount = shoppingList[i].getAmount();
         content += '<p>';
-        content += '<input type="checkbox" class="checkBox" id="checkBox" onclick="sendToFridge()">';
+        content += `<input type="checkbox" class="checkBox" id="checkBox" onclick="sendToFridge('${slTitle}', '${slAmount}')">`;
         content += '<span class="amountS">' + shoppingList[i].getAmount() + '</span>';
         content += '<span class="titleS">' + shoppingList[i].getTitle() + '</span>';
         content += '<button type="button" class="end" onclick="removeShoppingFromList(' + i + ')"><i class="fa fa-close"></i></button>';
@@ -283,8 +301,22 @@ function displayJSONSData(shoppingList) {
     document.getElementById("sFormEt").reset();
 }
 
-function sendToFridge() {
+function sendToFridge(title, amount) {
     document.getElementById("modalSendToFridge").style.display = "block";
+    document.getElementById("titleSList").innerHTML = title;
+    document.getElementById("amountSList").value = amount; 
+
+    document.getElementById("sendFridge").addEventListener('click', () => {
+        let date = document.getElementById("dateSend");
+        if (!date.value) {
+            alert("Please enter a date");
+        } else {
+            let myFridgeObject = new fridgeObj(amount, title, date.value);
+            objArray.push(myFridgeObject);
+            sendDataToServer(objArray);
+            displayJSONData(objArray);
+        }
+    });
 }
 
 
@@ -292,8 +324,8 @@ function initializeS() {
 
     document.getElementById("addS").addEventListener("click", function () {
         objArrayShopping[objArrayShopping.length] = new shoppingObj(document.getElementById("sAmount").value, document.getElementById("sTitle").value);
-        displayJSONSData(objArrayShopping);
         sendDataToServerS(objArrayShopping);
+        displayJSONSData(objArrayShopping);
     });
 
     var xhr = new XMLHttpRequest();

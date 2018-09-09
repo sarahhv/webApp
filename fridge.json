@@ -1,17 +1,12 @@
 { "fridge":[
 	{
-		"amount": "1",
-		"title": "Milk",
-		"date": "2018-10-05"
-	},
-	{
-		"amount": "1",
-		"title": "Butter",
-		"date": "2018-09-20"
-	},
-	{
 		"amount": "2",
 		"title": "Burger bun",
 		"date": "2018-09-07"
+	},
+	{
+		"amount": "5",
+		"title": "Milk",
+		"date": "2018-09-14"
 	}
 ]}
