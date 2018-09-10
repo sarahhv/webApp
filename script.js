@@ -195,11 +195,10 @@ function goModal(title) {
 
         // This line is needed - doesn't need alert, but an if there is nothing. Because we need a defined - or else there will be an undefined in or data list 
         if (!amount) {
-            alert("Please enter an amount")
+            alert("Please enter an amount");
         } else {
             let myShoppingObject = new shoppingObj(amount, title); 
             objArrayShopping.push(myShoppingObject);
-            removeFridgeFromList(objArray);
             sendDataToServerS(objArrayShopping);
             displayJSONSData(objArrayShopping);
             document.getElementById("amountAddForm").reset();
@@ -314,10 +313,8 @@ function sendToFridge(title, amount) {
         } else {
             let myFridgeObject = new fridgeObj(amount, title, date.value);
             objArray.push(myFridgeObject);
-            removeShoppingFromList(objArrayShopping);
             sendDataToServer(objArray);
             displayJSONData(objArray);
-            document.getElementById("formFire").reset();
         }
     });
 }

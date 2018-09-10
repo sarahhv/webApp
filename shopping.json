@@ -1,6 +1,18 @@
 { "shopping":[
 	{
-		"amount": "20",
-		"title": "Web udvikler"
+		"amount": "10",
+		"title": "Burger Buns"
+	},
+	{
+		"amount": "2",
+		"title": "Bananas"
+	},
+	{
+		"amount": "6",
+		"title": "pkg. Flour"
+	},
+	{
+		"amount": "7",
+		"title": "Bananas"
 	}
 ]}
