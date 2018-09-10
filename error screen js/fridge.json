@@ -1,0 +1,17 @@
+{ "fridge":[
+	{
+		"amount": "7",
+		"title": "Onions",
+		"date": "2018-10-11"
+	},
+	{
+		"amount": "2",
+		"title": "Salad heads",
+		"date": "2018-10-27"
+	},
+	{
+		"amount": "1",
+		"title": "pkg. Flour",
+		"date": "2018-12-11"
+	}
+]}

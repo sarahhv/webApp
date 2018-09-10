@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Expiration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sarah Hvalsøe, Amalie, Maria">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- Home section -->
+        <article id="home">
+            <header><img class="frontfridge" src="img/logo.png" alt="Picture of fridge">
+                <!-- <h1>Exparation</h1> -->
+            </header>
+            <nav>
+                <button id="see-fridge">See Fridge</button>
+                <button id="see-shopping">Shopping List</button>
+                <button id="see-items">Add Food</button>
+            </nav>
+        </article>
+
+        <!-- your-fridge section -->
+        <article id="your-fridge">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Your Fridge</h1>
+                <button id="go-shopping">
+                    <i class="fa fa-list-ul"></i>
+                </button>
+            </header>
+
+            <section id="dataArea">
+            </section>
+
+            <!-- The Modal-box for add to shopping list icon -->
+            <div id="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box">
+                        <header>
+                            <h1 id="titleFood"></h1>
+                            <button class="close">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                        <div class="indhold">
+                            <section class="stepper">
+                                <form action="/action_page.php" id="amountAddForm">
+                                    <input type="number" name="amount" step="1" placeholder="Amount" id="amountAdd">
+                                </form>
+                                <!-- Source for the form: 
+                                https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
+                            </section>
+                            <section class="btn">
+                                <button class="list" id="addEt">
+                                    <i class="fa fa-list-ul"></i>
+                                    <!-- Onclick remove it  -->
+                                </button>
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
+                    https://www.w3schools.com/howto/howto_css_modals.asp -->
+                </div>
+            </div>
+
+            <footer>
+                <button class="Fplus">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </footer>
+
+            <!-- Modal box in footer plus sign -->
+            <div id="modalFridge">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box">
+                        <header>
+                            <h1>Add food</h1>
+                            <button class="luk">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                        <div class="indhold">
+                            <section class="search">
+                                <form class="search" id="form">
+                                    <input type="number" name="search" id="amount" class="amount" placeholder="Amount">
+                                </form>
+                                <form class="search" id="formEt">
+                                    <input type="text" name="search" id="title" class="title" placeholder="Food">
+                                </form>
+                                <form class="search" id="formTo">
+                                    <input type="date" name="search" id="date" class="date">
+                                </form>
+                                <!-- Source for the form: 
+                                    https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
+                            </section>
+
+                            <section class="btn">
+                                <button type="button" id="add" class="fridgeModal">
+                                </button>
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
+                        https://www.w3schools.com/howto/howto_css_modals.asp -->
+                </div>
+            </div>
+        </article>
+
+        <!-- Add items/Add food section -->
+        <article id="add-food">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Add food</h1>
+                <form class="searchbar" id="searchbar">
+                    <input type="text" name="searchbar">
+                </form>
+            </header>
+                <input class="video" type="file" accept="image/*" capture="camera" />
+        </article>
+
+        <!-- Shopping list section -->
+        <article id="shopping-list">
+            <header>
+                <button class="back">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <h1>Shopping List</h1>
+                <button id="go-fridge">
+                </button>
+            </header>
+
+            <section id="shoppingArea">
+            </section>
+
+            <div id="modalSendToFridge">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <section class="modal-box">
+                            <header>
+                                <h1 id="titleSList"></h1>
+                                <button class="closeModalShopping">
+                                    <i class="fa fa-close"></i>
+                                </button>
+                            </header>
+                            <div class="indhold">
+                                <section class="searchShopping">
+                                    <form class="sendToFridge" id="formTre">
+                                        <input type="number" name="amount" id="amountSList" class="amountSend">
+                                    </form>
+                                    <form class="search" id="formFire">
+                                        <input type="date" name="search" id="dateSend" class="dateSend">
+                                    </form>
+                                    <!-- Source for the form: 
+                                        https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_step -->
+                                </section>
+    
+                                <section class="btn">
+                                    <button type="button" id="sendFridge" class="fridgeModal">
+                                    </button>
+                                </section>
+                            </div>
+                        </section>
+                        <!-- Source for the modal box: 
+                            https://www.w3schools.com/howto/howto_css_modals.asp -->
+                    </div>
+                </div>
+
+            <footer>
+                <button class="Splus">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </footer>
+
+            <div id="modalShopping">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <section class="modal-box-search">
+                        <header>
+                            <h1>Add to list</h1>
+                            <button class="lukEt">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </header>
+                        <div class="indhold">
+                            <section class="searchShopping">
+                                <form class="search" id="sForm">
+                                    <input type="number" name="search" id="sAmount" class="amount" placeholder="Amount">
+                                </form>
+                                <form class="search" id="sFormEt">
+                                    <input type="text" name="search" id="sTitle" class="title" placeholder="Food">
+                                </form>
+                            </section>
+
+                            <section class="btn">
+                                <button class="list" id="addS">
+                                    <i class="fa fa-list-ul"></i>
+                                </button>
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Source for the modal box: 
+                            https://www.w3schools.com/howto/howto_css_modals.asp -->
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Loading section -->
+        <article id="load">
+            <img src="img/fridge3.gif" alt="loading fridge, refrigerator">
+            <!-- Fridge found on: http://www.mitsubishielectric.com.au/mr-wx500c-s-multi-drawer-refrigerator.html  -->
+            <p>Waiting to fill your fridge...</p>
+        </article>
+
+        <!-- Error section -->
+        <article id="error">
+            <section>
+                <section class="mainheader">
+                    <h1>Error!</h1>
+                </section>
+
+                <img src="img/brokenfridge.jpg" alt="Error">
+
+                <h1>Oh no!</h1>
+                <p>Your page has expired!</p>
+            </section>
+        </article>
+
+            <!--  INTRODUKTION -->
+    <div class="intro-modal" id="modalIntro">
+            <div class="modal-content">
+                <article id="welcome">
+                    <header id="welcomeHead">
+                         <button class="introLuk">
+                        <i class="fa fa-close"></i>
+                        </button>
+                        <h1>Welcome to Experation</h1>
+                    </header>
+                    <section class="indhold">
+                        <p>This is a guide for you to get the optimal use of this app.</p>
+                        <p>Read on and see how</p>
+                    </section>
+                </article>
+                <article id="intro-fridge">
+                    <header>
+                        <h1>Your Fridge</h1>
+                    </header>
+    
+                    <section class="indhold">
+                        <p>Here you can see an inventory of the food you currently have in your fridge.</p>
+                        <p>At each food item you will see two symbols:</p>
+                        <p><i class="fa fa-list-ul"></i> With this one you can move the selected item to your shopping list.</p>
+                        <p><i class="fa fa-close"></i> This symbol will just remove it from the fridge.</p>
+                        <p>This symbol: <button class="btnPlus">
+                        <i class="fa fa-plus"></i>
+                    </button> gives you the opportunity to add by search directly to your fridge</p>
+                        
+                        <p><i class="fa fa-list-ul"></i> The symbol that looks like this placed in the right corner will get you directly to your shopping list</p>
+                    </section>
+                </article>
+                <article id="intro-list">
+                    <header>
+                        <h1>Shopping list</h1>
+                    </header>
+                    <section class="indhold">
+                        <p>On this site see the food items you placed here.</p>
+                        <p><input type="checkbox" class="check"> Check of when you have bought an item and it will get placed in the fridge</p>
+                        <p><i class="fa fa-close"></i> Click on this symbol if you regret the item and don't actually want it</p>
+                        <p>Again this symbol <button class="btnPlus">
+                        <i class="fa fa-plus"></i>
+                    </button> will add items directly by search this time to your shopping list instead</p>
+                        <p><button id="fridgeLogo">
+                    </button>
+                            With this symbol you'll get into the fridge, you can find it in the right corner.</p>
+                        
+                    </section>
+                </article>
+                <article id="intro-add">
+                    <header>
+                        <h1>Add food</h1>
+                    </header>
+                    <section class="indhold">
+                        <p>On this site you get a few options to find your food.</p>
+                        <p><i class="fa fa-search"></i>With this symbol you can directly type in the item you want, this you'll find in the right corner of this site.</p>
+                        <p>You can also look through different categories to find something you want you can then add the food you find to either your fridge or your shopping list</p>
+                        <p>The last option is to scan your food and add that directly to the fridge</p>
+                    </section>
+                </article>
+                <article id="enjoy">
+                    <header>
+                        <h1>Good luck</h1>
+                    </header>
+                    <section class="indhold">
+                        <p>You are now are now ready to explore Experation </p>
+                        <button class="introLuk"> <i class="fa fa-close"></i>
+                        </button>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

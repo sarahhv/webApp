@@ -1,0 +1,14 @@
+{ "shopping":[
+	{
+		"amount": "4",
+		"title": "Milk"
+	},
+	{
+		"amount": "10",
+		"title": "Burger Buns"
+	},
+	{
+		"amount": "2",
+		"title": "Bananas"
+	}
+]}
