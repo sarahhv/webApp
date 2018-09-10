@@ -745,13 +745,29 @@ body {
 
     p {
         font-family: $p-font;
-        font-size: 3em;
+        font-size: $p-size;
     }
 
     h1 {
         font-family: $h1-font;
         width: 100%;
+        font-size: 2.5em;
+    }
+
+    .back {
+        width: 100%;
+        margin: 5% auto;
+        border: none;
+        background-color: transparent;
         font-size: 3em;
+        animation: pulse 1s infinite;
+        
+        @keyframes pulse {
+            40% { transform: scale(1.08); }
+            50% { transform: scale(1); }
+            70% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
     }
 
     .mainheader {
@@ -764,14 +780,10 @@ body {
         position: relative;
     }
 
-    body {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
+    .errorIndhold {
+        padding: 3% 10% 0%;
+        background-color: $baggrund;
+        height: 100vh;
     }
 
     img {

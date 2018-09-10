@@ -34,6 +34,7 @@ function goBack() {
     document.getElementById("shopping-list").style.display = "none";
     document.getElementById("add-food").style.display = "none";
     document.getElementById("your-fridge").style.display = "none";
+    document.getElementById("error").style.display = "none";
     document.getElementById("home").style.display = "grid";
 }
 

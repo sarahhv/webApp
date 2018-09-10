@@ -551,11 +551,27 @@ body {
   position: absolute; }
   #error p {
     font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: 3em; }
+    font-size: 1.5em; }
   #error h1 {
     font-family: "Century Gothic", sans-serif;
     width: 100%;
-    font-size: 3em; }
+    font-size: 2.5em; }
+  #error .back {
+    width: 100%;
+    margin: 5% auto;
+    border: none;
+    background-color: transparent;
+    font-size: 3em;
+    animation: pulse 1s infinite; }
+@keyframes pulse {
+  40% {
+    transform: scale(1.08); }
+  50% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
   #error .mainheader {
     background-color: #D0F79E;
     color: #71A133;
@@ -564,14 +580,10 @@ body {
     padding-bottom: 20px;
     padding-top: 20px;
     position: relative; }
-  #error body {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%; }
+  #error .errorIndhold {
+    padding: 3% 10% 0%;
+    background-color: rgba(229, 251, 201, 0.7);
+    height: 100vh; }
   #error img {
     width: 100%;
     margin-bottom: 20px;
