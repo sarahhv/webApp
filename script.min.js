@@ -199,6 +199,7 @@ function goModal(title) {
         } else {
             let myShoppingObject = new shoppingObj(amount, title); 
             objArrayShopping.push(myShoppingObject);
+            removeFridgeFromList(objArray);
             sendDataToServerS(objArrayShopping);
             displayJSONSData(objArrayShopping);
             document.getElementById("amountAddForm").reset();
@@ -313,8 +314,10 @@ function sendToFridge(title, amount) {
         } else {
             let myFridgeObject = new fridgeObj(amount, title, date.value);
             objArray.push(myFridgeObject);
+            removeShoppingFromList(objArrayShopping);
             sendDataToServer(objArray);
             displayJSONData(objArray);
+            document.getElementById("formFire").reset();
         }
     });
 }

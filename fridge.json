@@ -5,8 +5,13 @@
 		"date": "2018-09-07"
 	},
 	{
-		"amount": "5",
-		"title": "Milk",
-		"date": "2018-09-14"
+		"amount": "1",
+		"title": "Egg",
+		"date": "2018-09-29"
+	},
+	{
+		"amount": "20",
+		"title": "Web udvikler",
+		"date": "2018-09-07"
 	}
 ]}

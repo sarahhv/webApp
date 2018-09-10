@@ -1,10 +1,6 @@
 { "shopping":[
 	{
-		"amount": "1",
-		"title": "Egg"
-	},
-	{
-		"amount": "5",
-		"title": "Milk"
+		"amount": "20",
+		"title": "Web udvikler"
 	}
 ]}
