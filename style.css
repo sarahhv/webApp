@@ -532,18 +532,19 @@ body {
 /* Load section */
 #load {
   display: none;
-  margin-top: 25%; }
+  background-color: rgba(229, 251, 201, 0.7);
+  height: 100vh; }
   #load img {
     display: block;
     width: 80%;
-    margin: auto; }
+    margin: auto;
+    margin-top: 25%; }
   #load p {
-    margin-top: 10%;
+    margin-top: -10%;
     font-family: "Yu Gothic UI Light", sans-serif;
-    font-size: 4em;
+    font-size: 2.1em;
     text-align: center;
-    padding: 0% 2%;
-    word-break: break-all; }
+    padding: 0% 2%; }
 
 /* Error section */
 #error {
@@ -577,17 +578,16 @@ body {
     color: #71A133;
     width: 100%;
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 2% 0%;
     position: relative; }
   #error .errorIndhold {
     padding: 3% 10% 0%;
     background-color: rgba(229, 251, 201, 0.7);
     height: 100vh; }
   #error img {
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 20px; }
+    display: block;
+    width: 80%;
+    margin: 20px auto; }
   #error section {
     height: 100%; }
 

@@ -720,21 +720,22 @@ body {
 /* Load section */
 #load {
     display: none;
-    margin-top: 25%;
+    background-color: $baggrund;
+    height: 100vh;
 
     img {
         display: block;
         width: 80%;
         margin: auto;
+        margin-top: 25%;
     }
 
     p {
-        margin-top: 10%;
+        margin-top: -10%;
         font-family: $p-font;
-        font-size: 4em;
+        font-size: $h1-size;
         text-align: center;
         padding: 0% 2%;
-        word-break: break-all;
     }
 }
 
@@ -775,8 +776,7 @@ body {
         color: $h1-color;
         width: 100%;
         text-align: center;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 2% 0%;
         position: relative;
     }
 
@@ -787,9 +787,9 @@ body {
     }
 
     img {
-        width: 100%;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        display: block;
+        width: 80%;
+        margin: 20px auto;
     }
 
     section {
