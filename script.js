@@ -138,6 +138,14 @@ window.addEventListener('click', () => {
     }
 });
 
+//Error screen on search//
+var searchbar = document.getElementById("searchbar");
+
+searchbar.addEventListener('click', () => {
+    document.getElementById("error").style.display = "block";
+    document.getElementById("add-food").style.display = "none"; 
+});
+
 /* MODAL BOX FOR INTRODUKTION*/
 
 //An array of elements
