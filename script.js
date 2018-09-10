@@ -9,13 +9,23 @@ btnSeeFridge.addEventListener('click', () => {
     document.getElementById("home").style.display = "none";
 });
 btnSeeItems.addEventListener('click', () => {
-    document.getElementById("add-food").style.display = "grid";
+    document.getElementById("load").style.display = "grid";
+               /*document.getElementById("add-food").style.display = "grid";*/
     document.getElementById("home").style.display = "none";
+    setTimeout(getAdd, 4000);
 });
+
+ function getAdd() {
+               document.getElementById("add-food").style.display = "grid";
+               document.getElementById("load").style.display = "none";
+           }
+
 btnSeeShopping.addEventListener('click', () => {
     document.getElementById("shopping-list").style.display = "grid";
     document.getElementById("home").style.display = "none";
 });
+
+
 
 /* BACK BUTTONS - TOP LEFT */
 var btnBack = document.getElementsByClassName("back");
@@ -129,15 +139,27 @@ window.addEventListener('click', () => {
 });
 
 /* MODAL BOX FOR INTRODUKTION*/
+
 //An array of elements
 var btnModal = document.getElementsByClassName("introLuk");
 
 function closeIntro() {
     document.getElementById("modalIntro").style.display = "none";
+    document.getElementById("help").style.display = "inherit"; 
 }
+
 for (var btn of btnModal) {
     btn.addEventListener('click', closeIntro);
 }
+
+ var btnHelp = document.getElementById("help");
+
+           btnHelp.addEventListener('click', () => {
+               document.getElementById("modalIntro").style.display = "block";
+               document.getElementById("help").style.display = "none";
+           })
+
+
 
 // --------- FRIDGE.JS HERE IS THE FRIDGE REGARDING FRIDGE.JS AND SAVEJSONFRIDGE.PHP ----------------//
 "use strict";
@@ -363,3 +385,19 @@ var objArrayShopping = new Array;
 window.addEventListener('load', initializeS);
 
 // --------- Hovedprogram Slut ----------------//
+
+
+
+
+/*https://stackoverflow.com/questions/16641329/how-to-detect-if-it-is-the-first-page-of-my-site-the-user-views*/
+           // this is the first time
+           if (!sessionStorage.noFirstVisit) {
+               // show the element
+               // and do the animation you want
+               document.getElementById('modalIntro').style.display = 'block';
+
+               // check this flag for escaping this if block next time
+               sessionStorage.noFirstVisit = "1";
+           }
+
+           //could also use localStorage which would store it longer in the browser and not just the tap.
