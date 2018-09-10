@@ -315,6 +315,7 @@ function sendToFridge(title, amount) {
             objArray.push(myFridgeObject);
             sendDataToServer(objArray);
             displayJSONData(objArray);
+            document.getElementById("formFire").reset();
         }
     });
 }
