@@ -287,6 +287,8 @@ window.addEventListener('load', initialize);
 
 // --------- Hovedprogram Slut ----------------//
 
+/* https://eaaa.instructure.com/courses/4558/files/190056?module_item_id=82589 Inspiration from Morten */
+
 
 // --------- SHOPPING.JS HERE IS THE SHOPPING REGARDING SHOPPING.JS AND SAVEJSONSHOPPING.JS ----------------//
 "use strict";
@@ -394,6 +396,8 @@ var objArrayShopping = new Array;
 window.addEventListener('load', initializeS);
 
 // --------- Hovedprogram Slut ----------------//
+
+/* https://eaaa.instructure.com/courses/4558/files/190056?module_item_id=82589 Inspiration from Morten */
 
 
 
